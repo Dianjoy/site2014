@@ -1,0 +1,12 @@
+/* 
+  Document   : editor-style
+  Created on : 2013-4-15, 17:20:00
+  Author     : meathill
+  Description:
+    用来修改编辑器样式
+*/
+
+root { 
+  display: block;
+}
+

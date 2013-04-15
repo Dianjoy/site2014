@@ -1,0 +1,49 @@
+/*
+Theme Name: Dianjoy 2013
+Theme URI: http://www.dianjoy.com/
+Description: 2013年点乐官网改版
+Author: 肉山
+Version: 1.0 
+Tags: purple， enterprise， fixed-width， responsive， editor-style， custom-menu
+
+License: MIT
+*/
+
+body {
+  padding:0;
+}
+/** ===================================
+ * 首页
+ * 从上至下
+ * ================================== */
+#top-navi {
+  width:100%;
+  background:#920042;
+  padding:3px 0;
+}
+#top-navi a {
+  color:#FFF
+}
+#top-navi a:hover {
+  color:#FF0;
+  text-decoration:none;
+}
+#top-navi h1 {
+  text-indent:40px;
+  padding-top:0;
+  padding-bottom:0;
+  margin:0;
+  color:#FFF;
+  font:bold 28px/40px Microsoft Yahei, Simhei;
+  background:url(img/logo.png) no-repeat 0 center;
+}
+#top-navi .menu,
+#top-navi .menu li {
+  list-style: none;
+}
+#top-navi .menu li {
+  float: left;
+  display:inline-block;
+  padding:0 15px;
+  font:16px/40px Microsoft Yahei, Simhei;
+}
