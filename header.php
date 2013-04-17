@@ -14,6 +14,7 @@ $nav = array(
   'container_class' => 'span9',
   'echo' => FALSE,
   'theme_location' => 'primary',
+  'menu_class' => 'menu pull-right',
 );
 $result = array(
   'title' => wp_title('|', FALSE, 'right'),

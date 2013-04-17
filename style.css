@@ -41,6 +41,10 @@ body {
 #top-navi .menu li {
   list-style: none;
 }
+#top-navi .menu {
+  margin: 0;
+  padding:0;
+}
 #top-navi .menu li {
   float: left;
   display:inline-block;
