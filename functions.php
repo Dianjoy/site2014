@@ -19,7 +19,7 @@ function dian2013_setup() {
   //add_theme_support('post-formats', array( 'aside', 'image', 'link', 'quote', 'status' ));
 
   // This theme uses wp_nav_menu() in one location.
-  register_nav_menu('primary', __('全站通用顶部导航'));
+  register_nav_menu('primary', __('primary-navi'));
 
   /*
    * This theme supports custom background color and image, and here

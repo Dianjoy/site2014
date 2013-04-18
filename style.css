@@ -11,15 +11,27 @@ License: MIT
 
 body {
   padding:0;
+  background:#F6F6F6
+}
+.single-column {
+  margin: 0 auto;
+}
+.bar {
+  border-top:2px solid #C17698;
+  border-bottom:2px solid #C17698;
+  background:#7B0D66;
 }
 /** ===================================
  * 首页
  * 从上至下
  * ================================== */
+/** ---------------
+ * 导航
+ * -------------- */
 #top-navi {
   width:100%;
   background:#920042;
-  padding:3px 0;
+  padding:4px 0;
 }
 #top-navi a {
   color:#FFF
@@ -34,7 +46,7 @@ body {
   padding-bottom:0;
   margin:0;
   color:#FFF;
-  font:bold 28px/40px Microsoft Yahei, Simhei;
+  font:bold 28px/36px Microsoft Yahei, Simhei;
   background:url(img/logo.png) no-repeat 0 center;
 }
 #top-navi .menu,
@@ -49,5 +61,93 @@ body {
   float: left;
   display:inline-block;
   padding:0 15px;
-  font:16px/40px Microsoft Yahei, Simhei;
+  font:16px/36px Microsoft Yahei, Simhei;
+}
+
+/** ---------------
+ * 导航
+ * -------------- */
+#top-slide {
+  width:1000px;
+  color:#FFF;
+}
+#top-slide .carousel-indicators {
+  top:auto;
+  bottom:15px;
+}
+#top-slide .item .mobile,
+#top-slide h3,
+#top-slide h4,
+#top-slide .link-button {
+  position: absolute;
+}
+#top-slide h3 {
+  font:44px/50px Microsoft Yahei, Simhei;
+  text-shadow:0 1px 8px rgba(0, 0, 0, 0.5);
+}
+#top-slide h4 {
+  font:28px/30px Microsoft Yahei, Simhei;
+  text-shadow:0 1px 8px rgba(0, 0, 0, 0.5);
+}
+#top-slide .link-button {
+  display:block;
+  width:110px;
+  text-align: center;
+  font:14px/28px Simsun;
+  color:#FFF;
+  background:#FF4642;
+  border-radius: 0 10px 0 10px;
+  box-shadow:inset 1px 0 1px 0 rgba(0, 0, 0, 0.3),inset 0 1px 1px 0 rgba(255, 255, 255, 0.5), inset -1px 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
+}
+#top-slide .item-0 .mobile {
+  top: 92px;
+  left:560px;
+}
+#top-slide .item-0 h3 {
+  top:125px;
+  left:224px;
+}
+#top-slide .item-0 h4 {
+  top:180px;
+  left:224px;
+}
+#top-slide .item-0 .link-button {
+  top:244px;
+  left:224px;
+}
+#top-slide .item-1 .mobile {
+  left:111px;
+  top:92px;
+}
+#top-slide .item-1 h3 {
+  left:490px;
+  top:125px;
+}
+#top-slide .item-1 h4 {
+  left:490px;
+  top:180px;
+}
+#top-slide .item-1 .link-button {
+  left:490px;
+  top:244px;
+}
+#active {
+  background: #920042;
+  padding:6px 0;
+  text-align: center;
+  color: #FFF;
+}
+#active .bar {
+  padding:10px 0;
+}
+#active p:last-child {
+  margin:0;
+}
+#active .slogan {
+  font:34px/35px Microsoft Yahei, Simhei;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+}
+#active .description {
+  font: 14px/15px Arial, Simsun;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
 }

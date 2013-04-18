@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @overview 通用头部
+ * @overview 通用头部，包括导航和前端框架
  * @author Meathill <lujia.zhai@dianjoy.com>
  * @since 1.0
  */
@@ -19,7 +19,6 @@ $nav = array(
 $result = array(
   'title' => wp_title('|', FALSE, 'right'),
   'pingback' => get_bloginfo('pingback_url'),
-  'wp_head' => wp_head(),
   'home_url' => esc_url(home_url('/')),
   'name' => get_bloginfo('name'),
   'name_title' => esc_attr(get_bloginfo('name', 'display')),
