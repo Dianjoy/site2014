@@ -10,11 +10,13 @@ License: MIT
 */
 
 body {
-  padding:0;
   background:#F6F6F6
 }
 .single-column {
   margin: 0 auto;
+}
+.mt50 {
+  margin-top:50px;
 }
 .bar {
   border-top:2px solid #C17698;
@@ -65,7 +67,7 @@ body {
 }
 
 /** ---------------
- * 导航
+ * 轮播图
  * -------------- */
 #top-slide {
   width:1000px;
@@ -150,4 +152,48 @@ body {
 #active .description {
   font: 14px/15px Arial, Simsun;
   text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+/** ---------------
+ * 我们的优势等
+ * -------------- */
+.feature .title {
+  background:url(img/features.png) no-repeat;
+  padding:0 0 30px 45px;
+  width:160px;
+  text-align: center;
+}
+.feature h2 {
+  font:30px/30px Microsoft Yahei, Simhei;
+  color:#F24C4C;
+  margin-bottom:8px;
+}
+.feature small {
+  font:14px/20px Arial, Simsun;
+  color:#666;
+}
+.figure {
+  width:252px;
+  background: #FFF;
+  border-radius: 0 10px 0 10px;
+  padding:5px 5px 0;
+  box-shadow: -2px 0 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 35px;
+}
+.figure img {
+  border-radius: 0 8px 0 0;
+}
+.figure .caption {
+  text-align:center;
+  font:20px/50px Microsoft Yahei, Simhei;
+  border-top:1px solid #CCC;
+  margin: 0;
+  color:#666;
+}
+.feature .desc {
+  font:14px/28px Simsun;
+  text-indent:28px;
+  color:#666;
+  width:252px;
+  padding:5px;
 }
