@@ -30,6 +30,7 @@
     <p class="description">INTELLIGNET MOBILE PHONRE ADVERTISEMENT PLATFORM FOR THE COUNTRY‘S LEADING</p>
   </div>
 </div>
+
 <div class="container feature feature-1 mt50">
   <div class="title">
     <h2>我们的优势</h2>
@@ -44,7 +45,7 @@
         </p>
       </div>
       <p class="desc">
-            点乐全面推动广告形式的创新，支持应用推荐、积分墙、通知栏推送、插屏、全屏(内测中)等多种广告形式。还可针对媒体定制广告形式。
+        点乐全面推动广告形式的创新，支持应用推荐、积分墙、通知栏推送、插屏、全屏(内测中)等多种广告形式。还可针对媒体定制广告形式。
       </p>
     </div>
     <div class="span4">
@@ -55,19 +56,83 @@
         </p>
       </div>
       <p class="desc">
-             将国际领先的数据挖掘技术、客户端技术和本地化运营完美结合，与中国移动机房、阿里云以及国内领先的CDN服务商通力合作，提供优质的广告分发和下载体验。
+        将国际领先的数据挖掘技术、客户端技术和本地化运营完美结合，与中国移动机房、阿里云以及国内领先的CDN服务商通力合作，提供优质的广告分发和下载体验。
       </p>
     </div>
     <div class="span4">
       <div class="figure">
-        <img src="{{home_url}}wp-content/themes/dian2013/img/f1-1.jpg" width="252" height="168" />
+        <img src="{{home_url}}wp-content/themes/dian2013/img/f1-3.jpg" width="252" height="168" />
         <p class="caption">
            经验丰富的团队 
         </p>
       </div>
       <p class="desc">
-                前微软广告团队成员创立，点乐成员大多来自于国际化的互联网、软件公司和相关业内数一数二的公司。优秀的人才给点乐带来优秀的基因，打造超一流的产品和服务。
+        前微软广告团队成员创立，点乐成员大多来自于国际化的互联网、软件公司和相关业内数一数二的公司。优秀的人才给点乐带来优秀的基因，打造超一流的产品和服务。
       </p>
     </div>
   </div>
+</div>
+<div class="container feature mt50">
+  <div class="row">
+    <div class="span8 feature-2">
+      <div class="title">
+        <h2>成功案例</h2>
+        <small>SAMPLE CASES</small>
+      </div>
+    </div>
+    <div class="span4 feature-3">
+      <div class="title">
+        <h2>公司新闻</h2>
+        <small>NEWS</small>
+      </div>
+    </div>
+    <div class="span4">
+      <div class="figure">
+        <img src="{{home_url}}wp-content/themes/dian2013/img/f2-1.jpg" width="252" height="168" />
+        <p class="caption">
+           畅无线 
+        </p>
+      </div>
+      <p class="desc">
+        畅无线：通过“畅豆”获得免费WIFI时间，每通过点乐试玩一个应用可上网两个半小时。
+      </p>
+    </div>
+    <div class="span4">
+      <div class="figure">
+        <img src="{{home_url}}wp-content/themes/dian2013/img/f2-2.jpg" width="252" height="168" />
+        <p class="caption">
+            友宝  
+        </p>
+      </div>
+      <p class="desc">
+        点乐为友宝App提供试玩应用换可乐券的解决方案而友宝通过售货机地理位置和单位类别帮助点乐实现精准广告投放。
+      </p>
+    </div>
+    <div class="span4 feature-3">
+      {{#blog}}
+      <div class="article {{class}}">
+        <h3><a href="{{link}}" title="{{full_title}}" target="_blank">{{title}}</a></h3>
+        <p class="meta">发表于 {{date}}</p>
+        <div class="excerpt">{{{excerpt}}}</div>
+      </div>
+      {{/blog}}
+    </div>
+  </div>
+</div>
+<div class="container feature feature-4 mt50">
+  <div class="title">
+    <h2>业内评价</h2>
+    <small>CUSTOMER FEEDBACK</small>
+  </div>
+</div>
+<div class="container feature feature-5 mt50">
+  <div class="title">
+    <h2>合作伙伴</h2>
+    <small>PARTNERS</small>
+  </div>
+  <ul class="partner-logos">
+    {{#partner}}
+    <li>{{{thumbnail}}}</li>
+    {{/partner}}
+  </ul>
 </div>

@@ -159,9 +159,10 @@ body {
  * -------------- */
 .feature .title {
   background:url(img/features.png) no-repeat;
-  padding:0 0 30px 45px;
+  padding:0 0 0 45px;
   width:160px;
   text-align: center;
+  margin-bottom: 30px;
 }
 .feature h2 {
   font:30px/30px Microsoft Yahei, Simhei;
@@ -196,4 +197,46 @@ body {
   color:#666;
   width:252px;
   padding:5px;
+}
+.feature-2 .title {
+  background-position-y: -60px;
+}
+.feature-3 .title {
+  background-position-y: -120px;
+}
+.feature-3 .article {
+  border-bottom:1px dashed #999;
+}
+.feature-3 .article:last-child {
+  border-bottom: none;
+}
+.feature-3 h3 {
+  font:18px/20px Microsoft Yahei, Simhei;
+  color: #555;
+  margin: 0 0 10px;
+}
+.feature-3 h3 a {
+  color:#555;
+}
+.feature-3 .meta {
+  font:12px/20px Simsun;
+  margin:0 0 10px;
+  color: #999;
+}
+.feature-3 .excerpt {
+  color:#555;
+}
+.feature-4 .title {
+  background-position-y: -180px;
+}
+.feature-5 .partner-logos {
+  margin:0;
+}
+.feature-5 li {
+  list-style: none;
+  border:1px solid #CCC;
+  padding:10px;
+  background:#FFF;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
+  display: inline-block;
 }
