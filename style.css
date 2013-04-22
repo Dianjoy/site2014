@@ -10,7 +10,8 @@ License: MIT
 */
 
 body {
-  background:#F6F6F6
+  background:#F6F6F6;
+  font-family: simsun;
 }
 .single-column {
   margin: 0 auto;
@@ -23,6 +24,28 @@ body {
   border-bottom:2px solid #C17698;
   background:#7B0D66;
 }
+
+/** ===================================
+ * 按钮
+ * ================================== */
+.button {
+  display:block;
+  width:100px;
+  text-align: center;
+  font:14px/28px Simsun;
+  color:#FFF;
+  background:#FF4642;
+  border-radius: 0 10px 0 10px;
+  box-shadow:inset 1px 0 1px 0 rgba(0, 0, 0, 0.3),inset 0 1px 1px 0 rgba(255, 255, 255, 0.5), inset -1px 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
+}
+.button-big {
+  width:150px;
+  font:18px/36px Simsun;
+}
+.button-full-width {
+  width:100%;
+}
+
 /** ===================================
  * 首页
  * 从上至下
@@ -91,16 +114,6 @@ body {
   font:28px/30px Microsoft Yahei, Simhei;
   text-shadow:0 1px 8px rgba(0, 0, 0, 0.5);
 }
-#top-slide .link-button {
-  display:block;
-  width:110px;
-  text-align: center;
-  font:14px/28px Simsun;
-  color:#FFF;
-  background:#FF4642;
-  border-radius: 0 10px 0 10px;
-  box-shadow:inset 1px 0 1px 0 rgba(0, 0, 0, 0.3),inset 0 1px 1px 0 rgba(255, 255, 255, 0.5), inset -1px 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
-}
 #top-slide .item-0 .mobile {
   top: 92px;
   left:560px;
@@ -160,14 +173,14 @@ body {
 .feature .title {
   background:url(img/features.png) no-repeat;
   padding:0 0 0 45px;
-  width:160px;
+  width:140px;
   text-align: center;
   margin-bottom: 30px;
 }
 .feature h2 {
   font:30px/30px Microsoft Yahei, Simhei;
   color:#F24C4C;
-  margin-bottom:8px;
+  margin-bottom:4px;
 }
 .feature small {
   font:14px/20px Arial, Simsun;
@@ -178,7 +191,7 @@ body {
   background: #FFF;
   border-radius: 0 10px 0 10px;
   padding:5px 5px 0;
-  box-shadow: -2px 0 1px rgba(0, 0, 0, 0.2);
+  box-shadow: -2px 1px 2px rgba(0, 0, 0, 0.2);
   margin-bottom: 35px;
 }
 .figure img {
@@ -198,6 +211,9 @@ body {
   width:252px;
   padding:5px;
 }
+.feature-1 .title {
+  width:160px;
+}
 .feature-2 .title {
   background-position-y: -60px;
 }
@@ -207,7 +223,7 @@ body {
 .feature-3 .article {
   border-bottom:1px dashed #999;
 }
-.feature-3 .article:last-child {
+.feature-3 .article:last-of-type {
   border-bottom: none;
 }
 .feature-3 h3 {
@@ -227,7 +243,57 @@ body {
   color:#555;
 }
 .feature-4 .title {
+  width:180px;
   background-position-y: -180px;
+}
+.feedback-item {
+  position: relative;
+}
+.feedback-item p {
+  font:24px/40px Microsoft Yahei;
+  color:#747474;
+  padding:20px 100px;
+  position: relative;
+}
+.feedback-item p:before,
+.feedback-item p:after {
+  font:100px/100px Arial;
+  position: absolute;
+  color:#747474;
+}
+.feedback-item p:before {
+  content: '“';
+  left:60px;
+  top:-10px;
+}
+.feedback-item p:after {
+ content: '”'; 
+ right: 80px;
+ bottom:-35px;
+}
+.feedback-item h3,
+.feedback-item h4 {
+  text-align: right;
+  margin:0;
+  padding:0 200px;
+}
+.feedback-item h3 {
+  font:14px/20px Simsun;
+}
+.feedback-item h4 {
+  font:34px/40px Microsoft Yahei;
+}
+.feedback-item img {
+  width:76px;
+  height:76px;
+  border-radius: 40px;
+  border:2px solid #FF7765;
+  position: absolute;
+  bottom: 0;
+  right:110px;
+}
+.feature-5 .title {
+  background-position-y: -240px;
 }
 .feature-5 .partner-logos {
   margin:0;
@@ -239,4 +305,57 @@ body {
   background:#FFF;
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
   display: inline-block;
+}
+
+/** ---------------
+ * 脚部
+ * -------------- */
+footer {
+  background: #920042;
+  padding:10px 0;
+  color:#FFF;
+  font:14px/28px Simsun;
+}
+footer h2 {
+  font: 28px/40px Microsoft Yahei;
+  margin: 20px 0 10px;
+}
+footer a {
+  color:#FFF;
+}
+footer a:hover {
+  color:#FF0;
+  text-decoration: underline;
+}
+footer .copyright {
+  text-align: center;
+  border-top:1px solid #FFF;
+  line-height:35px;
+}
+#download {
+  padding:10px 0 0;
+  margin:0;
+  overflow:hidden;
+}
+#download li {
+  list-style: none;
+  width:150px;
+  margin:0 30px 20px 0;
+  text-align: center;
+  float:left;
+}
+#download small {
+  font:10px/25px Arial;
+}
+#download .icon-Android,
+#download .icon-ios {
+  display:inline-block;
+  width:19px;
+  height:24px;
+  background:url(img/platform.png) no-repeat;
+  vertical-align:text-bottom;
+}
+#download .icon-ios {
+  width:21px;
+  background-position-x: -19px;
 }

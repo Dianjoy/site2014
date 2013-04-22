@@ -33,6 +33,20 @@ if (have_posts()) {
   );
   $result['noblog'] = $noblog;
 }
+
+// 读取业内评价
+$result['feedback'] = array();
+$args = array('post_type' => 'feedback', 'posts_per_page' => 50);
+$feedbacks = new WP_Query($args);
+while ($feedbacks->have_posts()) {
+  $feedbacks->the_post();
+  $content = get_the_content();
+  $content = apply_filters('the_content', $content);
+  $result['feedback'][] = array(
+    'content' => $content,
+    'thumbnail' => get_the_post_thumbnail(),
+  ); 
+}
 // 读取合作伙伴
 $result['partner'] = array();
 $args = array('post_type' => 'partner', 'posts_per_page' => 20);

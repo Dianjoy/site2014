@@ -10,14 +10,14 @@
       <div class="mobile"><img src="{{home_url}}wp-content/themes/dian2013/img/mobile0.png" width="270" height="253" /></div>
       <h3>海纳百川</h3>
       <h4>广告主的精准推广平台</h4>
-      <a href="/advertiser" class="link-button">了解更多…</a>
+      <a href="/advertiser" class="button link-button">了解更多…</a>
     </div>
     <div class="item item-1">
       <img src="{{home_url}}wp-content/themes/dian2013/img/slide1.jpg" width="1000" height="437" />
       <div class="mobile"><img src="{{home_url}}wp-content/themes/dian2013/img/mobile1.png" width="270" height="253" /></div>
       <h3>一日千里</h3>
       <h4>开发者的梦想创业伙伴</h4>
-      <a href="/developer" class="link-button">了解更多…</a>
+      <a href="/developer" class="button link-button">了解更多…</a>
     </div>
   </div>
   <!-- Carousel nav -->
@@ -116,6 +116,7 @@
         <div class="excerpt">{{{excerpt}}}</div>
       </div>
       {{/blog}}
+      <a href="/news" class="button button-full-width">了解更多....</a>
     </div>
   </div>
 </div>
@@ -123,6 +124,14 @@
   <div class="title">
     <h2>业内评价</h2>
     <small>CUSTOMER FEEDBACK</small>
+  </div>
+  <div>
+    {{#feedback}}
+    <div class="feedback-item">
+      {{{content}}}
+      {{{thumbnail}}}
+    </div>
+    {{/feedback}}
   </div>
 </div>
 <div class="container feature feature-5 mt50">

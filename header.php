@@ -10,6 +10,8 @@
 require_once('inc/mustache.php');
 $tpl = new Mustache_Engine();
 
+global $page, $paged;
+$pagenum = $page > 2 || $paged > 2 ? ' | ' . sprintf(__('第 %s 页'), max($paged, $page)) : '';
 $nav = array(
   'container_class' => 'span9',
   'echo' => FALSE,
@@ -17,7 +19,7 @@ $nav = array(
   'menu_class' => 'menu pull-right',
 );
 $result = array(
-  'title' => wp_title('|', FALSE, 'right'),
+  'title' => wp_title('|', FALSE, 'right') . get_bloginfo('name') . $pagenum,
   'pingback' => get_bloginfo('pingback_url'),
   'home_url' => esc_url(home_url('/')),
   'name' => get_bloginfo('name'),
@@ -25,7 +27,12 @@ $result = array(
   'nav' => wp_nav_menu($nav),
 );
 
+// 为了保证wp_head的输出
 $template = dirname(__FILE__) . '/template/header.html';
 $template = file_get_contents($template);
-echo $tpl->render($template, $result);
+$html = $tpl->render($template, $result);
+$htmls = explode('<!-- wp_head -->', $html);
+echo $htmls[0];
+wp_head();
+echo $htmls[1];
 ?>

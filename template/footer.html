@@ -1,0 +1,34 @@
+<footer class="mt50">
+  <div class="bar">
+    <div class="container">
+      <div class="row">
+        <div class="span7">
+          <h2>联系我们</h2>
+          <p>
+            商务合作QQ：2360462740<br /> 
+            开发者合作QQ：473356366<br />
+            开发者QQ群：179416952<br />
+            <a href="mailto:support@dianjoy.com">support@dianjoy.com</a><br />
+            <a href="http://weibo.com/dianjoy">http://weibo.com/dianjoy</a><br />
+            北京市朝阳区霞光里15号霄云中心A座2305室 +86(0)10-84463838<br />
+            广州市珠江新城海明路20号力迅上筑西区243号 020-38279055
+          </p>
+        </div>
+        <div class="span5">
+          <h2>最新下载</h2>
+          <ul id="download">
+            {{#sdks}}
+            <li>
+              <a href="url" class="button button-big download-button" title="点乐 {{type}} SDK {{name}}" download="点乐{{type}}SDK{{name}}.zip"><i class="icon-{{platform}}"></i> {{type}} SDK</a>
+              <small>(Ver. {{version}})</small>
+            </li>
+            {{/sdks}}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="copyright container">
+      点乐 &copy; 2013 保留一切权力     京ICP备12010382号
+    </p>
+  </div>
+</footer>
