@@ -359,3 +359,69 @@ footer .copyright {
   width:21px;
   background-position-x: -19px;
 }
+
+/** ===================================
+ * 广告主
+ * 从上至下
+ * ================================== */
+#advertiser-topbar {
+  width:1000px;
+  color:#FFF;
+  background:url(img/advertiser-bg.jpg) no-repeat;
+  height:324px;
+  overflow:hidden;
+  position: relative;
+}
+#feedback {
+  position: relative;
+  margin-top: 35px;
+}
+#feedback p,
+#feedback p:before,
+#feedback p:after {
+  color:#FFF;
+}
+#advertiser-topbar .nav {
+  position: absolute;
+  bottom: 14px;
+  left:0;
+  right:0;
+}
+.page-nav {
+  margin:0;
+}
+.page-nav a {
+  color:#FFF;
+  background:none;
+  font:20px/60px Microsoft Yahei;
+}
+.page-nav a:hover {
+  color:#FF0;
+  text-decoration: underline;
+}
+.page-nav li {
+  background:#DD5648;
+  border-radius: 4px 4px 0 0;
+  text-align: center;
+  width:320px;
+  
+}
+.page-nav li.active {
+  background:#94133B;
+  border:1px solid #FFF;
+  border-bottom-color:#94133B;
+}
+.page-nav li.active a {
+  color:#FFF
+  background:none;
+}
+#advertiser-topbar .nav-bottom {
+  height:13px;
+  border-top:1px solid #FFF;
+  font:0/0 Simsun;
+  background:#94133B;
+  position: absolute;
+  bottom: 0;
+  left:0;
+  right:0;
+}
