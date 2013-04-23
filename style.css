@@ -38,6 +38,10 @@ body {
   border-radius: 0 10px 0 10px;
   box-shadow:inset 1px 0 1px 0 rgba(0, 0, 0, 0.3),inset 0 1px 1px 0 rgba(255, 255, 255, 0.5), inset -1px 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
 }
+.button-medium {
+  width:125px;
+  font:16px/32px Simsun;
+}
 .button-big {
   width:150px;
   font:18px/36px Simsun;
@@ -93,7 +97,7 @@ body {
  * 轮播图
  * -------------- */
 #top-slide {
-  width:1000px;
+  width:100%;
   color:#FFF;
 }
 #top-slide .carousel-indicators {
@@ -114,6 +118,18 @@ body {
   font:28px/30px Microsoft Yahei, Simhei;
   text-shadow:0 1px 8px rgba(0, 0, 0, 0.5);
 }
+#top-slide .item {
+  width:100%;
+  height:437px;
+}
+#top-slide .content {
+  width:1000px;
+  margin:0 auto;
+  position: relative;
+}
+#top-slide .item-0 {
+  background:url(img/slide0.jpg) center 0;
+}
 #top-slide .item-0 .mobile {
   top: 92px;
   left:560px;
@@ -129,6 +145,9 @@ body {
 #top-slide .item-0 .link-button {
   top:244px;
   left:224px;
+}
+#top-slide .item-1 {
+  background:url(img/slide1.jpg) center 0;
 }
 #top-slide .item-1 .mobile {
   left:111px;
@@ -177,7 +196,7 @@ body {
   text-align: center;
   margin-bottom: 30px;
 }
-.feature h2 {
+.title h2 {
   font:30px/30px Microsoft Yahei, Simhei;
   color:#F24C4C;
   margin-bottom:4px;
@@ -267,9 +286,9 @@ body {
   top:-10px;
 }
 .feedback-item p:after {
- content: '”'; 
- right: 80px;
- bottom:-35px;
+  content: '”'; 
+  right: 80px;
+  bottom:-35px;
 }
 .feedback-item h3,
 .feedback-item h4 {
@@ -361,17 +380,80 @@ footer .copyright {
 }
 
 /** ===================================
- * 广告主
+ * 广告主 & 开发者
  * 从上至下
  * ================================== */
-#advertiser-topbar {
-  width:1000px;
+.page-topbar {
+  width:100%;
   color:#FFF;
-  background:url(img/advertiser-bg.jpg) no-repeat;
-  height:324px;
+  height:338px;
   overflow:hidden;
   position: relative;
 }
+#advertiser-topbar {
+  background:url(img/advertiser-bg.jpg) center 0;
+}
+#developer-topbar {
+  background:url(img/developer-bg.jpg) center 0;
+}
+.page-topbar .nav-bottom {
+  height:13px;
+  border-top:1px solid #FFF;
+  font:0/0 Simsun;
+  background:#94133B;
+  position: absolute;
+  bottom: 0;
+  left:0;
+  right:0;
+}
+.page-topbar .nav {
+  position: absolute;
+  bottom: 13px;
+  left:0;
+  right:0;
+  z-index:2;
+}
+.page-nav {
+  width:982px;
+  margin:0 auto;
+  padding:0 9px;
+}
+.page-nav > li > a {
+  color:#FFF;
+  background:none;
+  font:20px/63px Microsoft Yahei;
+  background:#DD5648;
+  border-radius: 4px 4px 0 0;
+  width:320px;
+  margin:0;
+  padding:0;
+  border:none;
+}
+.page-nav > li > a:hover {
+  color:#FF0;
+  text-decoration: underline;
+  background:#94133B;
+}
+.page-nav li.active a {
+  border:1px solid #FFF;
+  border-bottom-color:#94133B;
+  background:#94133B;
+  color:#FFF;
+  line-height:62px;
+}
+.page-nav li.active a:hover {
+  background:#94133B;
+  color:#FFF;
+  text-decoration: none;
+}
+.page-nav li {
+  text-align: center;
+  margin:0 10px -1px 0;
+}
+.page-nav li:last-child {
+  margin-right: 0;
+}
+
 #feedback {
   position: relative;
   margin-top: 35px;
@@ -381,47 +463,116 @@ footer .copyright {
 #feedback p:after {
   color:#FFF;
 }
-#advertiser-topbar .nav {
-  position: absolute;
-  bottom: 14px;
-  left:0;
-  right:0;
+#feedback p {
+  font:20px/30px Microsoft Yahei;
 }
-.page-nav {
-  margin:0;
+
+#sdks {
+  margin:30px auto 0;
+  width:1000px;
 }
-.page-nav a {
-  color:#FFF;
-  background:none;
-  font:20px/60px Microsoft Yahei;
+#sdks h2 {
+  font:38px/50px Microsoft Yahei, Simhei;
 }
-.page-nav a:hover {
-  color:#FF0;
-  text-decoration: underline;
+#sdks p {
+  margin-bottom: 30px;
 }
-.page-nav li {
-  background:#DD5648;
-  border-radius: 4px 4px 0 0;
-  text-align: center;
-  width:320px;
-  
+#sdks .button {
+  display:inline-block;
+  margin-right: 20px;
 }
-.page-nav li.active {
-  background:#94133B;
-  border:1px solid #FFF;
-  border-bottom-color:#94133B;
+
+.feature-6 .title {
+  background-position-y:-300px;
+  width:200px;
+  padding-left:70px;
+  text-align: left;
 }
-.page-nav li.active a {
-  color:#FFF
-  background:none;
+.advertiser .content {
+  padding-left:70px;
+  line-height:28px;
 }
-#advertiser-topbar .nav-bottom {
-  height:13px;
-  border-top:1px solid #FFF;
-  font:0/0 Simsun;
-  background:#94133B;
-  position: absolute;
-  bottom: 0;
-  left:0;
-  right:0;
+.content .figure {
+  margin:0 auto;
+  padding: 5px;
+  width: auto;
+  display:inline-block;
+}
+.content .figure img {
+  max-width:inherit;
+  border-radius: 0 8px 0 8px;
+}
+.feature-7 .title {
+  background-position-y: -360px;
+  width:240px;
+  text-align:left;
+  padding-left:60px;
+}
+.feature-7 h2,
+.feature-9 h2 {
+  font:30px/40px Microsoft Yahei;
+}
+.feature-7 .row,
+.feature-9 .row {
+  background-image: linear-gradient(top, #E8E8E8 0%, #F6F6F6 100%);
+  background-image: -webkit-linear-gradient(top, #E8E8E8 0%, #F6F6F6 100%);
+  border-bottom: 2px solid #FFF;
+  line-height: 28px;
+  padding:40px 0;
+}
+.feature-7 .row.no-bg,
+.feature-9 .row.no-bg {
+  background-image: linear-gradient(bottom, #E8E8E8 0%, #F6F6F6 100%);
+  background-image: -webkit-linear-gradient(bottom, #E8E8E8 0%, #F6F6F6 100%);
+}
+.feature-7 .row:last-child, 
+.feature-9 .row:last-child {
+  min-height:100px;
+  border:none;
+}
+.feature-7 .row.snip,
+.feature-9 .row.snip {
+  padding-bottom:0;
+}
+.feature-8 .title {
+  background-position-y: -420px;
+  width:240px;
+  text-align: left;
+  padding-left:75px;
+}
+
+.top-row {
+  padding: 60px 0;
+  background-image: linear-gradient(bottom, #E8E8E8 0%, #F6F6F6 100%);
+  background-image: -webkit-linear-gradient(bottom, #E8E8E8 0%, #F6F6F6 100%);
+  border-bottom: 2px solid #FFF;
+}
+.main-feature {
+  width:600px;
+  padding:20px 90px;
+  background: #FFF;
+  border-radius: 0 10px 0 10px;
+  box-shadow: -2px 1px 4px 1px rgba(0, 0, 0, 0.3);
+  margin:0 auto;
+}
+.main-feature h2 {
+  background: url(img/features.png) 0 -480px no-repeat;
+  padding-left: 60px;
+  font:30px/60px Microsoft Yahei, Simhei;
+  color:#E94C45;
+  margin:0 130px 30px;
+}
+.main-feature li {
+  list-style: none;
+  font:18px/36px Microsoft Yahei, Simhei;
+  color: #666;
+  background:url(img/arrow.png) 0 4px no-repeat;
+  padding-left: 30px;
+}
+.feature-9 .title {
+  background-position-y: -540px;
+  width:400px;
+}
+.feature-9 .title h2 {
+  line-height:60px;
 }

@@ -25,6 +25,7 @@ while ($feedbacks->have_posts()) {
   ); 
 }
 $result = array(
+  'home_url' => esc_url(home_url('/')),
   'feedback' => $feedback,
 );
 
