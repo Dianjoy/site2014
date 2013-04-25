@@ -7,25 +7,36 @@
  */
 get_header(); ?>
 
-	<div id="primary" class="site-content">
-		<div id="content" role="main">
+<?php
+// 生成列表
+if (have_posts()) {
+  while (have_posts()) {
+    the_post();
+    $blog = array(
+      'id' => get_the_ID(),
+      'is_featured' => is_sticky() && is_home() && ! is_paged(),
+      'class' => join(' ', get_post_class($class, $post_id)),
+      'title' => the_title('', '', FALSE),
+      'full_title' => the_title_attribute(array('echo' => FALSE)),
+      'is_search' => is_search(),
+      'link' => apply_filters('the_permalink', get_permalink()),
+      'date' => apply_filters('the_time', get_the_time('Y-m-d'), 'Y-m-d'),
+      'excerpt' => apply_filters('the_excerpt', get_the_excerpt()),
+      'content' => the_content('继续阅读'),
+      'thumbnail' => get_the_post_thumbnail(),
+      //'meta' => twentytwelve_entry_meta(),
+    );
+  }
+}
 
-			<?php while ( have_posts() ) : the_post(); ?>
+require_once('inc/mustache.php');
+$tpl = new Mustache_Engine();
 
-				<?php get_template_part( 'content', get_post_format() ); ?>
+$template = dirname(__FILE__) . '/template/single.html';
+$template = file_get_contents($template);
+echo $tpl->render($template, $blog);
 
-				<nav class="nav-single">
-					<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentytwelve' ); ?></h3>
-					<span class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'twentytwelve' ) . '</span> %title' ); ?></span>
-					<span class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'twentytwelve' ) . '</span>' ); ?></span>
-				</nav><!-- .nav-single -->
-
-				<?php comments_template( '', true ); ?>
-
-			<?php endwhile; // end of the loop. ?>
-
-		</div><!-- #content -->
-	</div><!-- #primary -->
+?>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

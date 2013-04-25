@@ -31,6 +31,9 @@ function dian2013_setup() {
   add_theme_support('custom-background', array(
     'default-color' => 'F6F6F6',
   ));
+
+  add_theme_support( 'post-thumbnails' );
+  set_post_thumbnail_size(400, 1000); // Unlimited height, soft crop
 }
 add_action('after_setup_theme', 'dian2013_setup');
 
@@ -73,5 +76,43 @@ function create_post_type() {
 }
 add_action('init', 'create_post_type');
 
-add_theme_support( 'post-thumbnails' ); 
+/**
+ * 添加边栏
+ *
+ * @since dian2013 1.0
+ */
+function dian2013_widgets_init() {
+  register_sidebar( array(
+    'name' => '主边栏',
+    'id' => 'sidebar-1',
+    'description' => '文章列表及文章右侧',
+    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+    'after_widget' => '</aside>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>',
+  ) );
+}
+add_action('widgets_init', 'dian2013_widgets_init');
+
+
+if (!function_exists( 'twentytwelve_content_nav')) :
+/**
+ * Displays navigation to next/previous pages when applicable.
+ *
+ * @since Twenty Twelve 1.0
+ */
+function twentytwelve_content_nav( $html_id ) {
+  global $wp_query;
+
+  $html_id = esc_attr( $html_id );
+
+  if ( $wp_query->max_num_pages > 1 ) : ?>
+    <nav id="<?php echo $html_id; ?>" class="navigation" role="navigation">
+      <h3 class="assistive-text"><?php _e( 'Post navigation', 'twentytwelve' ); ?></h3>
+      <div class="nav-previous alignleft"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'twentytwelve' ) ); ?></div>
+      <div class="nav-next alignright"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?></div>
+    </nav><!-- #<?php echo $html_id; ?> .navigation -->
+  <?php endif;
+}
+endif;
 ?>

@@ -1,0 +1,28 @@
+<div id="primary" class="site-content mt50 single container">
+  <div id="content" role="main">
+    <article id="post-{{id}}" class="{{class}}">
+      {{#is_featured}}
+      <div class="label label-success featured-post">
+        推荐文章
+      </div>
+      {{/is_featured}}
+      <header class="entry-header">
+        {{{thumbnail}}}
+        <h1 class="entry-title">{{full_title}}</h1>
+      </header>
+
+      {{#is_search}}
+      <div class="entry-summary label label-info">
+        {{{excerpt}}}
+      </div>
+      {{/is_search}}
+      {{^is_search}}
+      <div class="entry-content">
+        {{{content}}}
+      </div>
+      {{/is_search}}
+      <footer class="entry-meta">
+      </footer>
+    </article>
+  </div>
+</div>

@@ -14,6 +14,7 @@ $result = array();
 // 读取公司新闻
 if (have_posts()) {
   $blog = array();
+  $count = 0;
   while (have_posts()) {
     the_post();
     $blog[] = array(
@@ -23,7 +24,12 @@ if (have_posts()) {
       'link' => apply_filters('the_permalink', get_permalink()),
       'date' => apply_filters('the_time', get_the_time('Y-m-d'), 'Y-m-d'),
       'excerpt' => apply_filters('the_excerpt', get_the_excerpt()),
+      'thumbnail' => get_the_post_thumbnail(),
     );
+    $count ++;
+    if ($count >= 2) {
+      break;
+    }
   }
   $result['blog'] = $blog;
 } else {

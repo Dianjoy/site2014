@@ -1,0 +1,37 @@
+<section id="primary" class="site-content category container mt50">
+  <h1>{{category}}</h1>
+  {{#description}}
+  <p class="lead">
+    {{description}}
+  </p>
+  {{/description}}
+  <div class="hr-bar"></div>
+  <div id="content" role="main" class="mt30">
+    {{#blog}}
+    <article class="article {{class}}">
+      <h2><a href="{{link}}" title="{{full_title}}" target="_blank">{{title}}</a></h2>
+      <p class="meta">发布于 {{date}}</p>
+      {{#thumbnail}}
+      <p class="thumbnail"><a href="{{link}}" target="_blank">{{{thumbnail}}}</a></p>
+      {{/thumbnail}}
+      <div class="excerpt">{{{excerpt}}}</div>
+      <a href="{{link}}" title="{{full_title}}" target="_blank" class="button button-big">阅读全文</a>
+    </article>
+    {{/blog}}
+  </div>
+  {{#pages}}
+  <hr />
+  <ul class="pager">
+    {{#prev}}
+    <li class="previous">
+      <a href="{{prev}}">&larr; 更早的新闻</a>
+    </li>
+    {{/prev}}
+    {{#next}}
+    <li class="next">
+      <a href="{{next}}">稍迟的新闻 &rarr;</a>
+    </li>
+    {{/next}}
+  </ul>
+  {{/pages}}
+</section>

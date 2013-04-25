@@ -7,39 +7,48 @@
  */
 get_header(); ?>
 
-	<section id="primary" class="site-content">
-		<div id="content" role="main">
+<?php
+// 生成列表
+if (have_posts()) {
+  $blog = array();
+  while (have_posts()) {
+    the_post();
+    $blog[] = array(
+      'class' => join(' ', get_post_class($class, $post_id)),
+      'title' => the_title('', '', FALSE),
+      'full_title' => the_title_attribute(array('echo' => FALSE)),
+      'link' => apply_filters('the_permalink', get_permalink()),
+      'date' => apply_filters('the_time', get_the_time('Y-m-d'), 'Y-m-d'),
+      'excerpt' => apply_filters('the_excerpt', get_the_excerpt()),
+      'thumbnail' => get_the_post_thumbnail(),
+    );
+  }
+}
 
-		<?php if ( have_posts() ) : ?>
-			<header class="archive-header">
-				<h1 class="archive-title"><?php printf( __( 'Category Archives: %s', 'twentytwelve' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h1>
+// 生成翻页
+$max_page = $wp_query->max_num_pages;
+$cur_page = isset($curpage) ? $curpage : 1;
+$next_page = $cur_page + 1;
 
-			<?php if ( category_description() ) : // Show an optional category description ?>
-				<div class="archive-meta"><?php echo category_description(); ?></div>
-			<?php endif; ?>
-			</header><!-- .archive-header -->
+// 整理输出
+$result = array(
+  'category' => single_cat_title('', false),
+  'description' => category_description(),
+  'blog' => $blog,
+  'pages' => $wp_query->max_num_pages > 1 ? array(
+    'prev' => $next_page <= $max_page ? next_posts($next_page, false) : NULL,
+    'next' => $cur_page > 1 ? previous_posts(false) : NULL,
+  ) : NULL,
+);
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+require_once('inc/mustache.php');
+$tpl = new Mustache_Engine();
 
-				/* Include the post format-specific template for the content. If you want to
-				 * this in a child theme then include a file called called content-___.php
-				 * (where ___ is the post format) and that will be used instead.
-				 */
-				get_template_part( 'content', get_post_format() );
+$template = dirname(__FILE__) . '/template/category.html';
+$template = file_get_contents($template);
+echo $tpl->render($template, $result);
 
-			endwhile;
-
-			twentytwelve_content_nav( 'nav-below' );
-			?>
-
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-		<?php endif; ?>
-
-		</div><!-- #content -->
-	</section><!-- #primary -->
+?>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

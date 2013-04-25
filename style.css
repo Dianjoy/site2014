@@ -16,6 +16,9 @@ body {
 .single-column {
   margin: 0 auto;
 }
+.mt30 {
+  margin-top:30px;
+}
 .mt50 {
   margin-top:50px;
 }
@@ -23,6 +26,12 @@ body {
   border-top:2px solid #C17698;
   border-bottom:2px solid #C17698;
   background:#7B0D66;
+}
+.hr-bar {
+  border-top: 2px solid #C17698;
+  background:#7B0D66;
+  min-height:4px;
+  font:0/0 Arial;
 }
 
 /** ===================================
@@ -48,6 +57,10 @@ body {
 }
 .button-full-width {
   width:100%;
+}
+.button:hover {
+  color:#FF0;
+  text-decoration: none;
 }
 
 /** ===================================
@@ -241,6 +254,7 @@ body {
 }
 .feature-3 .article {
   border-bottom:1px dashed #999;
+  margin-bottom: 15px;
 }
 .feature-3 .article:last-of-type {
   border-bottom: none;
@@ -593,4 +607,26 @@ footer .copyright {
   width: 490px;
   text-align: left;
   padding-left:60px;
+}
+
+/** ===================================
+ * 文章页 缺省专题页
+ * 样式比较简单
+ * ================================== */
+.site-content {
+  background: #FFF;
+  padding: 35px;
+  box-shadow: -2px 1px 4px 1px rgba(0,0,0,0.2);
+  border-radius: 0 10px 0 10px;
+}
+p.thumbnail {
+  display:inline-block;
+}
+.page h1,
+.category h1 {
+  margin-bottom: 30px;
+  color:#EC4C45;
+}
+.category article {
+  margin:0 0 50px;
 }
