@@ -13,6 +13,9 @@ body {
   background:#F6F6F6;
   font-family: simsun;
 }
+h1, h2, h3, h4 {
+  font-family: Microsoft Yahei, Simhei;
+}
 .single-column {
   margin: 0 auto;
 }
@@ -343,24 +346,24 @@ body {
 /** ---------------
  * 脚部
  * -------------- */
-footer {
+#main-footer {
   background: #920042;
   padding:10px 0;
   color:#FFF;
   font:14px/28px Simsun;
 }
-footer h2 {
+#main-footer h2 {
   font: 28px/40px Microsoft Yahei;
   margin: 20px 0 10px;
 }
-footer a {
+#main-footer a {
   color:#FFF;
 }
-footer a:hover {
+#main-footer a:hover {
   color:#FF0;
   text-decoration: underline;
 }
-footer .copyright {
+#main-footer .copyright {
   text-align: center;
   border-top:1px solid #FFF;
   line-height:35px;
@@ -619,6 +622,10 @@ footer .copyright {
   box-shadow: -2px 1px 4px 1px rgba(0,0,0,0.2);
   border-radius: 0 10px 0 10px;
 }
+.site-content.single,
+.site-content.category {
+  padding:12px 20px;
+}
 p.thumbnail {
   display:inline-block;
 }
@@ -629,4 +636,21 @@ p.thumbnail {
 }
 .category article {
   margin:0 0 50px;
+}
+.single .date {
+  margin-left:40px;
+}
+.single footer {
+  padding: 15px 0;
+}
+
+/** ===================================
+ * 文章页 缺省专题页
+ * 样式比较简单
+ * ================================== */
+#secondary aside {
+  background: #FFF;
+  padding: 10px;
+  box-shadow: -2px 1px 4px 1px rgba(0,0,0,0.2);
+  border-radius: 0 10px 0 10px;
 }

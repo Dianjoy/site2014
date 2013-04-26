@@ -1,4 +1,4 @@
-<div id="primary" class="site-content mt50 single container">
+<div id="primary" class="site-content mt50 single span9">
   <div id="content" role="main">
     <article id="post-{{id}}" class="{{class}}">
       {{#is_featured}}
@@ -6,23 +6,54 @@
         推荐文章
       </div>
       {{/is_featured}}
+      
       <header class="entry-header">
-        {{{thumbnail}}}
         <h1 class="entry-title">{{full_title}}</h1>
+        <ul class="breadcrumb">
+          <li><a href="/">首页</a> <span class="divider">/</span></li>
+          <li>{{{category}}} <span class="divider">/</span></li>
+          <li class="active">正文</li>
+          <li class="active date">| 发布于 {{date}}</li>
+        </ul>
       </header>
 
       {{#is_search}}
-      <div class="entry-summary label label-info">
+      <div class="entry-summary label label-info mt30">
         {{{excerpt}}}
       </div>
       {{/is_search}}
       {{^is_search}}
-      <div class="entry-content">
+      <div class="entry-content mt30">
         {{{content}}}
       </div>
       {{/is_search}}
-      <footer class="entry-meta">
+      <footer class="tags">
+        <hr />
+        标签：{{{tags}}}
       </footer>
     </article>
   </div>
+  
+  <!-- Duoshuo Comment BEGIN -->
+  <div class="ds-thread"></div>
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"dianjoy"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';
+      ds.async = true;
+      ds.src = 'http://static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0] 
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    }());
+  </script>
+  <!-- Duoshuo Comment END -->
+  
+  <!-- JiaThis Button BEGIN -->
+  <script>
+    var jiathis_config = {data_track_clickback: 'true'};
+  </script>
+  <script src="http://v3.jiathis.com/code/jiathis_r.js?move=0&amp;btn=r5.gif&amp;uid=1362193362797406"></script>
+  <!-- JiaThis Button END -->
 </div>
