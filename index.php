@@ -61,7 +61,7 @@ while ($partners->have_posts()) {
   $partners->the_post();
   $result['partner'][] = array(
     'title' => the_title('', '', FALSE),
-    'thumbnail' => get_the_post_thumbnail(),
+    'thumbnail' => get_the_post_thumbnail(null, 'homepage-partners'),
   ); 
 }
 

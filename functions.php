@@ -34,6 +34,7 @@ function dian2013_setup() {
 
   add_theme_support( 'post-thumbnails' );
   set_post_thumbnail_size(400, 1000); // Unlimited height, soft crop
+  add_image_size('homepage-partners', 300, 80);
 }
 add_action('after_setup_theme', 'dian2013_setup');
 
