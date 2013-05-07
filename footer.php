@@ -10,9 +10,9 @@
 require_once('inc/mustache.php');
 $tpl = new Mustache_Engine();
 
-// SDK路径如 sdk/Dianjoy_android_SDK_v2.1.zip
+// SDK路径如 ../sdk/Dianjoy_android_SDK_v2.1.zip
 $sdks = array();
-$zipfiles = glob('../sdk/*.zip');
+$zipfiles = glob('dev/sdk/*.zip');
 foreach ($zipfiles as $zip) {
   $arr = explode('/', $zip);
   $file = $arr[count($arr) - 1];

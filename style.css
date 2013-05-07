@@ -385,14 +385,14 @@ h1, h2, h3, h4 {
   font:10px/25px Arial;
 }
 #download .icon-Android,
-#download .icon-ios {
+#download .icon-iOS {
   display:inline-block;
   width:19px;
   height:24px;
   background:url(img/platform.png) no-repeat;
   vertical-align:text-bottom;
 }
-#download .icon-ios {
+#download .icon-iOS {
   width:21px;
   background-position-x: -19px;
 }
@@ -474,7 +474,8 @@ h1, h2, h3, h4 {
 
 #feedback {
   position: relative;
-  margin-top: 35px;
+  margin: 35px auto 0;
+  width:1000px;
 }
 #feedback p,
 #feedback p:before,
@@ -654,4 +655,14 @@ p.thumbnail {
   padding: 10px;
   box-shadow: -2px 1px 4px 1px rgba(0,0,0,0.2);
   border-radius: 0 10px 0 10px;
+}
+
+/** ===================================
+ * 响应式部分
+ * 主要覆盖bootstrap的样式
+ * ================================== */
+@media (min-width:1200px) {
+  #sdks {
+    width:1200px;
+  }
 }
