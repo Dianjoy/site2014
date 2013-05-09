@@ -597,9 +597,34 @@ h1, h2, h3, h4 {
   background:url(img/arrow.png) 0 4px no-repeat;
   padding-left: 30px;
 }
+.feature-8 .content {
+  padding:0;
+  overflow-x:hidden;
+}
+.feature-8 .gallery {
+  margin-right:-44px;
+}
+.feature-8 .gallery-item {
+  float:left;
+  margin:0 26px 20px 0;
+  text-align: center;
+}
+.feature-8 .gallery-icon {
+  min-height:135px;
+  min-width:135px;
+}
+.feature-8 .gallery-item img {
+  max-width: 135px;
+  max-height: 135px;
+}
+.feature-8 .gallery dd {
+  margin:0;
+  font:16px/40px Simsun;
+}
 .feature-9 .title {
   background-position-y: -540px;
   width:400px;
+  font:16px/30px Simsun;
 }
 .feature-9 .title h2 {
   line-height:60px;
@@ -664,5 +689,19 @@ p.thumbnail {
 @media (min-width:1200px) {
   #sdks {
     width:1200px;
+  }
+  .feature-8 .gallery {
+    margin-right:-54px;
+  }
+  .feature-8 .gallery-item {
+    margin:0 54px 20px 0;
+  }
+  .feature-8 .gallery-icon {
+    min-width: 150px;
+    min-height: 150px;
+  }
+  .feature-8 .gallery-item img {
+    max-width: 150px;
+    max-height: 150px;
   }
 }
