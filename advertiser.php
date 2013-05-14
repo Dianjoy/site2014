@@ -30,7 +30,7 @@ $result = array(
 );
 
 // 读取合作案例
-$sub_page_id = 732;
+$sub_page_id = 766;
 query_posts("page_id=$sub_page_id");
 if (have_posts()) {
   the_post();

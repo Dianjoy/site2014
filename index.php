@@ -24,7 +24,7 @@ if (have_posts()) {
       'link' => apply_filters('the_permalink', get_permalink()),
       'date' => apply_filters('the_time', get_the_time('Y-m-d'), 'Y-m-d'),
       'excerpt' => apply_filters('the_excerpt', get_the_excerpt()),
-      'thumbnail' => get_the_post_thumbnail(),
+      'thumbnail' => get_the_post_thumbnail(null, 'homepage-posts'),
     );
     $count ++;
     if ($count >= 2) {
