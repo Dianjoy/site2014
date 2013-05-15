@@ -207,19 +207,12 @@ h1, h2, h3, h4 {
  * -------------- */
 .feature .title {
   background:url(img/features.png) no-repeat;
-  padding:0 0 0 45px;
-  width:140px;
-  text-align: center;
+  padding:0 0 0 50px;
   margin-bottom: 30px;
 }
 .title h2 {
-  font:30px/30px Microsoft Yahei, Simhei;
+  font:30px/60px Microsoft Yahei, Simhei;
   color:#F24C4C;
-  margin-bottom:4px;
-}
-.feature small {
-  font:14px/20px Arial, Simsun;
-  color:#666;
 }
 .figure {
   width:252px;
@@ -245,9 +238,6 @@ h1, h2, h3, h4 {
   color:#666;
   width:252px;
   padding:5px;
-}
-.feature-1 .title {
-  width:160px;
 }
 .feature-2 .title {
   background-position-y: -60px;
@@ -507,7 +497,6 @@ h1, h2, h3, h4 {
 
 .feature-6 .title {
   background-position-y:-300px;
-  width:200px;
   padding-left:70px;
   text-align: left;
 }
@@ -527,15 +516,8 @@ h1, h2, h3, h4 {
 }
 .feature-7 .title {
   background-position-y: -360px;
-  width:240px;
   text-align:left;
   padding-left:60px;
-}
-.feature-7 h2,
-.feature-9 h2,
-.feature-10 h2,
-.feature-11 h2 {
-  font:30px/40px Microsoft Yahei;
 }
 .feature-7 .row,
 .feature-9 .row,
@@ -568,7 +550,6 @@ h1, h2, h3, h4 {
 }
 .feature-8 .title {
   background-position-y: -420px;
-  width:240px;
   text-align: left;
   padding-left:75px;
 }
@@ -627,7 +608,6 @@ h1, h2, h3, h4 {
 }
 .feature-9 .title {
   background-position-y: -540px;
-  width:400px;
   font:16px/30px Simsun;
 }
 .feature-9 .title h2 {
@@ -638,7 +618,6 @@ h1, h2, h3, h4 {
 }
 .feature-11 .title {
   background-position-y: -660px;
-  width: 490px;
   text-align: left;
   padding-left:60px;
 }
