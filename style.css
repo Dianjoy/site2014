@@ -275,6 +275,9 @@ h1, h2, h3, h4 {
   margin:0 0 10px;
   color: #999;
 }
+.feature-3 .thumbnail img {
+  max-width:360px;
+}
 .feature-3 .excerpt {
   color:#555;
 }
@@ -499,6 +502,7 @@ h1, h2, h3, h4 {
 #sdks .button {
   display:inline-block;
   margin-right: 20px;
+  font-family: Microsoft Yahei, Simhei;
 }
 
 .feature-6 .title {
