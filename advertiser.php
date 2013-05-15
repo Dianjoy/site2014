@@ -13,7 +13,7 @@ get_header();
 
 // 读取业内评价
 $feedback = array();
-$args = array('post_type' => 'feedback', 'posts_per_page' => 50);
+$args = array('post_type' => 'feedback', 'orderby' => 'rand', 'posts_per_page' => '1');
 $feedbacks = new WP_Query($args);
 while ($feedbacks->have_posts()) {
   $feedbacks->the_post();

@@ -66,13 +66,15 @@ function create_post_type() {
         'name' => '合作伙伴',
         'singular_name' => '合作伙伴',
         'all_items' => '所有合作伙伴',
+        'add_new' => '添加合作伙伴',
+        'add_new_item' => '添加合作伙伴',
       ),
       'public' => true,
       'rewrite' => array('slug' => 'partner'),
       'description' => '用来在首页显示合作伙伴，只有缩略图有意义',
       'exclude_from_search' => true,
       'show_in_nav_menus' => false,
-      'supports' => array('title', 'thumbnail'),
+      'supports' => array('title', 'thumbnail', 'editor'),
     )
   );
 }
