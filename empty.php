@@ -9,11 +9,20 @@
  */
 ?>
 <?php
-get_header();
+ob_start();
+get_header('clear');
 ?>
 
 *** replace ***
 
 <?php
-get_footer();
+get_footer('clear');
+
+// 生成缓存
+$page = ob_get_contents();
+$fp = fopen('empty.html', 'w');
+fwrite($fp, $page);
+fclose($fp);
+
+ob_end_flush();
 ?>
