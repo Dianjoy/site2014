@@ -86,13 +86,20 @@ h1, h2, h3, h4 {
   text-decoration:none;
 }
 #top-navi h1 {
-  text-indent:40px;
   padding-top:0;
   padding-bottom:0;
   margin:0;
   color:#FFF;
   font:bold 28px/36px Microsoft Yahei, Simhei;
-  background:url(img/logo.png) no-repeat 0 center;
+}
+#top-navi .row {
+  position:relative;
+}
+#top-navi .logo {
+  position: absolute;
+  top:-7px;
+  left:0;
+  z-index:10;
 }
 #top-navi .menu,
 #top-navi .menu li {
@@ -119,6 +126,20 @@ h1, h2, h3, h4 {
 #top-slide .carousel-indicators {
   top:auto;
   bottom:15px;
+}
+#top-slide .carousel-control {
+  width:30px;
+  height:28px;
+  padding-bottom: 2px;
+  border: none;
+  background: #FF4642;
+  font-size: 32px;
+  line-height: 28px;
+  border-radius: 0 6px;
+  opacity: 1;
+  top:50%;
+  margin-top:-15px;
+  box-shadow: inset 1px 0 1px 0 rgba(0, 0, 0, 0.3),inset 0 1px 1px 0 rgba(255, 255, 255, 0.5), inset -1px 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
 }
 #top-slide .item .mobile,
 #top-slide h3,
@@ -262,7 +283,7 @@ h1, h2, h3, h4 {
 }
 .feature-3 .meta {
   font:12px/20px Simsun;
-  margin:0 0 10px;
+  margin:0 0 5px;
   color: #999;
 }
 .feature-3 .thumbnail img {
