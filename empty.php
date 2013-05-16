@@ -1,9 +1,9 @@
 <?php
 /*
-  Template Name: 登录页
+  Template Name: 空白页
  */
 /**
- * @overview 登录页模版
+ * @overview 专门做出来给别的地方引用的
  * @author Meathill <lujia.zhai@dianjoy.com>
  * @since 1.0
  */
