@@ -18,8 +18,23 @@ $nav = array(
   'theme_location' => 'primary',
   'menu_class' => 'menu pull-right',
 );
+
+// 提取描述和关键词
+$tags = '';
+if (is_single()) {
+  $description = apply_filters('the_excerpt', get_the_excerpt());
+  $post_tags = get_the_terms(0, 'post_tag');
+  $tags = ',';
+  foreach ($post_tags as $tag) {
+    $tags .= $tag->name . ',';
+  }
+  $tags = substr($tags, 0, -1);
+}
+
 $result = array(
   'title' => wp_title('|', FALSE, 'right') . get_bloginfo('name') . $pagenum,
+  'description' => $description ? $description : get_bloginfo('description'),
+  'keywords' => $tags,
   'pingback' => get_bloginfo('pingback_url'),
   'home_url' => esc_url(home_url('/')),
   'name' => get_bloginfo('name'),
