@@ -40,5 +40,5 @@ echo $tpl->render($template, $blog);
 ?>
 
 <?php get_sidebar(); ?>
-<?php echo '</div></div>' ?>;
+<?php echo '</div></div>' ?>
 <?php get_footer(); ?>

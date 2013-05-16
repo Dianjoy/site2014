@@ -266,7 +266,7 @@ h1, h2, h3, h4 {
   color: #999;
 }
 .feature-3 .thumbnail img {
-  max-width:360px;
+  max-width:290px 0;
 }
 .feature-3 .excerpt {
   color:#555;
@@ -334,7 +334,7 @@ h1, h2, h3, h4 {
   background:#FFF;
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2);
   display: inline-block;
-  margin-right: 10px;
+  margin:0 10px 10px 0;
 }
 
 /** ---------------
@@ -672,6 +672,9 @@ p.thumbnail {
 @media (min-width:1200px) {
   #sdks {
     width:1200px;
+  }
+  .feature-3 .thumbnail img {
+    max-width:360px 0;
   }
   .feature-8 .gallery {
     margin-right:-54px;
