@@ -378,6 +378,18 @@ h1, h2, h3, h4 {
   color:#FF0;
   text-decoration: underline;
 }
+#main-footer dt {
+  font:bold 20px/30px Microsoft Yahei;
+  margin-bottom: 5px;
+}
+#main-footer dd {
+  line-height:28px;
+  margin-bottom: 10px;
+  margin-left: 0;
+}
+#main-footer dd:last-child {
+  margin:0;
+}
 #main-footer .copyright {
   text-align: center;
   border-top:1px solid #FFF;
@@ -666,7 +678,12 @@ p.thumbnail {
   color:#EC4C45;
 }
 .category article {
-  margin:0 0 50px;
+  padding-bottom: 20px;
+  margin:0 0 30px;
+  border-bottom: 2px dashed #CCC;
+}
+.category article:last-of-type {
+  border: none;
 }
 .single .date {
   margin-left:40px;
