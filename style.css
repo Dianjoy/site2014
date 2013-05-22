@@ -3,7 +3,7 @@ Theme Name: Dianjoy 2013
 Theme URI: http://www.dianjoy.com/
 Description: 2013年点乐官网改版
 Author: 肉山
-Version: 1.0 
+Version: 1.0
 Tags: purple， enterprise， fixed-width， responsive， editor-style， custom-menu
 
 License: MIT
@@ -317,7 +317,7 @@ h1, h2, h3, h4 {
   top:-10px;
 }
 .feedback-item p:after {
-  content: '”'; 
+  content: '”';
   right: 80px;
   bottom:-35px;
 }
@@ -440,6 +440,9 @@ h1, h2, h3, h4 {
 #developer-topbar {
   background:url(img/developer-bg.jpg) center 0;
 }
+#about-topbar {
+  background: url(img/about-bg.jpg) center 0;
+}
 .page-topbar .nav-bottom {
   height:13px;
   border-top:1px solid #FFF;
@@ -555,7 +558,8 @@ h1, h2, h3, h4 {
 .feature-7 .row,
 .feature-9 .row,
 .feature-10 .row,
-.feature-11 .row {
+.feature-11 .row,
+.feature-12 .row {
   background-image: linear-gradient(top, #E8E8E8 0%, #F6F6F6 100%);
   background-image: -webkit-linear-gradient(top, #E8E8E8 0%, #F6F6F6 100%);
   border-bottom: 2px solid #FFF;
@@ -565,20 +569,23 @@ h1, h2, h3, h4 {
 .feature-7 .row.no-bg,
 .feature-9 .row.no-bg,
 .feature-10 .row.no-bg,
-.feature-11 .row.no-bg {
+.feature-11 .row.no-bg,
+.feature-12 .row.no-bg {
   background-image: linear-gradient(bottom, #E8E8E8 0%, #F6F6F6 100%);
   background-image: -webkit-linear-gradient(bottom, #E8E8E8 0%, #F6F6F6 100%);
 }
-.feature-7 .row:last-child, 
-.feature-9 .row:last-child, 
-.feature-10 .row:last-child, 
-.feature-11 .row:last-child {
+.feature-7 .row:last-child,
+.feature-9 .row:last-child,
+.feature-10 .row:last-child,
+.feature-11 .row:last-child,
+.feature-12 .row:last-child {
   min-height:100px;
   border:none;
 }
 .feature-7 .row.snip,
 .feature-9 .row.snip,
-.feature-10 .row.snip {
+.feature-10 .row.snip,
+.feature-12 .row.snip {
   padding-bottom:0;
 }
 .feature-8 .title {
@@ -651,8 +658,58 @@ h1, h2, h3, h4 {
 }
 .feature-11 .title {
   background-position-y: -660px;
-  text-align: left;
   padding-left:60px;
+}
+.feature-12 .title {
+  background-position-y:-720px;
+}
+.feature-12 .maps {
+  padding:0 50px;
+}
+.feature-12 .map {
+  width:335px;
+  height:300px;
+  background:#FFF;
+  box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.2);
+  position:relative;
+  margin-left:50px;
+  float: left;
+}
+.feature-12 .map .address {
+  position:absolute;
+  background:#FFF;
+  width:170px;
+  height:100px;
+  padding:10px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.feature-12 .address h3 {
+  font:20px/24px Microsoft Yahei;
+  margin:0 0 10px;
+  text-indent: -2px;
+}
+.feature-12 .address p {
+  margin-bottom: 5px;
+}
+.feature-12 .address p:last-child {
+  margin-bottom:0;
+}
+.feature-12 .map.beijing {
+  border-radius: 0 0 0 6px;
+}
+.beijing .address {
+  top:0;
+  right: -190px;
+}
+.feature-12 .map.guangzhou {
+  border-radius:0 6px 0 0;
+  z-index:2;
+}
+.feature-12 .map.guangzhou .address {
+  bottom:0;
+  left:-190px;
+  padding:10px 0 10px 20px;
+  box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /** ===================================
