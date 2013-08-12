@@ -50,7 +50,6 @@ body {
   color:#0097FF;
   text-decoration:none;
 }
-
 /** ===================================
  * carousel
  * ==================================== */
@@ -71,7 +70,10 @@ body {
   font:bold 36px/50px Arial, Microsoft Yahei;
 }
 #top-slide p {
-  font:22px/30px Arial, Microsoft Yahei;
+  font:18px/30px Arial, Microsoft Yahei;
+}
+#top-slide.en p {
+  font-size: 22px;
 }
 
 /** ===================================
@@ -95,7 +97,7 @@ body {
   box-flex:1;
   width:0;
   margin-right:65px;
-  font:16px/28px Simsun;
+  font:16px/28px Arial, Simsun;
   padding-left:40px;
   background:url(../img/aboard/icon.png) no-repeat -10px 5px;
 }
@@ -109,22 +111,26 @@ body {
 .feature:last-child {
   margin-right:0;
 }
-hr {
-  border-width: 2px;
+.feature h3 {
+  font-family: Arial, Microsoft Yahei;
 }
 
-#notice h2 {
-  text-align:center;
-  margin: 40px 0 45px;
+hr {
+  border-width: 2px;
 }
 
 /** ===================================
  * notice
  * ==================================== */
 #notice {
-  font:16px/30px Simsun;
+  font:16px/30px Arial, Simsun;
   margin-bottom:30px;
 } 
+#notice h2 { 
+  font-family:Arial, Microsoft Yahei;
+  text-align:center;
+  margin: 40px 0 45px;
+}
 #notice p,
 #notice ol {
   margin: 0 50px 20px;
@@ -162,6 +168,9 @@ hr {
   border-radius: 2px;
   width: 270px;
   font: 25px/28px Microsoft Yahei;
+}
+#signup.en .btn {
+  width:300px;
 }
 
 /** ===================================

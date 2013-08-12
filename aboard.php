@@ -24,9 +24,9 @@ function translate_menu($menu_items) {
 }
 ?>
 <?php
-
-if (isset($_REQUEST['lang']) && $_REQUEST['lang'] == 'en') {
-  $lang = '-' . $_REQUEST['lang'];
+$is_en = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) && stripos($_SERVER['HTTP_ACCEPT_LANGUAGE'], 'en') !== FALSE;
+if ($is_en || isset($_REQUEST['lang']) && $_REQUEST['lang'] == 'en') {
+  $lang = '-en';
   add_filter('wp_nav_menu_objects', 'translate_menu');
 }
 
