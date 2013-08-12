@@ -10,9 +10,26 @@
 function add_aboard_css() {
   return 'css/aboard.css';
 }
+function translate_menu($menu_items) {
+  foreach ($menu_items as &$item) {
+    $en_title = substr($item->url, strrpos($item->url, '/') + 1, strrpos($item->url, '.'));
+    if (strpos($en_title, '.') !== FALSE) {
+      $en_title = substr($en_title, 0, strrpos($en_title, '.'));
+    }
+    $en_title = $en_title ? ucfirst($en_title) : 'Home';
+    $item->title = $en_title;
+  }
+  
+  return $menu_items;
+}
 ?>
 <?php
-$lang = isset($_REQUEST['lang']) ? '-' . $_REQUEST['lang'] : '';
+
+if (isset($_REQUEST['lang']) && $_REQUEST['lang'] == 'en') {
+  $lang = '-' . $_REQUEST['lang'];
+  add_filter('wp_nav_menu_objects', 'translate_menu');
+}
+
 add_filter('custom_css', 'add_aboard_css');
 get_header();
 

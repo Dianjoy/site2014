@@ -5,6 +5,9 @@
     Description:
         for the expidition page
 */
+body {
+  font-family: Arial;
+}
 
 /** ===================================
  * top-navi
