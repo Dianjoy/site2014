@@ -68,7 +68,7 @@
   font:bold 36px/50px Arial, Microsoft Yahei;
 }
 #top-slide p {
-  font:18px/25px Arial, Microsoft Yahei;
+  font:22px/30px Arial, Microsoft Yahei;
 }
 
 /** ===================================
@@ -101,6 +101,7 @@
 }
 .feature-2 {
   background-position:-1px -395px;
+  padding-left: 45px;
 }
 .feature:last-child {
   margin-right:0;
