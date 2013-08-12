@@ -31,15 +31,17 @@ if (is_single()) {
   $tags = substr($tags, 0, -1);
 }
 
+$home_url = esc_url(home_url('/'));
 $result = array(
   'title' => wp_title('|', FALSE, 'right') . get_bloginfo('name') . $pagenum,
   'description' => $description ? $description : get_bloginfo('description'),
   'keywords' => $tags,
   'pingback' => get_bloginfo('pingback_url'),
-  'home_url' => esc_url(home_url('/')),
+  'home_url' => $home_url,
   'name' => get_bloginfo('name'),
   'name_title' => esc_attr(get_bloginfo('name', 'display')),
   'nav' => wp_nav_menu($nav),
+  'css' => has_filter('custom_css') ? apply_filters('custom_css', '') : 'style.css',
 );
 
 // 为了保证wp_head的输出
