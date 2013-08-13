@@ -55,6 +55,7 @@ body {
  * ==================================== */
 .item-0 {
   background:url(../img/aboard/slide.jpg) center center;
+  background-size: cover;
   height:442px;
 }
 #top-slide .content {
@@ -238,4 +239,32 @@ dd .answer {
   text-align: center;
   border-top:2px solid #CCC;
   line-height:40px;
+}
+
+@media (min-width: 1121px) {
+  .item-0 {
+    background-image: url(../img/aboard/slide2.jpg);
+  }
+}
+@media (max-width: 800px) {
+  #top-navi .span9 {
+    display:none;
+  }
+  #top-slide .content {
+    left: 40px;
+    right:40px;
+    width:auto;
+    margin:0;
+  }
+  #features {
+    -ms-flex-direction:column;
+    box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    padding: 0;
+  }
+  .feature {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
