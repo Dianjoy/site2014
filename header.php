@@ -41,7 +41,7 @@ $result = array(
   'name' => get_bloginfo('name'),
   'name_title' => esc_attr(get_bloginfo('name', 'display')),
   'nav' => wp_nav_menu($nav),
-  'css' => has_filter('custom_css') ? apply_filters('custom_css', '') : 'style.css',
+  'css' => has_filter('dianjoy_custom_css') ? apply_filters('dianjoy_custom_css', '') : 'style.css',
 );
 
 // 为了保证wp_head的输出

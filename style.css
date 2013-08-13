@@ -92,7 +92,7 @@ h1, h2, h3, h4 {
   color:#FFF;
   font:bold 28px/36px Microsoft Yahei, Simhei;
 }
-#top-navi .row {
+#top-navi .container {
   position:relative;
 }
 #top-navi .logo {

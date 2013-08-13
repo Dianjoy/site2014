@@ -40,6 +40,7 @@ $result = array(
   'name' => get_bloginfo('name'),
   'name_title' => esc_attr(get_bloginfo('name', 'display')),
   'nav' => wp_nav_menu($nav),
+  'css' => 'style.css',
 );
 
 // 为了保证wp_head的输出

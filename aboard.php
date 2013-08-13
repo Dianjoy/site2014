@@ -30,7 +30,7 @@ if ($is_en || isset($_REQUEST['lang']) && $_REQUEST['lang'] == 'en') {
   add_filter('wp_nav_menu_objects', 'translate_menu');
 }
 
-add_filter('custom_css', 'add_aboard_css');
+add_filter('dianjoy_custom_css', 'add_aboard_css');
 get_header();
 
 readfile(dirname(__FILE__) . '/template/aboard' . $lang . '.html');
