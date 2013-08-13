@@ -202,6 +202,23 @@ h1, h2, h3, h4 {
   left:490px;
   top:244px;
 }
+#top-slide .item-2 {
+  background:url(img/aboard/slide2.jpg) center center;
+  background-size: cover; 
+}
+#top-slide .item-2 h3 {
+  top:100px;
+  left:120px;
+}
+#top-slide .item-2 h4 {
+  font:24px/32px Microsoft Yahei;
+  top: 170px;
+  left:120px;
+}
+#top-slide .item-2 .link-button {
+  top:270px;
+  left:120px;
+}
 #active {
   background: #920042;
   padding:6px 0;

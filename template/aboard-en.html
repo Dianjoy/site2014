@@ -1,10 +1,10 @@
 <style>
   #top-navi li {
-    padding: 0 20px;
+    padding: 0 15px;
   }
   #top-navi li:hover,
   #top-navi li.active {
-    padding:5px 20px 0;
+    padding:5px 15px 0;
   }
 </style>
 <div id="top-slide" class="carousel slide single-column en">
@@ -78,6 +78,7 @@
   </div>
   <div class="modal-body">
     <form action="/dev/user/test-request.php" class="form-horizontal" id="signup-form">
+      <input type="hidden" name="backurl" value="/expedition?lang=en" />
       <div class="control-group">
         <label for="email" class="control-label">Email</label>
         <div class="controls">
@@ -85,27 +86,21 @@
         </div>
       </div>
       <div class="control-group">
-        <label for="username" class="control-label">Name</label>
+        <label for="name" class="control-label">Name</label>
         <div class="controls">
-          <input type="text" class="input-large" name="username" id="username" require="true" />
+          <input type="text" class="input-large" name="name" id="name" require="true" />
         </div>
       </div>
       <div class="control-group">
-        <label for="qq" class="control-label">QQ</label>
+        <label for="contact" class="control-label">Mobile</label>
         <div class="controls">
-          <input type="text" class="input-large" name="qq" id="qq" />
-        </div>
-      </div>
-      <div class="control-group">
-        <label for="phone" class="control-label">Mobile</label>
-        <div class="controls">
-          <input type="text" class="input-large" name="phone" id="phone" />
+          <input type="text" class="input-large" name="contact" id="contact" />
         </div>
       </div>
     </form>
   </div>
   <div class="modal-footer">
     <button type="submit" class="btn btn-primary" form="signup-form">Submit</button>
-    <button type="button" class="btn">Cancel</button>
+    <button type="button" class="btn" data-dismiss="modal">Cancel</button>
   </div>
 </div>

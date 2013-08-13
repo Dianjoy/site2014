@@ -80,6 +80,7 @@
   </div>
   <div class="modal-body">
     <form action="/dev/user/test-request.php" class="form-horizontal" id="signup-form">
+      <input type="hidden" name="backurl" value="/expedition" />
       <div class="control-group">
         <label for="email" class="control-label">邮箱</label>
         <div class="controls">
@@ -87,27 +88,21 @@
         </div>
       </div>
       <div class="control-group">
-        <label for="username" class="control-label">称呼</label>
+        <label for="name" class="control-label">称呼</label>
         <div class="controls">
-          <input type="text" class="input-large" name="username" id="username" require="true" />
+          <input type="text" class="input-large" name="name" id="name" require="true" />
         </div>
       </div>
       <div class="control-group">
-        <label for="qq" class="control-label">QQ</label>
+        <label for="contact" class="control-label">联系电话</label>
         <div class="controls">
-          <input type="text" class="input-large" name="qq" id="qq" />
-        </div>
-      </div>
-      <div class="control-group">
-        <label for="phone" class="control-label">联系电话</label>
-        <div class="controls">
-          <input type="text" class="input-large" name="phone" id="phone" />
+          <input type="text" class="input-large" name="contact" id="contact" />
         </div>
       </div>
     </form>
   </div>
   <div class="modal-footer">
     <button type="submit" class="btn btn-primary" form="signup-form">提交</button>
-    <button type="button" class="btn">取消</button>
+    <button type="button" class="btn" data-dismiss="modal">取消</button>
   </div>
 </div>

@@ -7,6 +7,12 @@
  */
 ?>
 <?php
+// 英文访问，直接跳到海外页
+$is_en = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) && stripos($_SERVER['HTTP_ACCEPT_LANGUAGE'], 'en') !== FALSE;
+if ($is_en) {
+  header('Location: ./expedition?lang=en');
+}
+
 // 引用包含通用导航和前端框架的头部
 get_header();
 
