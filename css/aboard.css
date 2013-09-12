@@ -240,6 +240,10 @@ dd .answer {
   border-top:2px solid #CCC;
   line-height:40px;
 }
+#main-footer .span5 {
+  display: none;
+  margin-left: 80px;
+}
 
 @media (min-width: 1121px) {
   .item-0 {
