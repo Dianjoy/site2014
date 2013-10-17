@@ -304,7 +304,7 @@ h1, h2, h3, h4 {
   color: #999;
 }
 .feature-3 .thumbnail img {
-  max-width:290px 0;
+  max-width:290px;
 }
 .feature-3 .excerpt {
   color:#555;
@@ -691,6 +691,7 @@ h1, h2, h3, h4 {
   box-shadow: 0 1px 2px 0px rgba(0, 0, 0, 0.2);
   position:relative;
   margin-left:50px;
+  margin-bottom: 50px;
   float: left;
 }
 .feature-12 .map .address {
@@ -730,9 +731,11 @@ h1, h2, h3, h4 {
   box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 #beijing-map .modal-body,
-#guangzhou-map .modal-body {
+#guangzhou-map .modal-body,
+#shanghai-map .modal-body,
+#xian-map .modal-body {
   overflow:hidden;
-  padding:15px 20px;
+  max-height: inherit;
 }
 
 /** ===================================
