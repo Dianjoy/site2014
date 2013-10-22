@@ -77,6 +77,23 @@ function create_post_type() {
       'supports' => array('title', 'thumbnail', 'editor'),
     )
   );
+  register_post_type('hotad',
+    array(
+      'labels' => array(
+        'name' => '热门广告',
+        'singular_name' => '热门广告',
+        'all_items' => '所有热门广告',
+        'add_new' => '添加热门广告',
+        'add_new_item' => '添加热门广告',
+      ),
+      'public' => true,
+      'rewrite' => array('slug' => 'hotad'),
+      'description' => '用来在首页显示热门广告',
+      'exclude_from_search' => false,
+      'show_in_nav_menus' => false,
+      'supports' => array('title', 'thumbnail', 'editor'),
+    )
+  );
 }
 add_action('init', 'create_post_type');
 
