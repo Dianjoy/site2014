@@ -71,6 +71,18 @@ while ($partners->have_posts()) {
     'thumbnail' => get_the_post_thumbnail(null, 'homepage-partners'),
   ); 
 }
+// 读取热门广告
+$result['hotads'] = array();
+$args = array('post_type' => 'hotad', 'posts_per_page' => 8, 'orderby' => 'rand');
+$hotads = new WP_Query($args);
+while ($hotads->have_posts()) {
+  $hotads->the_post();
+  $result['hotads'][] = array(
+    'title' => the_title('', '', FALSE),
+    'price' => get_the_content(),
+    'thumbnail' => get_the_post_thumbnail(null, 'homepage-hotads'),
+  );
+}
 
 require_once('inc/mustache.php');
 $tpl = new Mustache_Engine();

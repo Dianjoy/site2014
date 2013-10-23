@@ -125,6 +125,21 @@
     </div>
   </div>
 </div>
+<div class="container feature feature-13 mt50">
+  <div class="title">
+    <h2>热门广告</h2>
+  </div>
+  <div>
+    {{#hotads}}
+    <div class="hot-ad-item">
+      <a href="/dev/">{{{thumbnail}}}</a>
+      <h4>{{title}}</h4>
+      <p class="price">&yen;{{price}}</p>
+      <a class="take-it" href="/dev/">接广告</a>
+    </div>
+    {{/hotads}}
+  </div>
+</div>
 <div class="container feature feature-4 mt50">
   <div class="title">
     <h2>业内评价</h2>

@@ -716,6 +716,41 @@ h1, h2, h3, h4 {
 .feature-12 .map.beijing {
   border-radius: 0 0 0 6px;
 }
+.feature-13 .title {
+  background-position-y:-780px;
+}
+.hot-ad-item {
+  width: 80px;
+  height: 195px;
+  padding: 40px 15px 0;
+  background: url(img/hot-ad-bg.png);
+  margin:0 5px;
+  display: inline-block;
+  vertical-align: top;
+}
+.hot-ad-item h4 {
+  text-align: center;
+  font: 16px/20px Microsoft Yahei;
+  margin: 20px 0 0;
+}
+.hot-ad-item .price {
+  text-align: center;
+  font:bold 25px/35px Arial;
+  color:#F24C4C;
+  margin: 0;
+}
+.hot-ad-item .take-it {
+  font: 14px/30px Microsoft Yahei;
+  color:#9A9A9A;
+  border-top:2px solid #CCC;
+  display: block;
+  width: 66px;
+  text-align: center;
+  margin: 0 auto;
+}
+.hot-ad-item .take-it:hover {
+  text-decoration: none;
+}
 .beijing .address {
   top:0;
   right: -190px;
@@ -795,7 +830,7 @@ p.thumbnail {
     width:1200px;
   }
   .feature-3 .thumbnail img {
-    max-width:360px 0;
+    max-width:360px;
   }
   .feature-8 .gallery {
     margin-right:-54px;
@@ -810,5 +845,8 @@ p.thumbnail {
   .feature-8 .gallery-item img {
     max-width: 150px;
     max-height: 150px;
+  }
+  .hot-ad-item {
+    margin: 0 10px;
   }
 }
