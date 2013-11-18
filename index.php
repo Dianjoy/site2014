@@ -8,7 +8,7 @@
 ?>
 <?php
 // 英文访问，直接跳到海外页
-$is_en = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) && stripos($_SERVER['HTTP_ACCEPT_LANGUAGE'], 'en') !== FALSE;
+$is_en = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) && stripos($_SERVER['HTTP_ACCEPT_LANGUAGE'], 'zh') === false;
 if ($is_en) {
   header('Location: ./expedition?lang=en');
 }
