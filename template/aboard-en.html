@@ -71,36 +71,40 @@
   </dd>
 </dl>
 
-<div id="popup" class="modal fade hide en">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    <h4>Free Pre-registration</h4>
-  </div>
-  <div class="modal-body">
-    <form action="/dev/user/test-request.php" class="form-horizontal" id="signup-form">
-      <input type="hidden" name="backurl" value="/expedition?lang=en" />
-      <div class="control-group">
-        <label for="email" class="control-label">Email</label>
-        <div class="controls">
-          <input type="email" class="input-large" name="email" id="email" required="true" />
-        </div>
+<div id="popup" class="modal fade cn">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Free Pre-registration</h4>
       </div>
-      <div class="control-group">
-        <label for="name" class="control-label">Name</label>
-        <div class="controls">
-          <input type="text" class="input-large" name="name" id="name" require="true" />
-        </div>
+      <div class="modal-body">
+        <form action="/dev/user/test-request.php" role="form" class="form-horizontal" id="signup-form">
+          <input type="hidden" name="backurl" value="/expedition" />
+          <div class="form-group">
+            <label for="email" class="control-label">Email</label>
+            <div class="controls">
+              <input type="email" class="form-control" name="email" id="email" required="true" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="control-label">Name</label>
+            <div class="controls">
+              <input type="text" class="form-control" name="name" id="name" require="true" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contact" class="control-label">Mobile</label>
+            <div class="controls">
+              <input type="text" class="form-control" name="contact" id="contact" />
+            </div>
+          </div>
+        </form>
       </div>
-      <div class="control-group">
-        <label for="contact" class="control-label">Mobile</label>
-        <div class="controls">
-          <input type="text" class="input-large" name="contact" id="contact" />
-        </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" form="signup-form">Submit</button>
+        <button type="button" class="btn" data-dismiss="modal">Cancel</button>
       </div>
-    </form>
-  </div>
-  <div class="modal-footer">
-    <button type="submit" class="btn btn-primary" form="signup-form">Submit</button>
-    <button type="button" class="btn" data-dismiss="modal">Cancel</button>
+    </div>
   </div>
 </div>
