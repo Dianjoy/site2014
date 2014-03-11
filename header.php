@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @overview 通用头部，包括导航和前端框架
  * @author Meathill <lujia.zhai@dianjoy.com>
@@ -24,8 +23,10 @@ if (is_single()) {
   $description = apply_filters('the_excerpt', get_the_excerpt());
   $post_tags = get_the_terms(0, 'post_tag');
   $tags = ',';
-  foreach ($post_tags as $tag) {
-    $tags .= $tag->name . ',';
+  if ($post_tags) {
+    foreach ($post_tags as $tag) {
+      $tags .= $tag->name . ',';
+    }
   }
   $tags = substr($tags, 0, -1);
 }

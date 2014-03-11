@@ -1,167 +1,140 @@
-<div id="top-slide" class="carousel slide single-column">
-  <ol class="carousel-indicators">
-    <li data-target="#top-slide" data-slide-to="0" class="active"></li>
-    <li data-target="#top-slide" data-slide-to="1"></li>
-    <li data-target="#top-slide" data-slide-to="2"></li>
-  </ol>
-  <!-- Carousel items -->
-  <div class="carousel-inner">
-    <div class="active item item-2">
-      <div class="content">
-        <h3>挺进美帝，Follow me</h3>
-        <h4>向海外输出价值观的航空母舰<br />点乐广告SDK海外版，敬请期待</h4>
-        <a href="/expedition" class="button link-button">了解更多…</a>
-      </div>
-    </div>
-    <div class="item item-0">
-      <div class="content">
-        <div class="mobile"><img src="{{home_url}}wp-content/themes/dian2013/img/mobile0.png" width="270" height="253" /></div>
-        <h3>海纳百川</h3>
-        <h4>广告主的精准推广平台</h4>
-        <a href="/advertiser" class="button link-button">了解更多…</a>
-      </div>
-    </div>
-    <div class="item item-1">
-      <div class="content">
-        <div class="mobile"><img src="{{home_url}}wp-content/themes/dian2013/img/mobile1.png" width="270" height="253" /></div>
-        <h3>一日千里</h3>
-        <h4>开发者的梦想创业伙伴</h4>
-        <a href="/developer" class="button link-button">了解更多…</a>
-      </div>
-    </div>
+<!--
+<div>
+  {{#hotads}}
+  <div class="hot-ad-item">
+    <a href="/dev/">{{{thumbnail}}}</a>
+    <h4>{{title}}</h4>
+    <p class="price">&yen;{{price}}</p>
+    <a class="take-it" href="/dev/">接广告</a>
   </div>
-  <!-- Carousel nav -->
-  <a class="carousel-control left" href="#top-slide" data-slide="prev">&lsaquo;</a>
-  <a class="carousel-control right" href="#top-slide" data-slide="next">&rsaquo;</a>
+  {{/hotads}}
 </div>
-<div id="active">
-  <div class="bar">
-    <p class="slogan">全国领先的手机智能广告平台</p>
-    <p class="description">用户超过200,000,000人, 应用分发超过30,000,000次, 推广产品超过800款</p>
+<div>
+  {{#feedback}}
+  <div class="feedback-item">
+    {{{content}}}
+    {{{thumbnail}}}
+  </div>
+  {{/feedback}}
+</div>
+<ul class="partner-logos">
+  {{#partner}}
+  <li>
+    <a href="{{url}}" title="{{title}}" target="_blank">{{{thumbnail}}}</a>
+  </li>
+  {{/partner}}
+</ul>
+-->
+<div class="carousel">
+  <div id="loginform">
+    <div class="title">
+      登录
+    </div>
+    <form action="dev/login_do.php">
+      <p>
+        <i class="fa icon-user"></i>
+        <input type="text" placeholder="用户名" autofocus="autofocus" name="username" tabindex="1">
+      </p>
+      <p>
+        <i class="fa icon-password"></i>
+        <input type="password" placeholder="密码" name="password" class="input" tabindex="2">
+      </p>
+      <p>
+        <input type="text" maxlength="4" size="10" id="verifycode" placeholder="验证码" name="verifycode" tabindex="3">
+        <img src="http://www.dianjoy.com/dev/inc/showimg.php" alt="验证码" title="点击刷新" id="vericode" onclick="refresh_code(this);">
+      </p>
+      <p>
+        <input type="submit" class="btn btn-primary" value="登录">
+      </p>
+      <p>
+        <a href="#forget-password">忘记密码</a>
+        <a href="http://www.dianjoy.com/dev/register.php">注册</a>
+      </p>
+    </form>
   </div>
 </div>
-
-<div class="container feature feature-1 mt50">
-  <div class="row">
-    <div class="span4">
-      <div class="figure">
-        <img src="{{home_url}}wp-content/themes/dian2013/img/f1-1.jpg" width="252" height="168" />
-        <p class="caption">
-           丰富的广告形式 
-        </p>
+<div class="service grid grid-pad">
+  <div class="col-6-12">
+    <div class="bg clearfix">
+      <div class="icon"></div>
+      <div class="content">
+        我们坚持广告主买单的依据是广告的实际效果，
+        是广告为广告主带来了多少实际价值，
+        提现在用户使用量、活跃度或者销售收入。
       </div>
-      <p class="desc">
-        点乐全面推动广告形式的创新，支持应用推荐、积分墙、通知栏推送、插屏、全屏(内测中)等多种广告形式。还可针对媒体定制广告形式。
-      </p>
-    </div>
-    <div class="span4">
-      <div class="figure">
-        <img src="{{home_url}}wp-content/themes/dian2013/img/f1-2.jpg" width="252" height="168" />
-        <p class="caption">
-            强大的技术优势  
-        </p>
-      </div>
-      <p class="desc">
-        将国际领先的数据挖掘技术、客户端技术和本地化运营完美结合，与中国移动机房、阿里云以及国内领先的CDN服务商通力合作，提供优质的广告分发和下载体验。
-      </p>
-    </div>
-    <div class="span4">
-      <div class="figure">
-        <img src="{{home_url}}wp-content/themes/dian2013/img/f1-3.jpg" width="252" height="168" />
-        <p class="caption">
-           经验丰富的团队 
-        </p>
-      </div>
-      <p class="desc">
-        前微软广告团队成员创立，点乐成员大多来自于国际化的互联网、软件公司和相关业内数一数二的公司。优秀的人才给点乐带来优秀的基因，打造超一流的产品和服务。
+      <p>
+        <a href="/advertiser" class="btn btn-primary">广告主服务</a>
       </p>
     </div>
   </div>
+  <div class="col-6-12">
+    <div class="bg clearfix">
+      <div class="icon"></div>
+      <div class="content">
+        最有效的展现形式。<br>
+        在您赚的盆满钵满低同时，<br>
+        敬请期待我们的下一款官告产品
+      </div>
+      <p>
+        <a href="/developer" class="btn btn-primary">开发者服务</a>
+      </p>
+    </div>
+  </div>
 </div>
-<div class="container feature mt50">
-  <div class="row">
-    <div class="span8 feature-2">
-      <div class="title">
-        <h2>成功案例</h2>
-      </div>
-    </div>
-    <div class="span4 feature-3">
-      <div class="title">
-        <h2>公司新闻</h2>
-      </div>
-    </div>
-    <div class="span4">
-      <div class="figure">
-        <img src="{{home_url}}wp-content/themes/dian2013/img/f2-1.jpg" width="252" height="168" />
-        <p class="caption">
-           畅无线 
-        </p>
-      </div>
-      <p class="desc">
-        畅无线：通过“畅豆”获得免费WIFI时间，每通过点乐试玩一个应用可上网两个半小时。
-      </p>
-    </div>
-    <div class="span4">
-      <div class="figure">
-        <img src="{{home_url}}wp-content/themes/dian2013/img/f2-2.jpg" width="252" height="168" />
-        <p class="caption">
-            友宝  
-        </p>
-      </div>
-      <p class="desc">
-        点乐为友宝App提供试玩应用换可乐券的解决方案而友宝通过售货机地理位置和单位类别帮助点乐实现精准广告投放。
-      </p>
-    </div>
-    <div class="span4 feature-3">
+<div id="owl-demo" class="owl-carousel owl-theme">
+  <div class="item"><img src="{{home_url}}wp-content/themes/dian2013/images/fullimage1.jpg" alt="The Last of us"></div>
+  <div class="item"><img src="{{home_url}}wp-content/themes/dian2013/images/fullimage2.jpg" alt="GTA V"></div>
+  <div class="item"><img src="{{home_url}}wp-content/themes/dian2013/images/fullimage3.jpg" alt="Mirror Edge"></div>
+</div>
+<div class="grid grid-pad">
+  <div class="col-8-12">
+    <h2>点乐动态</h2>
+    <ul id="news">
       {{#blog}}
-      <div class="article {{class}}">
-        <h3><a href="{{link}}" title="{{full_title}}">{{title}}</a></h3>
-        <p class="meta">发布于 {{date}}</p>
-        {{#thumbnail}}<p class="thumbnail"><a href="{{link}}">{{{thumbnail}}}</a></p>{{/thumbnail}}
-        <div class="excerpt">{{{excerpt}}}</div>
-      </div>
+      <li>
+      <a href="{{link}}" title="{{full_title}}">{{title}}</a>
+        <span>{{date}}</span>
+      </li>
       {{/blog}}
-      <a href="/news" class="button button-full-width">了解更多....</a>
-    </div>
+    </ul>
+  </div>
+  <div class="col-4-12">
+    <h2>下载中心</h2>
+    <ul id="downloads">
+      <li><a class="btn" href="#">积分墙广告SDK</a></li>
+      <li><a class="btn" href="#">内容流广告SDK</a></li>
+      <li><a class="btn" href="#">自动测试工具</a></li>
+    </ul>
   </div>
 </div>
-<div class="container feature feature-13 mt50">
-  <div class="title">
-    <h2>热门广告</h2>
-  </div>
-  <div>
-    {{#hotads}}
-    <div class="hot-ad-item">
-      <a href="/dev/">{{{thumbnail}}}</a>
-      <h4>{{title}}</h4>
-      <p class="price">&yen;{{price}}</p>
-      <a class="take-it" href="/dev/">接广告</a>
-    </div>
-    {{/hotads}}
+<div class="grid grid-pad">
+  <h2>合作伙伴</h2>
+  <div id="partner-logos">
+    <ul>
+      {{#partner}}
+      <li>
+        <a href="{{url}}" title="{{title}}" target="_blank">{{{thumbnail}}}</a>
+      </li>
+      {{/partner}}
+    </ul>
   </div>
 </div>
-<div class="container feature feature-4 mt50">
-  <div class="title">
-    <h2>业内评价</h2>
-  </div>
-  <div>
-    {{#feedback}}
-    <div class="feedback-item">
-      {{{content}}}
-      {{{thumbnail}}}
-    </div>
-    {{/feedback}}
-  </div>
-</div>
-<div class="container feature feature-5 mt50">
-  <div class="title">
-    <h2>合作伙伴</h2>
-  </div>
-  <ul class="partner-logos">
-    {{#partner}}
-    <li>
-      <a href="{{url}}" title="{{title}}" target="_blank">{{{thumbnail}}}</a>
-    </li>
-    {{/partner}}
-  </ul>
-</div>
+<script>
+  $(function() {
+    $("#owl-demo").owlCarousel({
+        navigation : false, // Show next and prev buttons
+        slideSpeed : 300,
+        paginationSpeed : 400,
+        singleItem:true,
+        paginationNumbers: true
+        // "singleItem:true" is a shortcut for:
+        // items : 1, 
+        // itemsDesktop : false,
+        // itemsDesktopSmall : false,
+        // itemsTablet: false,
+        // itemsMobile : false
+    });
+    //TODO form check
+  });
+</script>
+

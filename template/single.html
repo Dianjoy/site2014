@@ -7,7 +7,7 @@
       </div>
       {{/is_featured}}
       
-      <header class="entry-header">
+      <div class="entry-header">
         <h1 class="entry-title">{{full_title}}</h1>
         <ul class="breadcrumb">
           <li><a href="/">首页</a> <span class="divider">/</span></li>
@@ -15,7 +15,7 @@
           <li class="active">正文</li>
           <li class="active date pull-right">发布于 {{date}}</li>
         </ul>
-      </header>
+      </div>
 
       {{#is_search}}
       <div class="entry-summary label label-info mt30">
@@ -27,10 +27,10 @@
         {{{content}}}
       </div>
       {{/is_search}}
-      <footer class="tags">
+      <div class="footer">
         <hr />
         标签：{{{tags}}}
-      </footer>
+      </div>
     </article>
   </div>
 </div>

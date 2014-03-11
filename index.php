@@ -33,7 +33,7 @@ if (have_posts()) {
       'thumbnail' => get_the_post_thumbnail(null, 'homepage-posts'),
     );
     $count ++;
-    if ($count >= 2) {
+    if ($count >= 4) {
       break;
     }
   }
@@ -47,18 +47,18 @@ if (have_posts()) {
 }
 
 // 读取业内评价
-$result['feedback'] = array();
-$args = array('post_type' => 'feedback', 'orderby' => 'rand', 'posts_per_page' => '1');
-$feedbacks = new WP_Query($args);
-while ($feedbacks->have_posts()) {
-  $feedbacks->the_post();
-  $content = get_the_content();
-  $content = apply_filters('the_content', $content);
-  $result['feedback'][] = array(
-    'content' => $content,
-    'thumbnail' => get_the_post_thumbnail(),
-  ); 
-}
+//$result['feedback'] = array();
+//$args = array('post_type' => 'feedback', 'orderby' => 'rand', 'posts_per_page' => '1');
+//$feedbacks = new WP_Query($args);
+//while ($feedbacks->have_posts()) {
+//  $feedbacks->the_post();
+//  $content = get_the_content();
+//  $content = apply_filters('the_content', $content);
+//  $result['feedback'][] = array(
+//    'content' => $content,
+//    'thumbnail' => get_the_post_thumbnail(),
+//  ); 
+//}
 // 读取合作伙伴
 $result['partner'] = array();
 $args = array('post_type' => 'partner', 'posts_per_page' => 20);
@@ -72,17 +72,17 @@ while ($partners->have_posts()) {
   ); 
 }
 // 读取热门广告
-$result['hotads'] = array();
-$args = array('post_type' => 'hotad', 'posts_per_page' => 8, 'orderby' => 'rand');
-$hotads = new WP_Query($args);
-while ($hotads->have_posts()) {
-  $hotads->the_post();
-  $result['hotads'][] = array(
-    'title' => the_title('', '', FALSE),
-    'price' => get_the_content(),
-    'thumbnail' => get_the_post_thumbnail(null, 'homepage-hotads'),
-  );
-}
+//$result['hotads'] = array();
+//$args = array('post_type' => 'hotad', 'posts_per_page' => 8, 'orderby' => 'rand');
+//$hotads = new WP_Query($args);
+//while ($hotads->have_posts()) {
+//  $hotads->the_post();
+//  $result['hotads'][] = array(
+//    'title' => the_title('', '', FALSE),
+//    'price' => get_the_content(),
+//    'thumbnail' => get_the_post_thumbnail(null, 'homepage-hotads'),
+//  );
+//}
 
 require_once('inc/mustache.php');
 $tpl = new Mustache_Engine();

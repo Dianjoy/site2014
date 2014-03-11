@@ -1,3 +1,64 @@
+/**
+ * old css
+ *
+ */
+.single-column {
+  margin: 0 auto;
+}
+.mt30 {
+  margin-top:30px;
+}
+.mt50 {
+  margin-top:50px;
+}
+.bar {
+  border-top:2px solid #C17698;
+  border-bottom:2px solid #C17698;
+  background:#7B0D66;
+}
+.hr-bar {
+  border-top: 2px solid #C17698;
+  background:#7B0D66;
+  min-height:4px;
+  font:0/0 Arial;
+}
+/** ===================================
+ * 文章页 缺省专题页
+ * 样式比较简单
+ * ================================== */
+.site-content {
+  background: #FFF;
+}
+.site-content.single,
+.site-content.category {
+  padding:12px 20px;
+}
+p.thumbnail {
+  display:inline-block;
+}
+.page h1,
+.category h1 {
+  margin-bottom: 30px;
+  color:#EC4C45;
+}
+.category article {
+  padding-bottom: 20px;
+  margin:0 0 30px;
+  border-bottom: 2px dashed #CCC;
+}
+.category article:last-of-type {
+  border: none;
+}
+.single .date {
+  margin-left:40px;
+}
+.single .footer {
+  padding: 15px 0;
+}
+/*
+ * default css
+ *
+ */
 body {
   font-size: 12px;
   font-family: Microsoft YaHei,helvetica,tahoma,arial,SimSun;
@@ -274,6 +335,9 @@ footer .others li a {
   color: #ddd;
   text-decoration: none;
 }
+footer .others li a:hover {
+  text-decoration: underline;
+}
 
 footer table.address {
   width: 100%;
@@ -325,7 +389,7 @@ footer .copyright {
 }
 
 /**
- * contact page
+ * about page
  */
 .table {
   background-color: #f5fcff;
@@ -365,6 +429,13 @@ hr {
 }
 .maps a:first-child {
   display: block;
+}
+#beijing-map .modal-body,
+#guangzhou-map .modal-body,
+#shanghai-map .modal-body,
+#xian-map .modal-body {
+  overflow:hidden;
+  max-height: inherit;
 }
 /**
  * 主页
@@ -466,7 +537,7 @@ hr {
   margin-bottom: 28px;
 }
 .service .bg {
-  padding: 25px 70px;
+  padding: 25px 30px;
   background-color: #eee;
   color: #606060;
 }
@@ -505,6 +576,17 @@ hr {
 }
 .service .btn:hover {
   background-color: #4392DA;
+}
+
+#partner-logos ul {
+  padding: 0px;
+}
+#partner-logos li {
+  list-style: none;
+  padding:10px;
+  background:#FFF;
+  display: inline-block;
+  margin:0 10px 10px 0;
 }
 /* owl carousel*/
 #owl-demo .item img{
@@ -555,11 +637,16 @@ hr {
 
 #news > li a {
   font-size: 16px;
-  height: 72px;
-  font-size: 16px;
-  color: #7f8492;
+  color: #7F8492;
   background: url('../images/list-icon.png') center left no-repeat;
   padding-left: 16px;
+  display: block;
+  max-width: 450px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: break-word;
+  float: left;
 }
 #news > li > span:last-child {
   padding-left: 10px;

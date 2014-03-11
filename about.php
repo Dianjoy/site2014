@@ -14,21 +14,21 @@
 get_header();
 
 // 读取业内评价
-$feedback = array();
-$args = array('post_type' => 'feedback', 'orderby' => 'rand', 'posts_per_page' => '1');
-$feedbacks = new WP_Query($args);
-while ($feedbacks->have_posts()) {
-  $feedbacks->the_post();
-  $content = get_the_content();
-  $content = apply_filters('the_content', $content);
-  $feedback[] = array(
-      'content' => $content,
-      'thumbnail' => get_the_post_thumbnail(),
-  );
-}
+//$feedback = array();
+//$args = array('post_type' => 'feedback', 'orderby' => 'rand', 'posts_per_page' => '1');
+//$feedbacks = new WP_Query($args);
+//while ($feedbacks->have_posts()) {
+//  $feedbacks->the_post();
+//  $content = get_the_content();
+//  $content = apply_filters('the_content', $content);
+//  $feedback[] = array(
+//      'content' => $content,
+//      'thumbnail' => get_the_post_thumbnail(),
+//  );
+//}
 $result = array(
     'home_url' => esc_url(home_url('/')),
-    'feedback' => $feedback,
+    //'feedback' => $feedback,
 );
 
 
