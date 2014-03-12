@@ -26,9 +26,9 @@ function translate_menu($menu_items) {
 <?php
 $is_en = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) && stripos($_SERVER['HTTP_ACCEPT_LANGUAGE'], 'en') !== FALSE;
 if ($is_en || isset($_REQUEST['lang']) && $_REQUEST['lang'] == 'en') {
+  $lang = '-en';
   add_filter('wp_nav_menu_objects', 'translate_menu');
 }
-$lang = '-en';
 
 add_filter('dianjoy_custom_css', 'add_aboard_css');
 get_header();

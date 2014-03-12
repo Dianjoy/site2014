@@ -118,4 +118,15 @@ add_action('widgets_init', 'dian2013_widgets_init');
 
 // 不要默认的相册样式
 add_filter('use_default_gallery_style', '__return_false');
+
+function dian2013_home_pagesize( $query ) {
+    $uri = $_SERVER['REQUEST_URI'];
+    if (substr($uri, 0, 5) === '/news') {
+      //新闻
+      set_query_var('posts_per_page', 4);
+      $query->set( 'posts_per_page', 4);
+    }
+    return;
+}
+add_action( 'pre_get_posts', 'dian2013_home_pagesize', 1 );
 ?>

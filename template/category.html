@@ -1,37 +1,60 @@
-<section id="primary" class="site-content category container mt50">
-  <h1>{{category}}</h1>
+<div class="grid">
+  <h2>{{category}}</h2>
   {{#description}}
   <p class="lead">
     {{description}}
   </p>
   {{/description}}
-  <div class="hr-bar"></div>
-  <div id="content" role="main" class="mt30">
-    {{#blog}}
-    <article class="article {{class}}">
-      <h2><a href="{{link}}" title="{{full_title}}">{{title}}</a></h2>
-      <p class="meta muted">发布于 {{date}}</p>
-      {{#thumbnail}}
-      <p class="thumbnail"><a href="{{link}}">{{{thumbnail}}}</a></p>
-      {{/thumbnail}}
-      <div class="excerpt">{{{excerpt}}}</div>
-      <a href="{{link}}" title="{{full_title}}" class="button button-big">阅读全文</a>
-    </article>
-    {{/blog}}
+  <div id="news-list" class="col-3-12">
+    <ul>
+      <li><i class="fa"></i><a href="/news">全部</a></li>
+      <li><i class="fa"></i><a href="/news?tag=gonggao">点乐公告</a></li>
+      <li><i class="fa"></i><a href="/news?tag=huodong">点乐活动</a></li>
+      <li><i class="fa"></i><a href="/news?tag=baodao">媒体报道</a></li>
+    </ul>
   </div>
-  {{#pages}}
-  <hr />
-  <ul class="pager">
-    {{#prev}}
-    <li class="previous">
-      <a href="{{prev}}">&larr; 更早的新闻</a>
-    </li>
-    {{/prev}}
-    {{#next}}
-    <li class="next">
-      <a href="{{next}}">稍迟的新闻 &rarr;</a>
-    </li>
-    {{/next}}
-  </ul>
-  {{/pages}}
-</section>
+  <div class="col-9-12">
+    <ul id="article">
+      {{#blog}}
+      <li class="clearfix">
+        <div class="date">
+          <span>{{year}}</span>
+          <h2>{{date}}</h2>
+        </div>
+        <div>
+          <div class="title"><a href="{{link}}" title="{{full_title}}">{{title}}</a></div>
+          <div class="tag">[{{tag}}]</div>
+          <div class="excerpt">{{{excerpt}}}</div>
+        </div>
+      </li>
+      {{/blog}}
+    </ul>
+    <div class="pagination">
+      <ul>
+        {{#pages}}
+        <li class="{{class}}"><a href="{{href}}">{{num}}</a></li>
+        {{/pages}}
+      </ul>
+    </div>
+  </div>
+</div>
+<script>
+  function getTag() {
+    var search = location.search;
+    var m = search.match(/tag=(\w+)(?:$)/);
+    return m ? m[0]:'';
+  }
+  $(function(){
+    var tag = getTag();
+    if(!tag) return $('#news-list li').eq(0).addClass('active');
+    $('#news-list li').each(function(){
+      var li = $(this);
+      var a = li.find('a');
+      var reg = new RegExp(tag);
+      if (reg.test(a.attr('href'))) {
+        li.addClass('active');
+      }
+    });
+  })
+</script>
+
