@@ -1,0 +1,59 @@
+<div class="grid grid-pad">
+  <h2>下载中心</h2>
+  <div id="nav-list">
+    <ul>
+      <li><a href="/download/offerwall"><i class="fa fa-list"></i>积分墙广告SDK</a></li>
+      <li><a href="/download/instream"><i class="fa fa-trophy"></i>内容流广告SDK</a></li>
+    </ul>
+  </div>
+  <div id="download" class="article">
+    <div class="p">
+      <div class="lab">业务介绍：</div>
+      <div class="content">积分墙 积分广告</div>
+    </div>
+    <div class="p">
+      <div class="lab">版本号：</div>
+      <div class="content">V8.06</div>
+    </div>
+    <div class="p">
+      <div class="lab">发布时间：</div>
+      <div class="content">2014-02-15</div>
+    </div>
+    <div class="p">
+      <div class="lab">更新内容：</div>
+      <div class="content">
+        <ul>
+          <li>无积分广告[插播]</li>
+          <li>增加超时时间设置接口</li>
+          <li>优化展示机制</li>
+        </ul>
+        <ul>
+          <li>无积分广告[SmartBanner]新广告形式上线</li>
+          <li>无积分广告[插播]支持开发者后台云控制插播防误点功能</li>
+          <li>增加回调接口</li>
+          <li>无积分广告[Banner]</li>
+          <li>修复在初始化时候广告请求的bug</li>
+          <li>所有广告条展现形式</li>
+          <li>新增推荐墙展现形式</li>
+        </ul>
+      </div>
+    </div>
+    <div class="p n">
+      <div class="lab">在线文档:</div>
+      <div class="content">
+        <a href="#">中文版</a>
+      </div>
+    </div>
+    <div class="bottom">
+      <a class="btn btn-primary" href="#">下载</a>
+    </div>
+  </div>
+</div>
+<script>
+  $('#nav-list a').each(function() {
+    var href = this.href;
+    if (href.indexOf(location.pathname) !== -1) {
+      $(this).parent().addClass('active');
+    }
+  })
+</script>

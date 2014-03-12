@@ -685,6 +685,7 @@ hr {
 #nav-list > ul > li {
  list-style: none;
 }
+#nav-list > ul > li.active,
 #nav-list > ul > li:hover {
   background-color: #f0f0f0;
 }
@@ -699,11 +700,13 @@ hr {
   margin: 0 30px;
   color: #333;
 }
+#nav-list > ul > li.active a,
 #nav-list > ul > li a:hover {
   text-decoration: none;
   color: #3281dc;
 }
-#advertiser {
+.article {
+  line-height: 30px;
   margin-left: 230px;
   max-width: 640px;
 }
@@ -741,7 +744,7 @@ hr {
     width: auto;
     margin: 10px 15px;
   }
-  #advertiser {
+  .article {
     margin: 10px 15px;
   }
 }
@@ -886,4 +889,35 @@ hr {
   color: #fff;
   text-decoration: none;
 }
-
+#download > .p {
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+#download > .p.n {
+  border: none;
+}
+#download ul {
+  margin-bottom: 20px;
+  padding: 0px;
+}
+#download ul li {
+  list-style: none;
+}
+#download .lab {
+  float: left;
+  width: 60px;
+  text-align: right;
+}
+#download .content {
+  margin-left: 80px;
+}
+#download .bottom {
+  padding: 20px 5px;
+}
+#download .bottom .btn{
+  width: 200px;
+  background-color: #1C86E9;
+}
+#download .bottom .btn:hover {
+  background-color: #036DD0;
+}
