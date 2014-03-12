@@ -751,21 +751,29 @@ hr {
 /**
  * news 点乐动态
  */
-#news-list {
+#nav {
   line-height: 40px;
-  width: 200px;
+  width: 190px;
   font-size: 14px;
   margin-left: 10px;
+  float: left;
 }
-#news-list > ul {
+#nav.affix {
+  position: fixed;
+  top: 100px;
+}
+#nav.affix-bottom {
+  position: fixed;
+}
+#nav > ul {
   margin: 0px;
   padding: 0px;
 }
-#news-list > ul > li {
+#nav ul > li {
   list-style: none;
   position: relative;
 }
-#news-list > ul > li i.fa {
+#nav ul > li i.fa {
   position:absolute;
   background-color: #fff;
   border-radius: 50%;
@@ -776,7 +784,7 @@ hr {
   left: -5px;
   display: block;
 }
-#news-list > ul > li:first-child i.fa:before {
+#nav ul > li:first-child i.fa:before {
   position: absolute;
   height: 13px;
   width: 5px;
@@ -785,7 +793,7 @@ hr {
   content: "";
   border-left: 1px solid #FFF;
 }
-#news-list > ul > li:last-child i.fa:before {
+#nav ul > li:last-child i.fa:before {
   position: absolute;
   height: 13px;
   width: 5px;
@@ -794,20 +802,32 @@ hr {
   content: "";
   border-left: 1px solid #FFF;
 }
-#news-list > ul > li > a {
+#nav ul > li > a {
   border-left: 1px solid #f0f0f0;
   padding: 0 20px;
   display:block;
   color: #333;
 }
-#news-list > ul > li.active a,
-#news-list > ul > li a:hover {
+#nav ul > li.active a,
+#nav ul > li a:hover {
   text-decoration: none;
   color: #3281dc;
 }
-#news-list > ul > li.active i.fa,
-#news-list > ul > li:hover i.fa {
+#nav ul > li.active i.fa,
+#nav ul > li:hover i.fa {
   border-color: #3281dc;
+}
+#nav ul > ul {
+  border-left: 1px solid #f0f0f0;
+}
+#nav ul > ul > li:before {
+  position: absolute;
+  content: '';
+  top: 19px;
+  left: -40px;
+  height: 5px;
+  width: 35px;
+  border-top: 1px solid #F0F0F0;
 }
 #article li {
   list-style: none;
@@ -920,4 +940,15 @@ hr {
 }
 #download .bottom .btn:hover {
   background-color: #036DD0;
+}
+#doc {
+  margin-left: 200px;
+}
+#doc h2 span {
+  border-bottom: 2px solid #58aaf7;
+  padding: 5px 0;
+}
+#doc h2 {
+  border-bottom: 1px solid #58aaf7;
+  line-height: 32px;
 }

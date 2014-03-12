@@ -34,7 +34,7 @@ $tpl = new Mustache_Engine();
 
 $template = dirname(__FILE__) . '/template/single.html';
 $template = file_get_contents($template);
-echo '<div class="container"><div class="row-fluid">';
+echo '<div class="grid"><div class="row-fluid">';
 echo $tpl->render($template, $blog);
 
 ?>

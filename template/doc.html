@@ -1,0 +1,18 @@
+<div class="grid grid-pad">
+  <h2>{{title}}</h2>
+  {{{content}}}
+</div>
+<script>
+  $(function() {
+    prettyPrint();
+    window.onscroll = function () {
+      var p = $('#nav').css('position');
+    }
+    $('#nav').affix({
+      offset: {
+        top: 100 ,
+        bottom: 330
+      }
+    })
+  })
+</script>
