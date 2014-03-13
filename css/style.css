@@ -16,12 +16,6 @@
   border-bottom:2px solid #C17698;
   background:#7B0D66;
 }
-.hr-bar {
-  border-top: 2px solid #C17698;
-  background:#7B0D66;
-  min-height:4px;
-  font:0/0 Arial;
-}
 /** ===================================
  * 文章页 缺省专题页
  * 样式比较简单
@@ -964,4 +958,56 @@ hr {
 #doc h2 {
   border-bottom: 1px solid #58aaf7;
   line-height: 32px;
+}
+/**
+ * 开发者页面样式
+ */
+#steps {
+  margin: 50px 0;
+}
+#steps ul {
+  padding: 0px;
+}
+#steps ul > li {
+  float: left;
+  position: relative;
+}
+#steps ul > li~li {
+  margin-left: 40px;
+}
+#steps ul > li a {
+  display: block;
+}
+#steps ul > li .icon {
+  border: 3px solid #ddd;
+  border-radius: 15px;
+  width: 180px;
+  height: 77px;
+}
+#steps ul > li .text {
+  line-height: 40px;
+  color: #27426b;
+  text-align: center;
+  font-size: 14px;
+}
+#steps .edit-img {
+  background: url('../images/edit.png') center center no-repeat;
+}
+#steps .upload-img {
+  background: url('../images/upload.png') center center no-repeat;
+}
+#steps .download-img {
+  background: url('../images/download.png') center center no-repeat;
+}
+#developer .action {
+  text-align: center;
+}
+#developer .btn {
+  padding: 10px 70px;
+  border-radius: 0px;
+  background-color: #5CABF3;
+  border: none;
+}
+#developer .btn:hover {
+  background-color: #4392DA;
 }
