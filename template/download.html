@@ -1,4 +1,49 @@
 <div class="grid grid-pad">
   <h2>下载中心</h2>
-  {{{content}}}
+  <div id="nav-list">
+    <ul>
+      <li><a href="/download/offerwall"><i class="fa fa-list"></i>积分墙广告sdk</a></li>
+      <li><a href="/download/instream"><i class="fa fa-trophy"></i>内容流广告sdk</a></li>
+    </ul>
+  </div>
+  <div id="download" class="article">
+    <div class="p">
+      <div class="lab">业务介绍：</div>
+      <div class="content">{{description}}</div>
+    </div>
+    <div class="p">
+      <div class="lab">版本号：</div>
+      <div class="content">{{version}}</div>
+    </div>
+    <div class="p">
+      <div class="lab">发布时间：</div>
+      <div class="content">{{publish_date}}</div>
+    </div>
+    <div class="p">
+      <div class="lab">更新内容：</div>
+      <div class="content">
+        {{{content}}}
+      </div>
+    </div>
+    <div class="p n">
+      <div class="lab">在线文档：</div>
+      <div class="content">
+        <a href="{{doc_url}}">中文版</a>
+      </div>
+    </div>
+    <div class="bottom">
+      <a class="btn btn-primary" href="{{download_url}}">下载</a>
+    </div>
+  </div>
 </div>
+<script type="text/javascript">
+$(function() {
+  var path = location.pathname;
+  $('#nav-list li a').each(function() {
+    var href = this.href;
+    if (href.indexOf(path) !== -1) {
+      $(this).parent().addClass('active');
+    }
+  })
+})
+</script>
