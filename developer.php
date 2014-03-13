@@ -11,25 +11,8 @@ Template Name: 开发者
 <?php
 get_header();
 
-// SDK路径如 sdk/Dianjoy_android_SDK_v2.1.zip
-$sdks = array();
-$zipfiles = glob('dev/sdk/*.zip');
-foreach ($zipfiles as $zip) {
-  $arr = explode('/', $zip);
-  $file = $arr[count($arr) - 1];
-  $file = rtrim($file, '.zip');
-  $parse = explode('_', $file);
-  $sdks[] = array(
-    'platform' => $parse[1],
-    'type' => isset($parse[4]) ? $parse[4] : '广告墙',
-    'version' => $parse[3],
-    'url' => implode('/', array_slice($arr, 1)),
-    'name' => $parse[3],
-  );
-}
 $result = array(
-  'home_url' => esc_url(home_url('/')),
-  'sdks' => $sdks,
+  'home_url' => esc_url(home_url('/'))
 );
 
 
