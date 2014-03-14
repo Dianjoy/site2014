@@ -13,10 +13,9 @@ $tpl = new Mustache_Engine();
 global $page, $paged;
 $pagenum = $page > 2 || $paged > 2 ? ' | ' . sprintf(__('第 %s 页'), max($paged, $page)) : '';
 $nav = array(
-  'container_class' => 'span9',
   'echo' => FALSE,
   'theme_location' => 'primary',
-  'menu_class' => 'menu pull-right',
+  'menu_class' => 'nav',
 );
 
 // 提取描述和关键词
@@ -40,7 +39,7 @@ $result = array(
   'name' => get_bloginfo('name'),
   'name_title' => esc_attr(get_bloginfo('name', 'display')),
   'nav' => wp_nav_menu($nav),
-  'css' => 'style.css',
+  'css' => 'css/style.css',
 );
 
 // 为了保证wp_head的输出

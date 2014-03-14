@@ -30,7 +30,7 @@
     <div class="title">
       登录
     </div>
-    <form action="dev/login_do.php">
+    <form method="post" action="dev/login_do.php">
       <p>
         <i class="fa icon-user"></i>
         <input type="text" placeholder="用户名" autofocus="autofocus" name="username" tabindex="1">
@@ -41,14 +41,14 @@
       </p>
       <p>
         <input type="text" maxlength="4" size="10" id="verifycode" placeholder="验证码" name="verifycode" tabindex="3">
-        <img src="http://www.dianjoy.com/dev/inc/showimg.php" alt="验证码" title="点击刷新" id="vericode" onclick="refresh_code(this);">
+        <img src="dev/inc/showimg.php" alt="验证码" title="点击刷新" id="vericode" onclick="refresh_code(this);">
       </p>
       <p>
         <input type="submit" class="btn btn-primary" value="登录">
       </p>
       <p>
-        <a href="#forget-password">忘记密码</a>
-        <a href="http://www.dianjoy.com/dev/register.php">注册</a>
+        <a href="dev/forget-password.php">忘记密码</a>
+        <a href="dev/register.php">注册</a>
       </p>
     </form>
   </div>
@@ -138,5 +138,8 @@
     });
     //TODO form check
   });
+  function refresh_code(img) {
+    img.src = 'dev/inc/showimg.php?timestamp=' + (new Date()).getTime();
+  }
 </script>
 
