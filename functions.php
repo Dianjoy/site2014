@@ -122,11 +122,21 @@ add_filter('use_default_gallery_style', '__return_false');
 function dian2013_home_pagesize( $query ) {
     $uri = $_SERVER['REQUEST_URI'];
     if (substr($uri, 0, 5) === '/news') {
-      //新闻
+      //新闻页最多出4条 ugly hack
       set_query_var('posts_per_page', 4);
       $query->set( 'posts_per_page', 4);
     }
     return;
 }
 add_action( 'pre_get_posts', 'dian2013_home_pagesize', 1 );
+
+function make_href_root_relative($input) {
+    return preg_replace('!http(s)?://localhost:8080/!', '/', $input);
+}
+
+function root_relative_permalinks($input) {
+    return make_href_root_relative($input);
+}
+
+add_filter( 'the_permalink', 'root_relative_permalinks' );
 ?>

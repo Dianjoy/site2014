@@ -270,13 +270,17 @@ html {
   color: #333;
 }
 
+.grid ~ .grid {
+  margin-top: 20px;
+}
 /**
  * 主标题
  */
 
 h2 {
   font-size: 16px;
-  margin: 22px 0;
+  margin: 20px 0px 20px 0;
+  font-weight: bold;
 }
 
 /**
@@ -449,7 +453,6 @@ hr {
 
 .address {
   padding: 15px;
-  cursor: pointer;
   border-width: 1px solid #e8e8e8;
 }
 
@@ -493,7 +496,8 @@ hr {
 }
 
 .carousel > div {
-  width: 960px;
+  width: 100%;
+  max-width: 960px;
   margin: 0 auto;
   position: relative;
 }
@@ -501,7 +505,7 @@ hr {
 #loginform {
   position: absolute;
   top: 30px;
-  right: 60px;
+  right: 40px;
   width: 280px;
   height: 350px;
   background-color: rgba(255, 255, 255, 0.7);
@@ -660,10 +664,9 @@ hr {
 
 #partner-logos li {
   list-style: none;
-  padding: 10px;
   background: #FFF;
   display: inline-block;
-  margin: 0 10px 10px 0;
+  margin: 0 21px 20px 0;
 }
 
 /* owl carousel*/
@@ -724,7 +727,7 @@ hr {
   background: url('../images/list-icon.png') center left no-repeat;
   padding-left: 16px;
   display: block;
-  max-width: 450px;
+  max-width: 520px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -736,9 +739,11 @@ hr {
   padding-left: 10px;
   color: #7F8492;
 }
-
 /* downloads*/
 
+#downloads {
+  padding: 0px;
+}
 #downloads li {
   list-style: none;
 }
@@ -751,7 +756,7 @@ hr {
   background-color: #435674;
   border-radius: 3px;
   display: block;
-  width: 220px;
+  width: 200px;
   line-height: 46px;
   color: #fff;
   -webkit-box-shadow: 0 1px 3px #888;
@@ -1188,39 +1193,6 @@ hr {
   font-weight: bold;
 }
 
-@media handheld, only screen and (max-width: 767px) {
-  #nav-list {
-    float: none;
-    width: auto;
-    margin: 10px 15px;
-  }
-
-  .article {
-    margin: 10px 15px;
-  }
-
-  #nav {
-    display: none;
-  }
-
-  #doc,
-  #help {
-    margin: 0 20px;
-  }
-
-  header .nav {
-    display: none;
-  }
-
-  h2.title {
-    text-align: center;
-  }
-
-  footer table.address {
-    display: none;
-  }
-}
-
 #about p {
   font-size: 14px;
   line-height: 28px;
@@ -1289,3 +1261,52 @@ hr {
 #product .content.right~.img {
   float: left;
 }
+
+@media handheld, only screen and (max-width: 767px) {
+  #nav-list {
+    float: none;
+    width: auto;
+    margin: 10px 15px;
+  }
+
+  .article {
+    margin: 10px 15px;
+  }
+
+  #nav {
+    display: none;
+  }
+
+  #doc,
+  #help {
+    margin: 0 20px;
+  }
+
+  header .nav {
+    display: none;
+  }
+
+  h2.title {
+    text-align: center;
+  }
+
+  footer table.address {
+    display: none;
+  }
+  .service .bg:first-child {
+    margin-right: 0px;
+  }
+  .carousel > div {
+    width: auto;
+    padding-top: 30px;
+  }
+  #loginform {
+    position: static;
+    margin: 0px auto;
+  }
+  #news > li a {
+    white-space: initial;
+    float: none;
+  }
+}
+
