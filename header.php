@@ -11,11 +11,18 @@ $tpl = new Mustache_Engine();
 
 global $page, $paged;
 $pagenum = $page > 2 || $paged > 2 ? ' | ' . sprintf(__('第 %s 页'), max($paged, $page)) : '';
+
 $nav = array(
   'echo' => FALSE,
   'theme_location' => 'primary',
-  'menu_class' => 'nav',
+  'menu_class' => 'nav'
 );
+//非首页加入登录注册导航链接
+$login = '<li><a href="/dev/login">登录/注册</a></li>';
+$not_index = $_SERVER['REQUEST_URI'] != '/';
+if ($not_index) {
+  $nav['items_wrap'] = '<ul class="nav">%3$s'.$login.'</ul>';
+}
 
 // 提取描述和关键词
 $tags = '';
