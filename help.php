@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: 在线文档
+Template Name: 帮助中心
 */
 /**
  * @overview 开发者模版
@@ -21,10 +21,12 @@ if (have_posts()) {
     'content' => str_replace(']]>', ']]&gt;', apply_filters('the_content', get_the_content()))
   );
 }
+
+
 require_once('inc/mustache.php');
 $tpl = new Mustache_Engine();
 
-$template = dirname(__FILE__) . '/template/doc.html';
+$template = dirname(__FILE__) . '/template/help.html';
 $template = file_get_contents($template);
 echo $tpl->render($template, $result);
 
