@@ -6,19 +6,21 @@
 .single-column {
   margin: 0 auto;
 }
-
-.mt30 {
-  margin-top: 30px;
-}
-
-.mt50 {
-  margin-top: 50px;
 }
 
 .bar {
   border-top: 2px solid #C17698;
   border-bottom: 2px solid #C17698;
   background: #7B0D66;
+}
+.entry-title {
+  margin-bottom: 20px;
+}
+#content {
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+  font-family: simsun;
 }
 
 /** ===================================
@@ -270,9 +272,6 @@ html {
   color: #333;
 }
 
-.grid ~ .grid {
-  margin-top: 20px;
-}
 /**
  * 主标题
  */
@@ -291,12 +290,19 @@ h3 {
   font-size: 14px;
   color: #333;
   margin: 15px 0;
+  font-weight: bolder;
 }
 
 input {
   outline: none;
 }
 
+/**
+ * button
+ */
+.btn.btn-primary {
+  text-shadow: 0 1px 0 #555;
+}
 header {
   height: 80px;
   border-top: 2px solid #2688e6;
@@ -304,7 +310,7 @@ header {
 }
 
 header .logo {
-  margin: 18px 40px;
+  margin: 18px 20px;
   line-height: 78px;
   display: block;
   float: left;
@@ -344,8 +350,9 @@ footer {
 }
 
 footer dt {
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 5px;
+  font-weight: normal;
 }
 
 footer dd {
@@ -353,7 +360,7 @@ footer dd {
 }
 
 footer .others {
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 footer .others li {
@@ -362,7 +369,7 @@ footer .others li {
 }
 
 footer .others li.weibo {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 footer .others li.weibo a {
@@ -413,7 +420,7 @@ footer .address td {
 footer .copyright {
   text-align: center;
   color: #888;
-  padding: 25px 0;
+  padding-bottom: 10px;
 }
 
 .icon-weibo {
@@ -505,10 +512,10 @@ hr {
 #loginform {
   position: absolute;
   top: 30px;
-  right: 40px;
+  right: 20px;
   width: 280px;
   height: 350px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(245, 245, 245, 0.95);
   border-radius: 3px;
 }
 
@@ -597,12 +604,12 @@ hr {
 
 #loginform p >a:last-child {
   float: right;
+  color: #F60;;
 }
 
 /* 服务*/
 
 .service {
-  padding-top: 26px;
   margin-bottom: 28px;
 }
 
@@ -612,8 +619,12 @@ hr {
   color: #606060;
 }
 
-.service .bg:first-child {
-  margin-right: 40px;
+.service > div:first-child > .bg:first-child {
+  margin-right: 20px;
+}
+.service > div:nth-child(2) > .bg:first-child {
+  margin-left: 20px;
+  margin-right: 0px;
 }
 
 .service .icon {
@@ -666,7 +677,7 @@ hr {
   list-style: none;
   background: #FFF;
   display: inline-block;
-  margin: 0 21px 20px 0;
+  margin: 0 34px 20px 0;
 }
 
 /* owl carousel*/
@@ -707,7 +718,7 @@ hr {
 #news {
   background-color: #f0f0f0;
   border-top: 2px solid #e6e6e6;
-  margin: 0;
+  margin-right: 15px;
   padding: 0;
 }
 
@@ -723,7 +734,7 @@ hr {
 
 #news > li a {
   font-size: 16px;
-  color: #7F8492;
+  color: #26416C;
   background: url('../images/list-icon.png') center left no-repeat;
   padding-left: 16px;
   display: block;
@@ -1204,13 +1215,17 @@ hr {
 }
 
 #about h3 {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
+  border-bottom: 1px solid #58aaf7;
+  line-height: 32px;
 }
 
-#about .pad {
-  padding: 20px;
+#about h3 span {
+  border-bottom: 2px solid #58aaf7;
+  padding: 5px 0;
 }
+
 
 /**
  * 广告产品页
@@ -1310,3 +1325,6 @@ hr {
   }
 }
 
+#owl-demo {
+  display: none !important;
+}
