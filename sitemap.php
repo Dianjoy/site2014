@@ -12,7 +12,7 @@ get_header();
 // Add pages you'd like to exclude in the exclude here
 wp_list_pages(
   array(
-    'exclude' => '',
+    'exclude' => '911,266',
     'title_li' => '',
   )
 );
