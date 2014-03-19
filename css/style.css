@@ -1193,6 +1193,7 @@ hr {
 
 #help {
   margin-left: 200px;
+  line-height: 25px;
 }
 
 #help h2 {
@@ -1202,6 +1203,30 @@ hr {
 
 #help h3 {
   font-weight: bold;
+  position: relative;
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+#help h3::before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 1em;
+  content: '▸';
+}
+#help h3.expand::before {
+  content: '▾';
+}
+
+#help h3 ~ div {
+  display: none;
+  padding: 15px;
+}
+
+#help h3.expand ~ div {
+  background-color: #F5F5F5;
+  display: block;
 }
 
 #about p {

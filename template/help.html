@@ -3,14 +3,7 @@
   <div id="nav" class="affix-top">
     <ul>
       <li><i class="fa"></i><a href="#section_reg">注册点乐</a></li>
-      <ul>
-        <li><i class="fa"></i><a href="#section_reg_id">获取点乐ID</a></li>
-        <li><i class="fa"></i><a href="#section_reg_changepass">修改密码</a></li>
-        <li><i class="fa"></i><a href="#section_reg_findpass">找回密码</a></li>
-        <li><i class="fa"></i><a href="#section_reg_changeinfo">修改账户信息</a></li>
-        <li><i class="fa"></i><a href="#section_reg_freeze">处理帐号冻结</a></li>
-      </ul>
-      <li><i class="fa"></i><a href="#section_product">选择合作产品</a></li>
+      <li><i class="fa"></i><a href="#section_product">产品合作</a></li>
       <li><i class="fa"></i><a href="#section_upload">上传应用</a></li>
       <li><i class="fa"></i><a href="#section_income">收入相关</a></li>
       <li><i class="fa"></i><a href="#section_service">使用后台</a></li>
@@ -28,6 +21,10 @@
         top: 20 ,
         bottom: 330
       }
+    })
+    $('#help').on('click', 'h3', function() {
+      var el = $(this);
+      el.toggleClass('expand');
     })
   })
 </script>
