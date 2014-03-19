@@ -972,6 +972,9 @@ hr {
   border-top: 1px solid #F0F0F0;
 }
 
+#article {
+  margin-left: 170px;
+}
 #article li {
   list-style: none;
   border-bottom: 1px solid #EEE;
@@ -988,23 +991,24 @@ hr {
 }
 
 #article li > div:nth-child(2) {
-  margin-left: 70px;
+  margin-left: 90px;
 }
 
 #article li .date h2 {
   margin: 0px;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 #article li .date {
   width: 70px;
+  font-size: 16px;
   line-height: 25px;
 }
 
 #article li .title {
-  color: #2588e6;
+  color: #1c86e9;
   margin-bottom: 10px;
-  font-size: 25px;
+  font-size: 18px;
 }
 
 #article li .tag {
@@ -1013,6 +1017,7 @@ hr {
 
 #article li .excerpt {
   line-height: 25px;
+  color: #666;
 }
 
 /*
@@ -1199,10 +1204,14 @@ hr {
 #help h2 {
   border-bottom: 1px solid #58AAF7;
   line-height: 32px;
+  font-size: 14px;
 }
-
+#help h2 > span {
+  border-bottom: 2px solid #58AAF7;
+  padding: 5px 0;
+}
 #help h3 {
-  font-weight: bold;
+  font-weight: normal;
   position: relative;
   padding-left: 15px;
   cursor: pointer;

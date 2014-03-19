@@ -13,8 +13,8 @@
       <li><i class="fa"></i><a href="/news?tag=baodao">媒体报道</a></li>
     </ul>
   </div>
-  <div class="col-9-12">
-    <ul id="article">
+  <div id="article">
+    <ul>
       {{#blog}}
       <li class="clearfix">
         <div class="date">
@@ -23,7 +23,7 @@
         </div>
         <div>
           <div class="title"><a href="{{link}}" title="{{full_title}}">{{title}}</a></div>
-          <div class="tag">[{{tag}}]</div>
+          <div class="tag">{{tag}}</div>
           <div class="excerpt">{{{excerpt}}}</div>
         </div>
       </li>

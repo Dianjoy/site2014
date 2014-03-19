@@ -17,9 +17,10 @@ if (have_posts()) {
     $posttags = get_the_tags();
     if ($posttags) {
       foreach($posttags as $tag) {
-        $tag_str = $tag_str.$tag->name . ' ';
+        $tag_str = $tag_str.'['.$tag->name . ']';
       }
     }
+    $tag_str = trim($tag_str);
     $blog[] = array(
       'class' => join(' ', get_post_class($class, $post_id)),
       'title' => the_title('', '', FALSE),
