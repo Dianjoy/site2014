@@ -1224,7 +1224,7 @@ hr {
   padding: 15px;
 }
 
-#help h3.expand ~ div {
+#help h3.expand + div {
   background-color: #F5F5F5;
   display: block;
 }
