@@ -306,7 +306,7 @@ input {
 header {
   height: 80px;
   border-top: 2px solid #2688e6;
-  background-color: #fcfcfc;
+  background-color: #f5f5f5;
 }
 
 header .logo {
@@ -338,6 +338,7 @@ header .nav li a {
   padding: 0 25px;
 }
 
+header .nav li a.active,
 header .nav li a:hover {
   background-color: #333333;
   color: #ffffff;
@@ -566,7 +567,7 @@ hr {
 }
 
 #loginform p .fa.icon-user {
-  background: url('../images/user-icon.png') center center no-repeat;
+  background: url('../images/email-icon.png') center center no-repeat;
 }
 
 #loginform p .fa.icon-password {

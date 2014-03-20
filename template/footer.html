@@ -63,9 +63,9 @@
   $('header .nav a').each(function() {
     var path = this.pathname;
     var curr = window.location.pathname;
-    if (curr == '/' && path == '/') return this.style.fontWeight = 'bold';
+    if (curr == '/' && path == '/') return this.className = 'active';
     if (path !== '/' && curr.indexOf(path) === 0) {
-      this.style.fontWeight = 'bold';
+      this.className = 'active';
     }
   })
 </script>
