@@ -59,5 +59,15 @@
     点乐 © 2014 保留一切权力     京ICP备12010382号
   </div>
 </footer>
+<script>
+  $('header .nav a').each(function() {
+    var path = this.pathname;
+    var curr = window.location.pathname;
+    if (curr == '/' && path == '/') return this.style.fontWeight = 'bold';
+    if (path !== '/' && curr.indexOf(path) === 0) {
+      this.style.fontWeight = 'bold';
+    }
+  })
+</script>
 </body>
 </html>
