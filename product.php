@@ -18,7 +18,7 @@ if (have_posts()) {
   $result = array(
     'home_url' => esc_url(home_url('/')),
     'title' => the_title('', '', FALSE),
-    'content' => str_replace(']]>', ']]&gt;', apply_filters('the_content', get_the_content())),
+    'content' => get_the_content(),
   );
 }
 

@@ -445,7 +445,8 @@ footer .copyright {
   width: 100%;
 }
 
-.table td {
+.table td,
+.table th {
   border: 1px solid #d4eaf2;
   padding: 15px 35px;
 }
