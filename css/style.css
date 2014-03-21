@@ -781,7 +781,7 @@ hr {
 
 #nav-list {
   line-height: 64px;
-  width: 200px;
+  width: 210px;
   border: 1px solid #f0f0f0;
   font-size: 14px;
   float: left;
@@ -832,7 +832,7 @@ hr {
 
 .article {
   line-height: 30px;
-  margin-left: 230px;
+  margin-left: 240px;
   max-width: 690px;
 }
 
@@ -851,7 +851,7 @@ hr {
   line-height: 26px;
 }
 
-.article p {
+.article > p {
   font-size: 14px;
   line-height: 26px;
 }
@@ -1286,6 +1286,9 @@ hr {
   background: url('../images/icon-stream.png') center center no-repeat;
 }
 
+#product p {
+  font-size: 14px;
+}
 #product .block {
   height: 490px;
   padding: 40px 0;
