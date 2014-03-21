@@ -15,12 +15,12 @@
 }
 .entry-title {
   margin-bottom: 20px;
+  font-size: 20px;
 }
 .entry-content {
   font-size: 14px;
-  line-height: 20px;
+  line-height: 25px;
   color: #333;
-  font-family: simsun;
 }
 
 /** ===================================
@@ -1363,6 +1363,3 @@ hr {
   }
 }
 
-#owl-demo {
-  display: none !important;
-}
