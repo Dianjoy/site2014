@@ -833,7 +833,7 @@ hr {
 .article {
   line-height: 30px;
   margin-left: 230px;
-  max-width: 640px;
+  max-width: 690px;
 }
 
 .article h3 span {
@@ -852,7 +852,7 @@ hr {
 }
 
 .article p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 26px;
 }
 
