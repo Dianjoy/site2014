@@ -12,9 +12,13 @@ function add_aboard_css() {
 }
 function translate_menu($menu_items) {
   foreach ($menu_items as &$item) {
-    $en_title = substr($item->url, strrpos($item->url, '/') + 1, strrpos($item->url, '.'));
-    if (strpos($en_title, '.') !== FALSE) {
-      $en_title = substr($en_title, 0, strrpos($en_title, '.'));
+    if ($item->url[0] == '/') {
+      $en_title = substr($item->url, 1 , strlen($item->url));
+    } else {
+      $en_title = substr($item->url, strrpos($item->url, '/') + 1, strrpos($item->url, '.'));
+      if (strpos($en_title, '.') !== FALSE) {
+        $en_title = substr($en_title, 0, strrpos($en_title, '.'));
+      }
     }
     $en_title = $en_title ? ucfirst($en_title) : 'Home';
     $item->title = $en_title;
