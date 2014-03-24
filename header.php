@@ -17,8 +17,14 @@ $nav = array(
   'theme_location' => 'primary',
   'menu_class' => 'nav'
 );
+
 //非首页加入登录注册导航链接
 $login = '<li><a href="/dev/login">登录/注册</a></li>';
+$is_en = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) && stripos($_SERVER['HTTP_ACCEPT_LANGUAGE'], 'zh') === false;
+if ($is_en && $_SERVER["REQUEST_URI"] == "/expedition") {
+  $login = '<li><a href="/dev/login">Login</a></li>';
+}
+
 $not_index = $_SERVER['REQUEST_URI'] != '/';
 if ($not_index) {
   $nav['items_wrap'] = '<ul class="nav">%3$s'.$login.'</ul>';
