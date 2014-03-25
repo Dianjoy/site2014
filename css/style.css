@@ -15,10 +15,10 @@
 }
 .entry-title {
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 16px;
 }
 .entry-content {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 25px;
   color: #333;
 }
@@ -871,7 +871,7 @@ hr {
 
 #gallery-1 .gallery-item {
   float: left;
-  margin: 0 20px 20px 0;
+  margin: 0 17px 20px 0;
 }
 
 #gallery-1 .gallery-item img {
