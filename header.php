@@ -20,8 +20,8 @@ $nav = array(
 
 //非首页加入登录注册导航链接
 $login = '<li><a href="/dev/login">登录/注册</a></li>';
-$is_en = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) && stripos($_SERVER['HTTP_ACCEPT_LANGUAGE'], 'zh') === false;
-if ($is_en && $_SERVER["REQUEST_URI"] == "/expedition") {
+$is_en = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) && stripos($_SERVER['HTTP_ACCEPT_LANGUAGE'], 'en') !== FALSE;
+if ($is_en || isset($_REQUEST['lang']) && $_REQUEST['lang'] == 'en') {
   $login = '<li><a href="/dev/login">Login</a></li>';
 }
 
