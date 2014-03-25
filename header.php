@@ -22,7 +22,9 @@ $nav = array(
 $login = '<li><a href="/dev/login">登录/注册</a></li>';
 $is_en = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) && stripos($_SERVER['HTTP_ACCEPT_LANGUAGE'], 'en') !== FALSE;
 if ($is_en || isset($_REQUEST['lang']) && $_REQUEST['lang'] == 'en') {
-  $login = '<li><a href="/dev/login">Login</a></li>';
+  if ($_SERVER['REQUEST_URI'] == '/expedition') {
+    $login = '<li><a href="/dev/login">Login</a></li>';
+  }
 }
 
 $not_index = $_SERVER['REQUEST_URI'] != '/';
