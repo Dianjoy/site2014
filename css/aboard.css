@@ -89,12 +89,14 @@ body {
 }
 .feature {
   width: 33.3%;
-  font:16px/28px Arial, Simsun;
+  font-size: 16px;
+  line-height: 28px;
   float: left;
   padding-left:40px;
   background:url(../img/aboard/icon.png) no-repeat -10px 5px;
 }
 .feature h3{
+  font-size: 20px;
   margin-top: 10px;
 }
 .feature-1 {
