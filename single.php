@@ -12,6 +12,11 @@ get_header(); ?>
 if (have_posts()) {
   while (have_posts()) {
     the_post();
+    $tags = get_the_tags();
+    $links = array();
+    foreach ($tags as $tag) {
+      $links[] = '<a href="/news?tag='.$tag->slug.'">'.$tag->name.'</a>';
+    }
     $content = get_the_content('继续阅读');
     $blog = array(
       'id' => get_the_ID(),
@@ -24,10 +29,11 @@ if (have_posts()) {
       'excerpt' => apply_filters('the_excerpt', get_the_excerpt()),
       'content' => apply_filters('the_content', $content),
       'category' => get_the_category_list(' <span class="divider">/</span></li><li>'),
-      'tags' => apply_filters('the_tags', get_the_term_list(0, 'post_tag', '', '，'), '', '，', '', 0),
+      'tags' => implode(' ', $links),
     );
   }
 }
+
 
 require_once('inc/mustache.php');
 $tpl = new Mustache_Engine();
