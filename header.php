@@ -32,6 +32,7 @@ if ($not_index) {
   $nav['items_wrap'] = '<ul class="nav">%3$s'.$login.'</ul>';
 }
 
+$channel = $_GET['channel'];
 // 提取描述和关键词
 $tags = '';
 if (is_single()) {
@@ -53,6 +54,7 @@ $result = array(
   'keywords' => $tags,
   'pingback' => get_bloginfo('pingback_url'),
   'home_url' => $home_url,
+  'channel' => $channel,
   'name' => get_bloginfo('name'),
   'name_title' => esc_attr(get_bloginfo('name', 'display')),
   'nav' => wp_nav_menu($nav),
