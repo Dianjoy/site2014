@@ -18,7 +18,7 @@ get_header(); ?>
         <div class="entry-content">
           <p>您访问的地址似乎有误，没有页面，试试搜索下吧。</p>
           <?php get_search_form(); ?>
-          <iframe scrolling='no' frameborder='0' src='http://yibo.iyiyun.com/js/yibo404' width='640' height='540'></iframe>
+          <script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
         </div><!-- .entry-content -->
       </article><!-- #post-0 -->
 
