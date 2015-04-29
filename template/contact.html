@@ -21,6 +21,11 @@
           <a target="blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=252581403&amp;site=dianjoy&amp;menu=yes">252581403</a>
         </td>
       </tr>
+      <tr>
+        <td>深圳</td>
+        <td>QQ:  <a target="blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=5822207&amp;site=dianjoy&amp;menu=yes">5822207</a>
+        </td>
+      </tr>
     </table>
   </div>
   <div class="col-6-12">
@@ -83,74 +88,31 @@
         <p>电话：029-88814932 (开发者合作)</p>
       </address>
     </div>
+    <div class="address">
+      <div>深圳办公区</div>
+      <address>
+        <p>地址：深圳市南山区高新南四道泰邦科技大厦11层1105室</p>
+      </address>
+    </div>
   </div>
   <div class="col-8-12">
-    <div class="maps">
-      <a href="#beijing-map" role="button" data-toggle="modal">
+    <ul class="maps">
+      <li>
         <img width="600" height="290" src="http://st.map.soso.com/api?size=600*290&amp;center=116.394395,39.970138&amp;zoom=16&amp;markers=116.394395,39.970138" scale="0">
-      </a>
-      <a href="#guangzhou-map" role="button" data-toggle="modal">
-        <img width="600" height="290" src="http://st.map.soso.com/api?size=600*290&amp;center=23.126462,113.317399&amp;zoom=16&amp;markers=23.12646,113.317399" scale="0">
-      </a>
-      <a href="#shanghai-map" role="button" data-toggle="modal">
+      </li>
+      <li>
+        <img width="600" height="290" src="http://apis.map.qq.com/ws/staticmap/v2/?center=23.126462,113.317399&zoom=16&size=600*290&maptype=roadmap&markers=size:large|color:0x008AE6|label:D|23.126962,113.317199&key=KT2BZ-VC4RU-RVFVC-464Z4-JTID3-V3FRN" scale="0">
+      </li>
+      <li>
         <img width="600" height="290" src="http://st.map.soso.com/api?size=600*290&amp;center=121.395269,31.225370&amp;zoom=16&amp;markers=121.395269,31.225370" scale="0">
-      </a>
-      <a href="#xian-map" role="button" data-toggle="modal">
+      </li>
+      <li>
         <img width="600" height="290" src="http://st.map.soso.com/api?size=600*290&amp;center=108.900368,34.223757&amp;zoom=16&amp;markers=108.900368,34.223757" scale="0">
-      </a>
-    </div>
-  </div>
-</div>
-<div id="beijing-map" class="modal fade" role="dialog" aria-hidden="true" aria-labelledby="Dianjoy Beijing">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h3 class="modal-title">点乐北京办公室</h3>
-      </div>
-      <div class="modal-body">
-        <iframe width="520" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://l.soso.com/1688635199"></iframe>
-      </div>
-    </div>
-  </div>
-</div>
-<div id="guangzhou-map" class="modal fade" role="dialog" aria-hidden="true" aria-labelledby="Dianjoy Guangzhou">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h3 class="modal-title">点乐广州办公室</h3>
-      </div>
-      <div class="modal-body">
-        <iframe width="520" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://l.soso.com/1688643573"></iframe>
-      </div>
-    </div>
-  </div>
-</div>
-<div id="shanghai-map" class="modal fade" role="dialog" aria-hidden="true" aria-labelledby="Dianjoy Shanghai">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h3 class="modal-title">点乐上海办公室</h3>
-      </div>
-      <div class="modal-body">
-        <iframe width="520" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://l.soso.com/1937459401"></iframe>
-      </div>
-    </div>
-  </div>
-</div>
-<div id="xian-map" class="modal fade" role="dialog" aria-hidden="true" aria-labelledby="Dianjoy Xian">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h3 class="modal-title">点乐西安办公室</h3>
-      </div>
-      <div class="modal-body">
-        <iframe width="520" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://l.soso.com/1937469075"></iframe>
-      </div>
-    </div>
+      </li>
+      <li>
+        <img width="600" height="290" src="http://apis.map.qq.com/ws/staticmap/v2/?center=22.535610,113.952470&zoom=16&size=600*290&maptype=roadmap&markers=size:large|color:0x008AE6|label:D|22.535610,113.952470&key=KT2BZ-VC4RU-RVFVC-464Z4-JTID3-V3FRN" scale="0">
+      </li>
+    </ul>
   </div>
 </div>
 <script>
@@ -158,9 +120,8 @@
     $('#addresses').on('click', '.address', function(e) {
       var div = $(e.currentTarget);
       div.addClass('active').siblings().removeClass('active');
-      var i = div.prevAll().length;
-      $('.maps a').hide();
-      $('.maps a').eq(i).css('display', 'block');
+      var i = div.index();
+      $('.maps li').hide().eq(i).css('display', 'block');
     })
   })
 </script>
