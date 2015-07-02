@@ -28,6 +28,7 @@ if (have_posts()) {
     'doc_url' => get_post_meta($id, 'doc_url', true),
     'download_url' => get_post_meta($id, 'download_url', true),
   );
+  $result['ios'] = preg_match('/ios/', $result['title']);
 }
 require_once('inc/mustache.php');
 $tpl = new Mustache_Engine();
