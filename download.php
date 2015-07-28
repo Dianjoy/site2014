@@ -29,6 +29,7 @@ if (have_posts()) {
     'download_url' => get_post_meta($id, 'download_url', true),
   );
   $result['ios'] = preg_match('/ios/', $result['title']);
+  $result['is_android_offer_wall'] = preg_match('/\/offerwall\/?$/', $result['title']);
 }
 require_once('inc/mustache.php');
 $tpl = new Mustache_Engine();

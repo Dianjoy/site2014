@@ -51,7 +51,15 @@
       {{/ios}}
     </div>
     <div class="bottom">
+      {{#is_android_offer_wall}}
+      <div class="alert alert-warning">
+        <h4><i class="fa fa-warning"></i> 很抱歉，此版本为旧版</h4>
+        <p>请联系您的服务经理获取最新版本。</p>
+      </div>
+      {{/is_android_offer_wall}}
+      {{^is_android_offer_wall}}
       <a class="btn btn-primary" href="{{download_url}}">下载</a>
+      {{/is_android_offer_wall}}
     </div>
   </div>
   </div>
