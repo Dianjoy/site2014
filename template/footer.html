@@ -90,7 +90,11 @@
     if (path !== '/' && curr.indexOf(path) === 0) {
       this.className = 'active';
     }
-  })
+  });
+
+  function refresh_code(img) {
+    img.src = '/dev/inc/showimg.php?timestamp=' + Date.now();
+  }
 </script>
 </body>
 </html>

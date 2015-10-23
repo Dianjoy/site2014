@@ -1,6 +1,6 @@
-<div class="carousel">
+<div class="key-slide">
   <div>
-    <div id="carousel-text">
+    <div class="key-text">
       <div class="title">全国领先的手机智能平台</div>
       <div class="body">
           <div>用户超过 <span class="number">300,000,000</span> 人</div>
@@ -64,11 +64,20 @@
     </div>
   </div>
 </div>
-<div id="owl-demo" class="owl-carousel owl-theme">
-  <div class="item"><img src="{{home_url}}wp-content/themes/dian2013/images/slider_1.jpg"></div>
-  <div class="item"><img src="{{home_url}}wp-content/themes/dian2013/images/slider_2.jpg"></div>
-  <div class="item"><img src="{{home_url}}wp-content/themes/dian2013/images/slider_3.jpg"></div>
-  <div class="item"><img src="{{home_url}}wp-content/themes/dian2013/images/slider_4.jpg"></div>
+<div id="carousel-banner" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-banner" data-slide-to="0" class="active">1</li>
+    <li data-target="#carousel-banner" data-slide-to="1">2</li>
+    <li data-target="#carousel-banner" data-slide-to="2">3</li>
+    <li data-target="#carousel-banner" data-slide-to="3">4</li>
+  </ol>
+
+  <div class="carousel-inner" role="listbox">
+    <div class="item active"><img src="{{home_url}}wp-content/themes/dian2013/images/slider_1.jpg"></div>
+    <div class="item"><img src="{{home_url}}wp-content/themes/dian2013/images/slider_2.jpg"></div>
+    <div class="item"><img src="{{home_url}}wp-content/themes/dian2013/images/slider_3.jpg"></div>
+    <div class="item"><img src="{{home_url}}wp-content/themes/dian2013/images/slider_4.jpg"></div>
+  </div>
 </div>
 <div class="grid grid-pad">
   <div class="col-9-12">
@@ -106,24 +115,3 @@
     </ul>
   </div>
 </div>
-<script>
-  $(function() {
-    $("#owl-demo").owlCarousel({
-        navigation : false, // Show next and prev buttons
-        slideSpeed : 300,
-        paginationSpeed : 400,
-        singleItem:true,
-        autoPlay: true,
-        paginationNumbers: true
-        // "singleItem:true" is a shortcut for:
-        // items : 1, 
-        // itemsDesktop : false,
-        // itemsDesktopSmall : false,
-        // itemsTablet: false,
-        // itemsMobile : false
-    });
-  });
-  function refresh_code(img) {
-    img.src = 'dev/inc/showimg.php?timestamp=' + (new Date()).getTime();
-  }
-</script>

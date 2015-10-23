@@ -11,4 +11,10 @@ sitemap.xml
 wp-content/cache/
 wp-content/backups/
 sitemap.xml.gz
+
+# IDE
 .idea
+
+# build
+.sass-cache
+css/screen.css
