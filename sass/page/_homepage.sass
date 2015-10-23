@@ -40,12 +40,17 @@
   .carousel-indicators
     margin-left: 0
     right: $gap-l
+    bottom: $gap-s
     text-align: right
     width: auto
 
     li
-      line-height: $gap
+      color: $white
+      line-height: $gap - 2px
       width: $gap
       height: $gap
       text-align: center
       text-indent: 0
+
+      &.active
+        color: $font-color
