@@ -2,7 +2,7 @@
 @import "../define"
 
 .key-slide
-  background: url('../../images/slide1.jpg') center center
+  background: url(../images/slide1.jpg) center center
   @include background-size(cover)
   height: 454px
 
@@ -39,5 +39,13 @@
 #carousel-banner
   .carousel-indicators
     margin-left: 0
-    right: $gap-xl
+    right: $gap-l
     text-align: right
+    width: auto
+
+    li
+      line-height: $gap
+      width: $gap
+      height: $gap
+      text-align: center
+      text-indent: 0
