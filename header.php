@@ -32,7 +32,6 @@ if ($not_index) {
   $nav['items_wrap'] = '<ul class="nav">%3$s'.$login.'</ul>';
 }
 
-$channel = $_GET['channel'];
 // 提取描述和关键词
 $tags = '';
 if (is_single()) {
