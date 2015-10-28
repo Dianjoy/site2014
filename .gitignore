@@ -18,3 +18,4 @@ sitemap.xml.gz
 # build
 .sass-cache
 css/screen.css
+css/ie.css

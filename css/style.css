@@ -87,12 +87,12 @@ th {
 }
 
 dl {
-  margin: 0px;
+  margin: 0;
 }
 
 dd {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 address {
@@ -113,7 +113,7 @@ address {
 }
 
 [class*='col-']:last-of-type {
-  padding-right: 0px;
+  padding-right: 0;
 }
 
 .grid {
@@ -131,7 +131,7 @@ address {
 }
 
 .grid-pad {
-  padding: 20px 0 0px 20px;
+  padding: 20px 0 0 20px;
 }
 
 .grid-pad > [class*='col-']:last-of-type {
@@ -223,17 +223,17 @@ address {
   .grid {
     width: 100%;
     min-width: 0;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   [class*='col-'] {
     width: auto;
     float: none;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
     margin-top: 10px;
     margin-bottom: 10px;
     padding-left: 20px;
@@ -277,7 +277,7 @@ html {
 
 h2 {
   font-size: 16px;
-  margin: 20px 0px 20px 0;
+  margin: 20px 0 20px 0;
   font-weight: bold;
 }
 
@@ -319,7 +319,7 @@ header .nav {
   float: left;
   height: 100%;
   line-height: 78px;
-  padding: 0px;
+  padding: 0;
   margin-left: 95px;
 }
 
@@ -343,97 +343,14 @@ header .nav li a:hover {
   color: #ffffff;
 }
 
-footer {
-  background-color: #333333;
-  color: #ddd;
-  margin-top: 50px;
-}
-
-footer dt {
-  font-size: 14px;
-  margin-bottom: 5px;
-  font-weight: normal;
-}
-
-footer dd {
-  color: #888888;
-}
-
-footer .others {
-  margin-top: 30px;
-}
-
-footer .others li {
-  list-style: none;
-  line-height: 25px;
-}
-
-footer .others li.weibo {
-  margin-top: 20px;
-}
-
-footer .others li.weibo a {
-  display: block;
-  line-height: 32px;
-  height: 32px;
-}
-
-footer .others li a {
-  color: #ddd;
-  text-decoration: none;
-}
-
-footer .others li a:hover {
-  text-decoration: underline;
-}
-
-footer table.address {
-  width: 100%;
-  margin-top: 30px;
-  margin-bottom: 60px;
-}
-
-footer table.address tr:first-child>td {
-  padding-bottom: 25px;
-}
-
-footer table.address tr:last-child>td {
-  padding-top: 25px;
-}
-
-footer table.address td {
-  border-right: 1px solid #888;
-  padding: 0 10px;
-}
-
-footer table.address td:last-child {
-  border-right: none;
-}
-
-footer table.address tr:first-child {
-  border-bottom: 1px solid #888;
-}
-
-footer .address td {
-  width: 33.3333%;
-}
-
-footer .copyright {
-  text-align: center;
-  color: #888;
-  padding-bottom: 10px;
-}
-
 .icon-weibo {
   margin-top: -3px;
   display: inline-block;
   height: 16px;
   width: 16px;
   vertical-align: middle;
-  background-image: url('../images/weibo.png');
+  background: url('../images/weibo.png');
   line-height: normal;
-  background-position: 0% 0%;
-  background-repeat: repeat;
 }
 
 /**
@@ -478,8 +395,8 @@ hr {
 .maps li {
   list-style: none;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   display: none;
 }
 
@@ -530,8 +447,8 @@ hr {
 #loginform input[type="text"]:focus,
 #loginform input[type="password"]:focus {
   border: 1px solid #50a4f9;
-  -webkit-box-shadow: 0 0px 3px #999;
-  box-shadow: 0 0px 3px #999;
+  -webkit-box-shadow: 0 0 3px #999;
+  box-shadow: 0 0 3px #999;
 }
 
 #loginform form {
@@ -614,7 +531,7 @@ hr {
 }
 .service > div:nth-child(2) > .bg:first-child {
   margin-left: 20px;
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 .service .icon-left,
@@ -639,7 +556,7 @@ hr {
   clear: both;
   text-align: center;
   margin-top: 30px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .service .content {
@@ -649,7 +566,7 @@ hr {
 
 .service .btn {
   padding: 10px 60px;
-  border-radius: 0px;
+  border-radius: 0;
   background-color: #5CABF3;
   border: none;
   -webkit-box-shadow: 0 1px 3px #888;
@@ -661,7 +578,7 @@ hr {
 }
 
 #partner-logos ul {
-  padding: 0px;
+  padding: 0;
 }
 
 #partner-logos li {
@@ -744,7 +661,7 @@ hr {
 /* downloads*/
 
 #downloads {
-  padding: 0px;
+  padding: 0;
 }
 #downloads li {
   list-style: none;
@@ -787,8 +704,8 @@ hr {
 }
 
 #nav-list > ul {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 #nav-list > ul > li {
@@ -846,7 +763,7 @@ hr {
 }
 
 .article ul {
-  padding: 0px;
+  padding: 0;
 }
 
 .article ul li {
@@ -889,8 +806,8 @@ hr {
 }
 
 #nav > ul {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 #nav ul > li {
@@ -985,7 +902,7 @@ hr {
 }
 
 #article li .date h2 {
-  margin: 0px;
+  margin: 0;
   font-size: 22px;
 }
 
@@ -1023,8 +940,8 @@ hr {
 }
 
 .pagination > ul {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .pagination > ul:after {
@@ -1076,7 +993,7 @@ hr {
 
 #download ul {
   margin-bottom: 20px;
-  padding: 0px;
+  padding: 0;
 }
 
 #download ul li {
@@ -1129,7 +1046,7 @@ hr {
 }
 
 #steps ul {
-  padding: 0px;
+  padding: 0;
 }
 
 #steps ul > li {
@@ -1177,7 +1094,7 @@ hr {
 
 #developer .btn {
   padding: 10px 70px;
-  border-radius: 0px;
+  border-radius: 0;
   background-color: #5CABF3;
   border: none;
 }
@@ -1209,8 +1126,8 @@ hr {
 
 #help h3::before {
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   font-size: 1em;
   content: '▸';
 }
@@ -1336,7 +1253,7 @@ hr {
     display: none;
   }
   .service .bg:first-child {
-    margin-right: 0px;
+    margin-right: 0;
   }
   .carousel > div {
     width: auto;
@@ -1344,22 +1261,10 @@ hr {
   }
   #loginform {
     position: static;
-    margin: 0px auto;
+    margin: 0 auto;
   }
   #news > li a {
     white-space: initial;
     float: none;
   }
-}
-
-.ie #loginform {
-  background-color: #f5f5f5;
-}
-
-.ie footer table.address tr > td.r {
-  padding-left: 25px;
-}
-
-.ie footer table.address tr.b >td {
-  padding-top: 25px;
 }
