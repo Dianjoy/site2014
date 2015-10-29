@@ -20,6 +20,7 @@ get_footer('clear');
 
 // 生成缓存
 $page = ob_get_contents();
+$page = preg_replace('~</html>[\S\s]*~', '</html>', $page);
 $fp = fopen('empty.html', 'w');
 fwrite($fp, $page);
 fclose($fp);
