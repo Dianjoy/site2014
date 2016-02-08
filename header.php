@@ -15,7 +15,9 @@ $pagenum = $page > 2 || $paged > 2 ? ' | ' . sprintf(__('第 %s 页'), max($page
 $nav = array(
   'echo' => FALSE,
   'theme_location' => 'primary',
-  'menu_class' => 'nav'
+  'menu_class' => 'nav navbar-nav',
+  'container_id' => 'main-menu',
+  'container_class' => 'collapse navbar-collapse',
 );
 
 //非首页加入登录注册导航链接

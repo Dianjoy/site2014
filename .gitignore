@@ -19,3 +19,6 @@ sitemap.xml.gz
 .sass-cache
 css/screen.css
 css/ie.css
+
+# repo
+bower_components

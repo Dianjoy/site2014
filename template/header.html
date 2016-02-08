@@ -8,28 +8,34 @@
   <meta name="keywords" content="点乐,应用推广,手机应用推广,广告平台,广告墙{{keywords}}" />
 
   <!-- wp_head -->
-  <link rel="shortcut icon" type="image/png" href="{{home_url}}wp-content/themes/dian2013/img/logo.png" />
+  <link rel="shortcut icon" type="image/png" href="{{home_url}}wp-content/themes/dian2013/img/fav.png" />
   <link rel="profile" href="http://gmpg.org/xfn/11" />
   <link rel="pingback" href="{{pingback}}" />
-  <link rel="stylesheet" href="//cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="//cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="//cdn.staticfile.org/owl-carousel/1.32/owl.carousel.css">
-  <link rel="stylesheet" href="//cdn.staticfile.org/prettify/r298/prettify.css">
-  <link rel="stylesheet" href="/wp-content/themes/dian2013/{{css}}?20140519" />
+  <link rel="stylesheet" href="//cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.staticfile.org/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/wp-content/themes/dian2013/{{css}}" />
   <link rel="stylesheet" href="/wp-content/themes/dian2013/css/screen.css">
   <!--[if IE]>
   <link rel="stylesheet" href="/wp-content/themes/dian2013/css/ie.css">
   <![endif]-->
 </head>
 <!--[if IE ]>
-   <body class="ie">
+<body class="ie">
 <![endif]-->
 <!--[if !IE]>-->
 <body>
 <!--<![endif]-->
-<header>
-  <div class="grid">
-    <img class="logo" src="/wp-content/themes/dian2013/images/logo-site.png" height="43px" width="160px" alt="">
-    {{{nav}}}
+<nav class="navbar navbar-default" id="top-bar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false">
+        <span class="sr-only">收放菜单</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <a class="navbar-brand" href="/">dianjoy 点乐</a>
   </div>
-</header>
+  {{{nav}}}
+</nav>
