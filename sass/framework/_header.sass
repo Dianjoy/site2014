@@ -1,31 +1,27 @@
 @import '../define'
 
 #top-bar
-  height: $top-bar_height - 2px
+  height: $top-bar-height - 2px
   border-top: 2px solid $brand-color
   background-color: #f5f5f5
 
+  .container
+    height: 100%
+
   .navbar-brand
     width: 200px
+    height: 100%
     background: url(../img/logo.png) center center no-repeat
     background-size: 160px 43px
+    text-indent: -9999px
 
-  .nav
-    height: 100%
-    line-height: 78px
-    padding: 0
+  .nav > li > a
+    font-size: 16px
+    line-height: $top-bar-height - 2px
+    color: #606060
+    padding: 0 25px
 
-    li
-      list-style: none
-
-      a
-        display: block
-        color: #606060
-        font-size: 16px
-        text-decoration: none
-        padding: 0 25px
-
-        &.active,
-        &:hover
-          background-color: $footer-bg-color
-          color: $white
+    &.active,
+    &:hover
+      background-color: $footer-bg-color
+      color: $white
