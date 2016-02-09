@@ -1,6 +1,9 @@
 {
   "name": "dianjoy 2014",
   "devDependencies": {
-    "colors": "~2.2.0"
+    "colors": "~2.2.0",
+    "bootstrap-sass": "~3.3.6"
+  },
+  "dependencies": {
   }
 }

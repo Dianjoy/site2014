@@ -1,3 +1,6 @@
+@import "compass/css3/user-interface"
+@import "../../bower_components/colors/sass/variables"
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables"
 @import "../define"
 
 body
@@ -6,5 +9,8 @@ body
 h1, h2, h3
   font-family: 'PingFang SC','Hiragino Sans GB',helvetica,tahoma,arial,'Microsoft YaHei', Simhei,sans-serif
 
-address 
-  font-style: normal
+input
+  +input-placeholder
+    color: $gray
+    text-shadow: none
+    font-size: $font-size-small

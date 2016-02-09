@@ -1,0 +1,65 @@
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables"
+@import "../../define"
+
+$sm-gap: $gap + $gap-s
+$xs-gap: $gap-s + $gap-xs
+
+#our-service
+  margin-bottom: $sm-gap
+
+  .col-sm-6
+    margin-top: $sm-gap
+
+  .bg
+    padding: $gap
+    background-color: #eee
+    color: #606060
+
+  > div:first-child > .bg:first-child
+    margin-right: 20px
+
+  > div:nth-child(2) > .bg:first-child
+    margin-left: 20px
+    margin-right: 0
+
+  .icon-left,
+  .icon-right
+    float: left
+    height: 80px
+    width: 80px
+    border: 4px solid #fff
+    margin-right: 15px
+    border-radius: 50%
+
+  > div .icon-left
+    background: #b1dff4 url('../images/advertiser-icon.png') center center no-repeat
+
+  > div .icon-right
+    background: #b1dff4 url('../images/developer-icon.png') center center no-repeat
+
+  p
+    clear: both
+    text-align: center
+    margin-top: 30px
+    margin-bottom: 0
+
+  .content
+    line-height: 25px
+
+  .btn
+    padding: 10px 60px
+    border-radius: 0
+    background-color: #5CABF3
+    border: none
+    -webkit-box-shadow: 0 1px 3px #888
+    box-shadow: 0 1px 3px #888
+
+    &:hover
+      background-color: #4392DA
+
+  @media (max-width: $screen-xs-min)
+    &
+      margin-bottom: $xs-gap
+
+      .col-sm-6
+        margin-top: $xs-gap

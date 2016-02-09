@@ -1,11 +1,14 @@
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables"
 @import '../define'
 
 #top-bar
-  height: $top-bar-height - 2px
+  border: none
   border-top: 2px solid $brand-color
   background-color: #f5f5f5
+  margin-bottom: 0
 
-  .container
+  .container,
+  .navbar-header
     height: 100%
 
   .navbar-brand
@@ -16,12 +19,40 @@
     text-indent: -9999px
 
   .nav > li > a
-    font-size: 16px
-    line-height: $top-bar-height - 2px
     color: #606060
-    padding: 0 25px
 
     &.active,
     &:hover
       background-color: $footer-bg-color
       color: $white
+
+@media (max-width: $screen-xs-min)
+  #top-bar
+    .navbar-header
+      .navbar-toggle
+        line-height: 1em
+        margin-right: $gap-s
+
+        + .navbar-toggle
+          margin-right: $gap-xs
+
+      .login-button
+        color: $font-color
+        display: inline-block
+
+    .navbar-brand
+      width: 120px + $navbar-padding-horizontal
+      background-size: 120px 28px
+      background-position-x: $navbar-padding-horizontal
+
+@media (min-width: $screen-xs-max)
+  #top-bar
+    height: $top-bar-height
+
+    .navbar-header .login-button
+      display: none
+
+    .nav > li > a
+      font-size: 16px
+      line-height: $top-bar-height - 2px
+      padding: 0 25px

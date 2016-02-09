@@ -74,6 +74,19 @@
 <script src="//cdn.staticfile.org/jquery/2.1.4/jquery.min.js"></script>
 <script src="//cdn.staticfile.org/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
 <script>
+  var curr = window.location.pathname;
+  $('#main-menu .nav a').addClass(function() {
+    var path = this.pathname;
+    if (curr === '/' && path === '/' || path != '/' && curr.indexOf(path) === 0) {
+      return 'active';
+    }
+  });
+
+  function refresh_code() {
+    this.src = '/dev/inc/showimg.php?timestamp=' + Date.now();
+  }
+</script>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -82,20 +95,6 @@
   ga('set', 'dimension1', '{{channel}}');
   ga('create', 'UA-35957679-4', 'auto');
   ga('send', 'pageview');
-</script>
-<script>
-  $('header .nav a').each(function() {
-    var path = this.pathname;
-    var curr = window.location.pathname;
-    if (curr == '/' && path == '/') return this.className = 'active';
-    if (path !== '/' && curr.indexOf(path) === 0) {
-      this.className = 'active';
-    }
-  });
-
-  function refresh_code(img) {
-    img.src = '/dev/inc/showimg.php?timestamp=' + Date.now();
-  }
 </script>
 </body>
 </html>

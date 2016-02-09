@@ -1,5 +1,5 @@
 <div class="key-slide">
-  <div>
+  <div class="container">
     <div class="key-text">
       <div class="title">中国领先的移动智能广告平台</div>
       <div class="body">
@@ -8,62 +8,78 @@
           <div>推广产品超过 <span class="number">1000</span> 款</div>
       </div>
     </div>
-    <div id="loginform">
-      <div class="title">
-        点乐开发者后台
+    <div class="modal fade" tabindex="-1" role="dialog" id="login-form">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title">点乐开发者后台</h4>
+          </div>
+          <div class="modal-body">
+            <form method="post" action="dev/login_do.php">
+              <div class="form-group">
+                <i class="fa fa-envelope"></i>
+                <input type="email" class="form-control" placeholder="邮箱帐号" name="username" tabindex="1" autofocus>
+              </div>
+              <div class="form-group">
+                <i class="fa fa-lock"></i>
+                <input type="password" class="form-control" placeholder="密码" name="password" tabindex="2">
+              </div>
+              <div class="form-group">
+                <div class="input-group">
+                  <input maxlength="4" size="4" id="verify-code" placeholder="验证码" name="verifycode" tabindex="3" class="form-control">
+          <span class="input-group-addon">
+            <img src="dev/inc/showimg.php" alt="验证码" title="点击刷新" onclick="refresh_code();">
+          </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-primary btn-block">登录</button>
+              </div>
+              <div class="form-group other-options">
+                <a href="dev/forget-password.php">忘记密码</a>
+                <a href="dev/register.php">注册</a>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-      <form method="post" action="dev/login_do.php">
-        <p>
-          <i class="fa icon-user"></i>
-          <input type="text" placeholder="邮箱帐号" autofocus="autofocus" name="username" tabindex="1">
-        </p>
-        <p>
-          <i class="fa icon-password"></i>
-          <input type="password" placeholder="密码" name="password" class="input" tabindex="2">
-        </p>
-        <p>
-          <input type="text" maxlength="4" size="10" id="verifycode" placeholder="验证码" name="verifycode" tabindex="3">
-          <img src="dev/inc/showimg.php" alt="验证码" title="点击刷新" id="vericode" onclick="refresh_code(this);">
-        </p>
-        <p>
-          <input type="submit" class="btn btn-primary" value="登录">
-        </p>
-        <p>
-          <a href="dev/forget-password.php">忘记密码</a>
-          <a href="dev/register.php">注册</a>
-        </p>
-      </form>
     </div>
   </div>
 </div>
-<div class="service grid grid-pad">
-  <div class="col-6-12">
-    <div class="bg clearfix">
-      <div class="icon-left"></div>
-      <div class="content">
-        我们坚持广告主买单的依据是广告的实际效果，<br>
-        是广告为广告主带来了多少实际价值，<br>
-        体现在用户使用量、活跃度或者销售收入。
+<div class="container" id="our-service">
+  <div class="row">
+    <div class="col-sm-6 col-xs-12">
+      <div class="bg clearfix">
+        <div class="icon-left"></div>
+        <div class="content">
+          我们坚持广告主买单的依据是广告的实际效果，<br>
+          是广告为广告主带来了多少实际价值，<br>
+          体现在用户使用量、活跃度或者销售收入。
+        </div>
+        <p>
+          <a href="/advertiser" class="btn btn-primary">广告主服务</a>
+        </p>
       </div>
-      <p>
-        <a href="/advertiser" class="btn btn-primary">广告主服务</a>
-      </p>
     </div>
-  </div>
-  <div class="col-6-12">
-    <div class="bg clearfix">
-      <div class="icon-right"></div>
-      <div class="content">
-        最有效的展现形式。<br>
-        在您赚的盆满钵满的同时，<br>
-        敬请期待我们的下一款广告产品。
+    <div class="col-sm-6 col-xs-12">
+      <div class="bg clearfix">
+        <div class="icon-right"></div>
+        <div class="content">
+          最有效的展现形式。<br>
+          在您赚的盆满钵满的同时，<br>
+          敬请期待我们的下一款广告产品。
+        </div>
+        <p>
+          <a href="/developer" class="btn btn-primary">开发者服务</a>
+        </p>
       </div>
-      <p>
-        <a href="/developer" class="btn btn-primary">开发者服务</a>
-      </p>
     </div>
   </div>
 </div>
+
 <div id="carousel-banner" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carousel-banner" data-slide-to="0" class="active">1</li>
