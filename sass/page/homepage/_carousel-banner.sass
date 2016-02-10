@@ -1,19 +1,29 @@
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables"
 @import "../../define"
 
 #carousel-banner .carousel-indicators
-  margin-left: 0
-  right: $gap-l
-  bottom: $gap-s
-  text-align: right
-  width: auto
+  @media (min-width: $screen-sm-min)
+    &
+      font-size: $font-size-small
+      margin-left: 0
+      right: $gap-l
+      bottom: $gap-s
+      text-align: right
+      width: auto
 
-  li
-    color: $white
-    line-height: $gap - 2px
-    width: $gap
-    height: $gap
-    text-align: center
-    text-indent: 0
+      li
+        color: $white
+        line-height: $gap - 2px
+        width: $gap
+        height: $gap
+        text-align: center
+        text-indent: 0
 
-    &.active
-      color: $font-color
+        &.active
+          color: $font-color
+
+  @media (max-width: $screen-xs-max)
+    &
+      margin-bottom: 0
+      bottom: 0
+      line-height: $gap-s

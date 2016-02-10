@@ -1,3 +1,4 @@
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables"
 @import "../../define"
 
 #news
@@ -7,7 +8,6 @@
   ul
     background-color: #f0f0f0
     border-top: 2px solid #e6e6e6
-    margin-right: 15px
     padding: 0
 
     > li
@@ -20,16 +20,23 @@
 
       a
         color: #26416C
-        background: url('../images/list-icon.png') center left no-repeat
-        padding-left: 16px
-        display: block
-        max-width: 520px
-        text-overflow: ellipsis
-        overflow: hidden
-        white-space: nowrap
-        word-break: break-all
-        float: left
 
-      > span:last-child
+      small
         padding-left: 10px
-        color: #7F8492
+
+  @media (max-width: $screen-xs-max)
+    &
+      h3
+        margin: $gap 0 $gap-s
+
+      ul
+        border-bottom: 2px solid #e6e6e6
+
+        li
+          line-height: $gap
+          padding: $gap-s $gap-s $gap-s $gap-l - 4px
+          text-indent: -19px
+
+          i
+            text-indent: 0
+            width: $gap - 5px

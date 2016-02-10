@@ -81,65 +81,6 @@ p.thumbnail {
   line-height: normal;
 }
 
-/**
- * about page
- */
-
-.table {
-  background-color: #f5fcff;
-  width: 100%;
-}
-
-.table td,
-.table th {
-  border: 1px solid #d4eaf2;
-  padding: 15px 35px;
-}
-
-.table td:first-child {
-  text-align: center;
-}
-
-hr {
-  border: 1px solid #f0f0f0;
-  margin: 25px 0;
-}
-
-.address {
-  padding: 15px;
-  border-width: 1px;
-}
-
-.address.active {
-  background-color: #f0f0f0;
-  border: 1px solid #e8e8e8;
-}
-
-.maps {
-  margin: 0;
-  position: relative;
-}
-
-.maps li {
-  list-style: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: none;
-}
-
-.maps li:first-child {
-  display: block;
-}
-
-#beijing-map .modal-body,
-#guangzhou-map .modal-body,
-#shanghai-map .modal-body,
-#xian-map .modal-body {
-  overflow: hidden;
-  max-height: inherit;
-}
-
 #nav-list {
   line-height: 64px;
   width: 210px;
@@ -708,14 +649,6 @@ hr {
   }
   .service .bg:first-child {
     margin-right: 0;
-  }
-  .carousel > div {
-    width: auto;
-    padding-top: 30px;
-  }
-  #loginform {
-    position: static;
-    margin: 0 auto;
   }
   #news > li a {
     white-space: initial;

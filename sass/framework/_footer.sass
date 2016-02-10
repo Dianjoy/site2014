@@ -1,32 +1,30 @@
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables"
 @import "../define"
 
-footer 
+#footer
   background-color: $footer-bg-color
   color: $footer-color
   margin-top: $gap
 
-  dt
-    font-size: 14px
-    margin-bottom: 5px
-    font-weight: normal
+  .address dl
+    border-right: 1px solid #888
+    border-bottom: 1px solid #888
+    margin-bottom: 0
+    padding: $gap
 
-  dd
-    color: #888888
+    dt
+      margin-bottom: 5px
+
+    dd
+      color: #888888
 
   .others
-    margin-top: 30px
+    margin: $gap 0
+    padding: 0
 
     li
       list-style: none
       line-height: 25px
-
-      &.weibo
-        margin-top: 20px
-
-        a
-          display: block
-          line-height: 32px
-          height: 32px
 
       a
         color: #ddd
@@ -34,34 +32,6 @@ footer
 
         &:hover
           text-decoration: underline
-
-  .address
-    margin-top: 30px
-    margin-bottom: 60px
-
-    dl
-      border-right: 1px solid #888
-      margin-bottom: 0
-      padding: $gap
-
-      &:nth-child(3n + 1)
-        padding-left: 0
-
-      &:nth-child(3n)
-        padding-right: 0
-        border-right: none
-
-      dd
-        min-height: $gap * 3
-
-    dl:nth-child(-n+3)
-      border-bottom: 1px solid #888
-
-      > dd
-        padding-bottom: $gap
-
-    dl:nth-child(n+4) > dd
-      padding-top: $gap
 
   .copyright
     text-align: center
@@ -72,3 +42,57 @@ footer
     margin: 0
     padding: 0 0 $gap
     text-align: center
+
+  @media (min-width: $screen-sm-min)
+    &
+      .address
+        margin-top: $gap
+        margin-bottom: $gap-l
+
+        dl
+          dd
+            min-height: $gap * 2
+
+          &:nth-child(-n+3)
+            padding-top: 0
+
+          &:nth-child(3n + 1)
+            padding-left: 0
+
+          &:nth-child(3n)
+            padding-right: 0
+            border-right: none
+
+          &:nth-child(n+4)
+            border-bottom: none
+            padding-bottom: 0
+
+      .others .weibo
+        margin-top: 20px
+
+        a
+          display: block
+          line-height: 32px
+          height: 32px
+
+  @media (max-width: $screen-xs-max)
+    & .address
+      padding: $gap-s + $gap-xs
+
+      dl
+        dd
+          min-height: $gap * 3
+
+        &:nth-child(2n)
+          border-right: none
+          padding-right: 0
+
+        &:nth-child(2n+1)
+          padding-left: 0
+
+        &:nth-child(-n+2)
+          padding-top: 0
+
+        &:nth-child(n+5)
+          border-bottom: none
+          padding-bottom: 0

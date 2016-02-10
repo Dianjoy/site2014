@@ -1,4 +1,6 @@
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables"
 @import "../../define"
+@import "compass/css3/box-shadow"
 
 #downloads
   h3
@@ -20,8 +22,11 @@
         width: 200px
         line-height: 46px
         color: #fff
-        -webkit-box-shadow: 0 1px 3px #888
-        box-shadow: 0 1px 3px #888
+        @include box-shadow(0 1px 3px #888)
 
         &:hover
           background-color: #2A3D5B
+
+  @media (max-width: $screen-xs-max)
+    & ul li > a
+      width: 100%
