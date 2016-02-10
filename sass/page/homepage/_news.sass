@@ -1,0 +1,35 @@
+@import "../../define"
+
+#news
+  h3
+    margin: $gap 0
+
+  ul
+    background-color: #f0f0f0
+    border-top: 2px solid #e6e6e6
+    margin-right: 15px
+    padding: 0
+
+    > li
+      list-style: none
+      line-height: 60px
+      padding-left: 20px
+
+      + li
+        border-top: 1px solid #e6e6e6
+
+      a
+        color: #26416C
+        background: url('../images/list-icon.png') center left no-repeat
+        padding-left: 16px
+        display: block
+        max-width: 520px
+        text-overflow: ellipsis
+        overflow: hidden
+        white-space: nowrap
+        word-break: break-all
+        float: left
+
+      > span:last-child
+        padding-left: 10px
+        color: #7F8492

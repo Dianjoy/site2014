@@ -95,39 +95,42 @@
     <div class="item"><img src="{{home_url}}wp-content/themes/dian2013/images/slider_4.jpg"></div>
   </div>
 </div>
-<div class="grid grid-pad">
-  <div class="col-9-12">
-    <h3>点乐动态</h3>
-    <ul id="news">
-      {{#blog}}
-      <li>
-      <a href="{{link}}" title="{{full_title}}">{{title}}</a>
-        <span>{{date}}</span>
-      </li>
-      {{/blog}}
-    </ul>
-  </div>
-  <div class="col-3-12">
-    <h3>下载中心</h3>
-    <ul id="downloads">
-      <li><a class="btn btn-primary" href="/download/offerwall">积分墙广告SDK</a></li>
-      <li><a class="btn btn-primary" href="/download/list">推荐列表广告SDK</a></li>
-      <!--
-      <li><a class="btn btn-primary" href="/download/instream">内容流广告SDK</a></li>
-      <li><a class="btn" href="#">自动测试工具</a></li>
-      -->
-    </ul>
+
+<div class="container">
+  <div class="row">
+    <section id="news" class="col-sm-9 col-xs-12">
+      <h3>点乐动态</h3>
+      <ul>
+        {{#blog}}
+        <li>
+          <a href="{{link}}" title="{{full_title}}">{{title}}</a>
+          <span>{{date}}</span>
+        </li>
+        {{/blog}}
+      </ul>
+    </section>
+    <section class="col-sm-3 col-xs-12" id="downloads">
+      <h3>下载中心</h3>
+      <ul>
+        <li><a class="btn btn-primary" href="/download/offerwall">积分墙广告SDK</a></li>
+        <li><a class="btn btn-primary" href="/download/list">推荐列表广告SDK</a></li>
+        <!--
+        <li><a class="btn btn-primary" href="/download/instream">内容流广告SDK</a></li>
+        <li><a class="btn" href="#">自动测试工具</a></li>
+        -->
+      </ul>
+    </section>
   </div>
 </div>
-<div class="grid grid-pad">
+
+<section class="container" id="partner-logos">
   <h3>合作伙伴</h3>
-  <div id="partner-logos">
-    <ul>
-      {{#partner}}
-      <li>
-        <a href="{{url}}" title="{{title}}" target="_blank">{{{thumbnail}}}</a>
-      </li>
-      {{/partner}}
-    </ul>
-  </div>
-</div>
+  <ul>
+    {{#partner}}
+    <li>
+      <a href="{{url}}" title="{{title}}" target="_blank">{{{thumbnail}}}</a>
+    </li>
+    {{/partner}}
+  </ul>
+</section>
+
