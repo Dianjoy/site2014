@@ -1,0 +1,10 @@
+<script>
+  $(function(){
+    $('#addresses').on('click', '.address', function(e) {
+      var div = $(e.currentTarget);
+      div.addClass('active').siblings().removeClass('active');
+      var i = div.index();
+      $('.maps li').hide().eq(i).css('display', 'block');
+    })
+  })
+</script>

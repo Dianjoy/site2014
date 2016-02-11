@@ -1,0 +1,14 @@
+<script>
+  $(function() {
+    $('#nav').affix({
+      offset: {
+        top: 20 ,
+        bottom: 330
+      }
+    });
+    $('#help').on('click', 'h3', function() {
+      var el = $(this);
+      el.toggleClass('expand');
+    });
+  })
+</script>

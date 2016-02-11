@@ -5,9 +5,8 @@
  * @author Meathill <lujia.zhai@dianjoy.com>
  * @since 1.0
  */
-get_header(); ?>
+get_header();
 
-<?php
 // 生成列表
 if (have_posts()) {
   $blog = array();
@@ -34,6 +33,10 @@ if (have_posts()) {
     );
   }
 }
+
+add_action('wp_footer', function () {
+  readfile(dirname(__FILE__) . '/template/category-footer.html');
+}, 100);
 
 // 生成翻页
 $max_page = $wp_query->max_num_pages;
@@ -68,7 +71,4 @@ $template = dirname(__FILE__) . '/template/category.html';
 $template = file_get_contents($template);
 echo $tpl->render($template, $result);
 
-?>
-
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+get_footer();

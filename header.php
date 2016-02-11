@@ -10,7 +10,7 @@ require_once('inc/mustache.php');
 $tpl = new Mustache_Engine();
 
 global $page, $paged;
-$pagenum = $page > 2 || $paged > 2 ? ' | ' . sprintf(__('第 %s 页'), max($paged, $page)) : '';
+$page_num = $page > 2 || $paged > 2 ? ' | ' . sprintf(__('第 %s 页'), max($paged, $page)) : '';
 
 $nav = array(
   'echo' => FALSE,
@@ -21,17 +21,18 @@ $nav = array(
 );
 
 //非首页加入登录注册导航链接
-$login = '<li><a href="/dev/login">登录/注册</a></li>';
-$is_en = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) && stripos($_SERVER['HTTP_ACCEPT_LANGUAGE'], 'en') !== FALSE;
-if ($is_en || isset($_REQUEST['lang']) && $_REQUEST['lang'] == 'en') {
-  if ($_SERVER['REQUEST_URI'] == '/expedition') {
-    $login = '<li><a href="/dev/login">Login</a></li>';
-  }
-}
-
 $not_index = $_SERVER['REQUEST_URI'] != '/';
 if ($not_index) {
-  $nav['items_wrap'] = '<ul class="nav">%3$s'.$login.'</ul>';
+  $is_en = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) && stripos($_SERVER['HTTP_ACCEPT_LANGUAGE'], 'en') !== FALSE;
+  if (($is_en || isset($_REQUEST['lang']) && $_REQUEST['lang'] == 'en') && $_SERVER['REQUEST_URI'] == '/expedition') {
+    $login = 'Login';
+  } else {
+    $login = '登录/注册';
+  }
+  $login = '<li><a href="/dev/login">' . $login . '</a></li>';
+  add_filter('wp_nav_menu_items', function ( $items ) use ( $login ) {
+    return $items . $login;
+  });
 }
 
 // 提取描述和关键词
@@ -50,7 +51,7 @@ if (is_single()) {
 
 $home_url = esc_url(home_url('/'));
 $result = array(
-  'title' => wp_title('|', FALSE, 'right') . get_bloginfo('name') . $pagenum,
+  'title' => wp_title('|', FALSE, 'right') . get_bloginfo('name') . $page_num,
   'description' => $description ? $description : get_bloginfo('description'),
   'keywords' => $tags,
   'pingback' => get_bloginfo('pingback_url'),
@@ -60,6 +61,7 @@ $result = array(
   'name_title' => esc_attr(get_bloginfo('name', 'display')),
   'nav' => wp_nav_menu($nav),
   'css' => has_filter('dianjoy_custom_css') ? apply_filters('dianjoy_custom_css', '') : 'css/style.css',
+  'body_class' => join( ' ', get_body_class( ) ),
 );
 
 // 为了保证wp_head的输出

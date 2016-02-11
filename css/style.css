@@ -14,12 +14,6 @@
 }
 .entry-title {
   margin-bottom: 20px;
-  font-size: 16px;
-}
-.entry-content {
-  font-size: 12px;
-  line-height: 25px;
-  color: #333;
 }
 
 /** ===================================
@@ -132,39 +126,6 @@ p.thumbnail {
   color: #3281dc;
 }
 
-.article {
-  line-height: 30px;
-  margin-left: 240px;
-}
-
-.article h3 span {
-  border-bottom: 2px solid #58aaf7;
-  padding: 5px 0;
-}
-
-.article h3 {
-  border-bottom: 1px solid #58aaf7;
-  line-height: 30px;
-}
-
-.article h4 {
-  font-size: 14px;
-  line-height: 26px;
-}
-
-.article > p {
-  font-size: 14px;
-  line-height: 26px;
-}
-
-.article ul {
-  padding: 0;
-}
-
-.article ul li {
-  list-style: none;
-}
-
 #gallery-1 .wp-caption-text {
   display: none;
 }
@@ -178,10 +139,6 @@ p.thumbnail {
   height: 80px;
   width: 80px;
 }
-
-/**
- * news 点乐动态
- */
 
 #nav {
   line-height: 40px;

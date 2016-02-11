@@ -4,7 +4,7 @@
  */
 get_header();
 ?>
-<div class="grid grid-pad">
+<div class="container">
 <h2>站点地图</h2>
 <h3 id="pages">页面</h3>
 <ul>

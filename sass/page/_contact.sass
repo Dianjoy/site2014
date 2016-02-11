@@ -1,0 +1,41 @@
+@import "../define"
+
+.page-template-contact
+  .table 
+    background-color: #f5fcff
+
+    td,
+    th
+      border-color: #d4eaf2
+
+    td:first-child
+      text-align: center
+
+  .address
+    padding: 15px
+    border-width: 1px
+
+    &.active
+      background-color: #f0f0f0
+      border: 1px solid #e8e8e8
+
+  .maps
+    margin: 0
+    position: relative
+
+    li
+      list-style: none
+      position: absolute
+      top: 0
+      right: 0
+      display: none
+
+      li:first-child
+        display: block
+
+  #beijing-map .modal-body,
+  #guangzhou-map .modal-body,
+  #shanghai-map .modal-body,
+  #xian-map .modal-body
+    overflow: hidden
+    max-height: inherit

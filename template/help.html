@@ -1,32 +1,15 @@
-<div class="grid grid-pad">
-  <div class="col-1-1">
-    <h2 class="title">{{title}}</h2>
-    <div id="nav" class="affix-top">
-      <ul>
-        <li><i class="fa"></i><a href="#section_reg">注册点乐</a></li>
-        <li><i class="fa"></i><a href="#section_product">产品合作</a></li>
-        <li><i class="fa"></i><a href="#section_upload">上传应用</a></li>
-        <li><i class="fa"></i><a href="#section_income">收入相关</a></li>
-        <li><i class="fa"></i><a href="#section_service">使用后台</a></li>
-      </ul>
-    </div>
-    <div id="help">
-      {{{content}}}
-    </div>
+<div class="container">
+  <h2 class="title">{{title}}</h2>
+  <div id="nav" class="affix-top">
+    <ul>
+      <li><i class="fa"></i><a href="#section_reg">注册点乐</a></li>
+      <li><i class="fa"></i><a href="#section_product">产品合作</a></li>
+      <li><i class="fa"></i><a href="#section_upload">上传应用</a></li>
+      <li><i class="fa"></i><a href="#section_income">收入相关</a></li>
+      <li><i class="fa"></i><a href="#section_service">使用后台</a></li>
+    </ul>
+  </div>
+  <div id="help">
+    {{{content}}}
   </div>
 </div>
-<script>
-  $(function() {
-    //$('body').scrollspy({ target: '#nav' })
-    $('#nav').affix({
-      offset: {
-        top: 20 ,
-        bottom: 330
-      }
-    })
-    $('#help').on('click', 'h3', function() {
-      var el = $(this);
-      el.toggleClass('expand');
-    })
-  })
-</script>

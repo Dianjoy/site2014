@@ -1,0 +1,19 @@
+<script>
+  function getTag() {
+    var search = location.search;
+    var m = search.match(/tag=(\w+)(?:$)/);
+    return m ? m[0]:'';
+  }
+  $(function(){
+    var tag = getTag();
+    if(!tag) return $('#news-list li').eq(0).addClass('active');
+    $('#news-list li').each(function(){
+      var li = $(this);
+      var a = li.find('a');
+      var reg = new RegExp(tag);
+      if (reg.test(a.attr('href'))) {
+        li.addClass('active');
+      }
+    });
+  })
+</script>

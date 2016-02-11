@@ -7,8 +7,7 @@ Template Name: 广告主
  * @author Meathill <lujia.zhai@dianjoy.com>
  * @since 1.0
  */
-?>
-<?php
+
 get_header();
 
 $result = array(
@@ -35,4 +34,3 @@ echo $tpl->render($template, $result);
 
 
 get_footer();
-?>

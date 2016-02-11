@@ -8,8 +8,6 @@
  * @author Meathill <lujia.zhai@dianjoy.com>
  * @since 1.0
  */
-?>
-<?php
 
 get_header();
 
@@ -18,6 +16,9 @@ $result = array(
     //'feedback' => $feedback,
 );
 
+add_action('wp_footer', function () {
+  readfile(dirname(__FILE__) . '/template/contact-footer.html');
+}, 100);
 
 require_once('inc/mustache.php');
 $tpl = new Mustache_Engine();
@@ -28,4 +29,3 @@ echo $tpl->render($template, $result);
 
 
 get_footer();
-?>

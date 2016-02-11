@@ -9,6 +9,8 @@ Template Name: 广告产品
  */
 ?>
 <?php
+$page_slug = 'page-product';
+
 get_header();
 
 
