@@ -75,71 +75,6 @@ p.thumbnail {
   line-height: normal;
 }
 
-#nav-list {
-  line-height: 64px;
-  width: 210px;
-  border: 1px solid #f0f0f0;
-  font-size: 14px;
-  float: left;
-}
-
-#nav-list.affix {
-  position: fixed;
-  top: 100px;
-}
-
-#nav-list.affix-bottom {
-  position: fixed;
-}
-
-#nav-list > ul {
-  margin: 0;
-  padding: 0;
-}
-
-#nav-list > ul > li {
-  list-style: none;
-}
-
-#nav-list > ul > li.active,
-#nav-list > ul > li:hover {
-  background-color: #f0f0f0;
-}
-
-#nav-list > ul > li ~ li {
-  border-top: 1px solid #f0f0f0;
-}
-
-#nav-list > ul > li i.fa {
-  margin-right: 20px;
-}
-
-#nav-list > ul > li > a {
-  display: block;
-  margin: 0 30px;
-  color: #333;
-}
-
-#nav-list > ul > li.active a,
-#nav-list > ul > li a:hover {
-  text-decoration: none;
-  color: #3281dc;
-}
-
-#gallery-1 .wp-caption-text {
-  display: none;
-}
-
-#gallery-1 .gallery-item {
-  float: left;
-  margin: 0 17px 20px 0;
-}
-
-#gallery-1 .gallery-item img {
-  height: 80px;
-  width: 80px;
-}
-
 #download > .p {
   padding: 10px 0;
   border-bottom: 1px solid #f1f1f1;
@@ -195,106 +130,10 @@ p.thumbnail {
   line-height: 32px;
 }
 
-/**
- * 开发者页面样式
- */
-
-#steps {
-  margin: 50px 0;
-}
-
-#steps ul {
-  padding: 0;
-}
-
-#steps ul > li {
-  float: left;
-  position: relative;
-}
-
-#steps ul > li~li {
-  margin-left: 40px;
-}
-
-#steps ul > li a {
-  display: block;
-}
-
-#steps ul > li .icon {
-  border: 3px solid #ddd;
-  border-radius: 15px;
-  width: 180px;
-  height: 77px;
-}
-
-#steps ul > li .text {
-  line-height: 40px;
-  color: #27426b;
-  text-align: center;
-  font-size: 14px;
-}
-
-#steps .edit-img {
-  background: url('../images/edit.png') center center no-repeat;
-}
-
-#steps .upload-img {
-  background: url('../images/upload.png') center center no-repeat;
-}
-
-#steps .download-img {
-  background: url('../images/download.png') center center no-repeat;
-}
-
-#developer .action {
-  text-align: center;
-}
-
-#developer .btn {
-  padding: 10px 70px;
-  border-radius: 0;
-  background-color: #5CABF3;
-  border: none;
-}
-
-#developer .btn:hover {
-  background-color: #4392DA;
-}
-
-#about p {
-  font-size: 14px;
-  line-height: 28px;
-}
-
-#about h2 {
-  border-bottom: 1px solid #EEE;
-  line-height: 2;
-}
-
-#about h3 {
-  font-size: 14px;
-  font-weight: bold;
-  border-bottom: 1px solid #58aaf7;
-  line-height: 32px;
-}
-
-#about h3 span {
-  border-bottom: 2px solid #58aaf7;
-  padding: 5px 0;
-}
-
 
 /**
  * 广告产品页
  */
-
-#nav-list [class*='icon-'] {
-  display: inline-block;
-  vertical-align: middle;
-  height: 35px;
-  width: 35px;
-  margin-right: 8px;
-}
 
 .icon-wall {
   background: url('../images/icon-wall.png') center center no-repeat;
@@ -335,39 +174,4 @@ p.thumbnail {
 }
 #product .content.right~.img {
   float: left;
-}
-
-@media handheld, only screen and (max-width: 767px) {
-  #nav-list {
-    float: none;
-    width: auto;
-    margin: 10px 15px;
-  }
-
-  .article {
-    margin: 10px 15px;
-  }
-
-  #nav {
-    display: none;
-  }
-
-  header .nav {
-    display: none;
-  }
-
-  h2.title {
-    text-align: center;
-  }
-
-  footer table.address {
-    display: none;
-  }
-  .service .bg:first-child {
-    margin-right: 0;
-  }
-  #news > li a {
-    white-space: initial;
-    float: none;
-  }
 }

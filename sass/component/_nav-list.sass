@@ -1,0 +1,32 @@
+@import "../define"
+
+#nav-list
+  line-height: $gap * 3
+  border: 1px solid #f0f0f0
+  width: 100%
+
+  > ul
+    margin: 0
+    padding: 0
+
+    > li
+      list-style: none
+      padding: 0 $gap
+
+      &.active,
+      &:hover
+        background-color: #f0f0f0
+
+      ~ li
+        border-top: 1px solid #f0f0f0
+
+      .fa
+        margin-right: 20px
+
+      a
+        color: $font-color
+
+      &.active a,
+      a:hover
+        text-decoration: none
+        color: #3281dc

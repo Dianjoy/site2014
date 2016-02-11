@@ -1,0 +1,22 @@
+@import "../define"
+
+.gallery
+
+  ul
+    padding: 0
+
+  .wp-caption-text
+    display: none
+
+  .gallery-item
+    display: inline-block
+    list-style: none
+    margin: 0 $gap $gap 0
+
+    img
+      height: 80px
+      width: 80px
+
+  @media (width: 320px)
+    & .gallery-item:nth-child(3n)
+      margin-right: 0
