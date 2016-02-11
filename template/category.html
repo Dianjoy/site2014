@@ -5,32 +5,34 @@
     {{description}}
   </p>
   {{/description}}
-  <div id="nav">
-    <ul>
-      <li><i class="fa"></i><a href="/news">全部</a></li>
-      <li><i class="fa"></i><a href="/news?tag=gonggao">点乐公告</a></li>
-      <li><i class="fa"></i><a href="/news?tag=huodong">点乐活动</a></li>
-      <li><i class="fa"></i><a href="/news?tag=baodao">媒体报道</a></li>
-    </ul>
-  </div>
-  <div id="article">
-    <ul>
-      {{#blog}}
-      <li class="clearfix">
-        <div class="date">
-          <span>{{year}}</span>
-          <h2>{{date}}</h2>
-        </div>
-        <div>
-          <div class="title"><a href="{{link}}" title="{{full_title}}">{{title}}</a></div>
-          <div class="tag">{{tag}}</div>
-          <div class="excerpt">{{{excerpt}}}</div>
-        </div>
-      </li>
-      {{/blog}}
-    </ul>
-    <div class="pagination">
-      <ul>
+  <div class="row">
+    <div class="col-md-2 hidden-xs hidden-sm">
+      <nav id="nav" data-spy="affix" data-offset-top="60">
+        <ul>
+          <li><i class="fa"></i><a href="/news">全部</a></li>
+          <li><i class="fa"></i><a href="/news?tag=gonggao">点乐公告</a></li>
+          <li><i class="fa"></i><a href="/news?tag=huodong">点乐活动</a></li>
+          <li><i class="fa"></i><a href="/news?tag=baodao">媒体报道</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="article" class="col-md-10 col-sm-12">
+      <ul class="article-list">
+        {{#blog}}
+        <li class="row">
+          <div class="date col-md-1 col-xs-12">
+            <span>{{year}}</span>
+            <h2>{{date}}</h2>
+          </div>
+          <div class="col-md-11 col-xs-12">
+            <h3 class="title"><a href="{{link}}" title="{{full_title}}">{{title}}</a></h3>
+            <div class="tag">{{tag}}</div>
+            <p class="excerpt">{{{excerpt}}}</p>
+          </div>
+        </li>
+        {{/blog}}
+      </ul>
+      <ul class="pagination pull-right">
         {{#pages}}
         <li class="{{class}}"><a href="{{href}}">{{num}}</a></li>
         {{/pages}}

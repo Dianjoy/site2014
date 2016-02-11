@@ -1,0 +1,35 @@
+@import "../define"
+
+#article
+  .article-list
+    padding: 0
+
+  > ul li
+    list-style: none
+    border-bottom: 1px solid #EEE
+    padding-bottom: 10px
+    margin-bottom: 20px
+
+  li
+    .date
+      font-size: 16px
+      line-height: 25px
+
+      h2
+        margin: 0
+        font-size: 22px
+
+    .title
+      color: #1c86e9
+      margin: $gap-xs 0 $gap-s
+      font-size: 18px
+
+    .tag
+      color: #bbb
+
+    .excerpt
+      line-height: 25px
+      color: #666
+
+    &:last-child
+      border-bottom: none

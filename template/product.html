@@ -1,14 +1,19 @@
 <div class="container">
   <h2>广告产品</h2>
-  <div id="nav-list"  data-spy="affix" data-offset-top="60" data-offset-bottom="330">
-    <ul>
-      <li><a href="#section_wall"><i class="icon-wall"></i>积分墙广告</a></li>
-      <li><a href="#section_list"><i class="icon-list"></i>推荐列表广告</a></li>
-      <!--
-      <li><a href="#section_stream"><i class="icon-stream"></i>内容流广告</a></li>
-      -->
-    </ul>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm">
+      <nav id="nav-list" data-spy="affix" data-offset-top="60" data-offset-bottom="330">
+        <ul>
+          <li><a href="#section_wall"><i class="icon-wall"></i>积分墙广告</a></li>
+          <li><a href="#section_list"><i class="icon-list"></i>推荐列表广告</a></li>
+          <!--
+          <li><a href="#section_stream"><i class="icon-stream"></i>内容流广告</a></li>
+          -->
+        </ul>
+      </nav>
+    </div>
+    <div class="col-md-9 col-xs-12">
+      {{{content}}}
+    </div>
   </div>
-  {{{content}}}
 </div>
-

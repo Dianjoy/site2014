@@ -1,0 +1,37 @@
+#help
+  line-height: 25px
+
+  h2
+    border-bottom: 1px solid #58AAF7
+    line-height: 2em
+
+    > span
+      border-bottom: 2px solid #58AAF7
+      padding: 5px 0
+
+    &:first-child
+      margin-top: 0
+
+  h3
+    font-weight: normal
+    position: relative
+    padding-left: 15px
+    cursor: pointer
+
+    ~ div
+      display: none
+      padding: 15px
+
+    &::before
+      position: absolute
+      top: 0
+      left: 0
+      font-size: 1em
+      content: '▸'
+
+    &.expand::before
+      content: '▾'
+
+    &.expand + div
+      background-color: #F5F5F5
+      display: block

@@ -1,0 +1,72 @@
+@import "../../bower_components/colors/sass/variables"
+
+#nav
+  background-color: $white
+  line-height: 40px
+
+  &.affix-bottom
+    position: fixed
+
+  > ul
+    margin: 0
+    padding: 0
+
+    > li
+      list-style: none
+      position: relative
+
+      i.fa
+        position: absolute
+        background-color: #fff
+        border-radius: 50%
+        border: 1px solid #f0f0f0
+        width: 11px
+        height: 11px
+        top: 14px
+        left: -5px
+        display: block
+
+      &:first-child i.fa:before
+        position: absolute
+        height: 13px
+        width: 5px
+        top: -14px
+        left: 4px
+        content: ""
+        border-left: 1px solid #FFF
+
+      &:last-child i.fa:before
+        position: absolute
+        height: 13px
+        width: 5px
+        top: 10px
+        left: 4px
+        content: ""
+        border-left: 1px solid #FFF
+
+      > a
+        border-left: 1px solid #f0f0f0
+        padding: 0 20px
+        display: block
+        color: #444
+
+      &.active a,
+      a:hover
+        text-decoration: none
+        color: #3281dc
+
+      &.active i.fa,
+      &:hover i.fa
+        border-color: #3281dc
+
+    ul
+      border-left: 1px solid #f0f0f0
+
+      > li:before
+        position: absolute
+        content: ''
+        top: 19px
+        left: -40px
+        height: 5px
+        width: 35px
+        border-top: 1px solid #F0F0F0
