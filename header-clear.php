@@ -15,14 +15,18 @@ $pagenum = $page > 2 || $paged > 2 ? ' | ' . sprintf(__('第 %s 页'), max($page
 $nav = array(
   'echo' => FALSE,
   'theme_location' => 'primary',
-  'menu_class' => 'nav',
+  'menu_class' => 'nav navbar-nav navbar-right',
+  'container_id' => 'main-menu',
+  'container_class' => 'collapse navbar-collapse',
 );
 
 //非首页加入登录注册导航链接
-$login = '<li><a href="/dev/login">登录/注册</a></li>';
 $not_index = $_SERVER['REQUEST_URI'] != '/';
 if ($not_index) {
-  $nav['items_wrap'] = '<ul class="nav">%3$s'.$login.'</ul>';
+  $login = '<li><a href="/dev/login">登录/注册</a></li>';
+  add_filter('wp_nav_menu_items', function ( $items ) use ( $login ) {
+    return $items . $login;
+  });
 }
 
 // 提取描述和关键词
@@ -47,6 +51,7 @@ $result = array(
   'name_title' => esc_attr(get_bloginfo('name', 'display')),
   'nav' => wp_nav_menu($nav),
   'css' => 'css/style.css',
+  'body_class' => join( ' ', get_body_class( ) ),
 );
 
 // 为了保证wp_head的输出
