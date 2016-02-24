@@ -1,137 +1,205 @@
-<div class="key-slide">
+<div class="container-fluid" id="key-slide">
+  <div class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li class="active" data-target="#key-slide" data-slide-to="0"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h2>中国领先的移动智能广告平台</h2>
+        <p>基于大数据和用户行为分析进行九大维度精准投放10000+家广告主的信赖之选。</p>
+        <a href="/product" class="read-more">Read more <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <!-- TODO 弧线 -->
+  </footer>
+</div>
+
+<div class="container" id="features">
+  <h2 class="block-title">为什么选择我们？</h2>
+  <p class="leading">上万家广告主的信赖之选</p>
+  <div class="row">
+    <div class="col-sm-3 col-xs-6 item">
+      <i class="icon icon-focus"></i>
+      <h3>精准定向</h3>
+      <p>10亿用户精准画像<br>九大维度定向投放</p>
+    </div>
+    <div class="col-sm-3 col-xs-6 item">
+      <i class="icon icon-line-chart"></i>
+      <h3>流量保障</h3>
+      <p>安卓激励分发量第一<br>ios分发量前三名</p>
+    </div>
+    <div class="col-sm-3 col-xs-6 item">
+      <i class="icon icon-data"></i>
+      <h3>数据挖掘</h3>
+      <p>海量数据挖掘分析<br>基于兴趣推荐算法</p>
+    </div>
+    <div class="col-sm-3 col-xs-6 item">
+      <i class="icon icon-custom"></i>
+      <h3>定制服务</h3>
+      <p>24*7一对一专人服务<br>定制全方位移动推广解决方案</p>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="product">
+  <h2 class="block-title">点乐移动广告平台</h2>
+  <p class="leading">基于推广需求及产品特征打造定制化的移动推广方案</p>
   <div class="container">
-    <div class="key-text">
-      <div class="title">中国领先的移动智能广告平台</div>
-      <div class="body">
-          <div>用户超过 <span class="number">300,000,000</span> 人</div>
-          <div>应用分发超过 <span class="number">200,000,000</span> 次</div>
-          <div>推广产品超过 <span class="number">1000</span> 款</div>
+    <div class="row">
+      <div class="col-sm-6 col-xs-12">
+        <img src="{{theme_url}}/img/ad-types.jpg">
+      </div>
+      <div class="col-sm-6 col-xs-12 ad-types">
+        <h3>七大广告形式</h3>
+        <p class="leading">Advertising forms of seven</p>
+        <ul>
+          <li>
+            <i class="icon icon-tehui"></i>
+            <p>特惠专区</p>
+          </li>
+          <li>
+            <i class="icon icon-lock"></i>
+            <p>锁屏图</p>
+          </li>
+          <li>
+            <i class="icon icon-banner"></i>
+            <p>Banner</p>
+          </li>
+          <li>
+            <i class="icon icon-weixin"></i>
+            <p>朋友圈信息流</p>
+          </li>
+          <li>
+            <i class="icon icon-market"></i>
+            <p>应用市场精品推荐</p>
+          </li>
+          <li>
+            <i class="icon icon-task"></i>
+            <p>深度任务</p>
+          </li>
+          <li>
+            <i class="icon icon-offer"></i>
+            <p>积分墙</p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-6 col-xs-12 pull-right">
+        <img src="{{theme_url}}/img/offer-ways.jpg">
+      </div>
+      <div class="col-sm-6 col-xs-12 pull-right offer-ways">
+        <h3>五种出价方式</h3>
+        <p class="leading">Five kind of offer way</p>
+        <ul>
+          <li>CPA</li>
+          <li>CPM</li>
+          <li>CPC</li>
+          <li>CPT</li>
+          <li>CPD</li>
+        </ul>
       </div>
     </div>
-    <div class="modal fade" tabindex="-1" role="dialog" id="login-form">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <h4 class="modal-title">点乐开发者后台</h4>
-          </div>
-          <div class="modal-body">
-            <form method="post" action="dev/login_do.php">
-              <div class="form-group">
-                <i class="fa fa-envelope"></i>
-                <input type="email" class="form-control" placeholder="邮箱帐号" name="username" tabindex="1" autofocus>
-              </div>
-              <div class="form-group">
-                <i class="fa fa-lock"></i>
-                <input type="password" class="form-control" placeholder="密码" name="password" tabindex="2">
-              </div>
-              <div class="form-group">
-                <div class="input-group">
-                  <input maxlength="4" size="4" id="verify-code" placeholder="验证码" name="verifycode" tabindex="3" class="form-control">
-          <span class="input-group-addon">
-            <img src="dev/inc/showimg.php" alt="验证码" title="点击刷新" onclick="refresh_code();">
-          </span>
-                </div>
-              </div>
-              <div class="form-group">
-                <button class="btn btn-primary btn-block">登录</button>
-              </div>
-              <div class="form-group other-options">
-                <a href="dev/forget-password.php">忘记密码</a>
-                <a href="dev/register.php">注册</a>
-              </div>
-            </form>
-          </div>
-        </div>
+  </div>
+  <div class="container">
+    <h3>五大收益方向</h3>
+    <p class="leading">Five big earnings direction</p>
+    <ul>
+      <li>
+        <i class="icon-color icon-improve"></i>
+        <h4>榜位提升</h4>
+        <p>Places to improve</p>
+      </li>
+      <li>
+        <i class="icon-color icon-obtain"></i>
+        <h4>流量获取</h4>
+        <p>Flow to obtain</p>
+      </li>
+      <li>
+        <i class="icon-color icon-aso"></i>
+        <h4>ASO优化</h4>
+        <p>ASO optimization</p>
+      </li>
+      <li>
+        <i class="icon-color icon-brand"></i>
+        <h4>品牌曝光</h4>
+        <p>Brand exposure</p>
+      </li>
+      <li>
+        <i class="icon-color icon-social"></i>
+        <h4>社会化营销</h4>
+        <p>Social marketing</p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <header>
+    <!-- TODO 弧线2 -->
+  </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-xs-12">
+        <h2>服务客户</h2>
+        <p class="leading">以卓越价值赢得客户信赖</p>
+        <hr>
+        <ul>
+
+        </ul>
+      </div>
+      <div class="col-sm-6 col-xs-12">
+        <h2>合作开发及广告代理</h2>
+        <p class="leading">一站式覆盖，海量投放资源，打造移动推广生态圈</p>
+        <hr>
+        <ul></ul>
       </div>
     </div>
   </div>
 </div>
-<div class="container" id="our-service">
-  <div class="row">
-    <div class="col-sm-6 col-xs-12">
-      <div class="bg clearfix">
-        <div class="icon-left"></div>
-        <div class="content">
-          我们坚持广告主买单的依据是广告的实际效果，<br>
-          是广告为广告主带来了多少实际价值，<br>
-          体现在用户使用量、活跃度或者销售收入。
-        </div>
-        <p>
-          <a href="/advertiser" class="btn btn-primary">广告主服务</a>
-        </p>
-      </div>
-    </div>
-    <div class="col-sm-6 col-xs-12">
-      <div class="bg clearfix">
-        <div class="icon-right"></div>
-        <div class="content">
-          最有效的展现形式。<br>
-          在您赚的盆满钵满的同时，<br>
-          敬请期待我们的下一款广告产品。
-        </div>
-        <p>
-          <a href="/developer" class="btn btn-primary">开发者服务</a>
-        </p>
-      </div>
+
+<div class="container-fluid">
+  <div id="latest-news">
+    <div class="container">
+      <h2><a href="{{latest.link}}">{{latest.title}}</a></h2>
+      <p>{{latest.description}}</p>
+      <a href="{{latest.link}}">Read More <i class="fa fa-arrow-right"></i></a>
     </div>
   </div>
+  <section id="news" class="container">
+    <h3>点乐动态 <a href="/news">更多 <i class="fa fa-chevron-right"></i></a></h3>
+    <ul>
+      {{#blog}}
+      <li>
+        <a href="{{link}}" title="{{full_title}}">{{title}}</a>
+        <small class="text-muted">{{date}}</small>
+      </li>
+      {{/blog}}
+    </ul>
+  </section>
 </div>
 
-<div id="carousel-banner" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-banner" data-slide-to="0" class="active">1</li>
-    <li data-target="#carousel-banner" data-slide-to="1">2</li>
-    <li data-target="#carousel-banner" data-slide-to="2">3</li>
-    <li data-target="#carousel-banner" data-slide-to="3">4</li>
-  </ol>
-
-  <div class="carousel-inner" role="listbox">
-    <div class="item active"><img src="{{home_url}}wp-content/themes/dian2013/images/slider_1.jpg"></div>
-    <div class="item"><img src="{{home_url}}wp-content/themes/dian2013/images/slider_2.jpg"></div>
-    <div class="item"><img src="{{home_url}}wp-content/themes/dian2013/images/slider_3.jpg"></div>
-    <div class="item"><img src="{{home_url}}wp-content/themes/dian2013/images/slider_4.jpg"></div>
-  </div>
+<div class="container-fluid" id="links">
+  <section class="container">
+    <h2>友情链接</h2>
+    <ul>
+      {{#partner}}
+      <li class="gallery-item">
+        <a href="{{url}}" title="{{title}}" target="_blank">{{{thumbnail}}}</a>
+      </li>
+      {{/partner}}
+    </ul>
+  </section>
 </div>
 
-<div class="container">
-  <div class="row">
-    <section id="news" class="col-sm-9 col-xs-12">
-      <h3>点乐动态</h3>
-      <ul>
-        {{#blog}}
-        <li>
-          <i class="fa fa-th-large"></i>
-          <a href="{{link}}" title="{{full_title}}">{{title}}</a>
-          <small class="text-muted">{{date}}</small>
-        </li>
-        {{/blog}}
-      </ul>
-    </section>
-    <section class="col-sm-3 col-xs-12" id="downloads">
-      <h3>下载中心</h3>
-      <ul>
-        <li><a class="btn btn-primary" href="/download/offerwall">积分墙广告SDK</a></li>
-        <li><a class="btn btn-primary" href="/download/list">推荐列表广告SDK</a></li>
-        <!--
-        <li><a class="btn btn-primary" href="/download/instream">内容流广告SDK</a></li>
-        <li><a class="btn" href="#">自动测试工具</a></li>
-        -->
-      </ul>
-    </section>
-  </div>
+<div class="container-fluid" id="business">
+  <section class="container">
+    <h2>商务合作</h2>
+    <ul>
+      <li>【安卓】Mobile： 13520327725   QQ: 879509586</li>
+      <li>【iOS】Mobile：18510238828   QQ: 2858661171</li>
+      <li>【VIP】Mobile：13811709335   QQ：26485070</li>
+    </ul>
+  </section>
 </div>
-
-<section class="container gallery" id="partner-logos">
-  <h3>合作伙伴</h3>
-  <ul>
-    {{#partner}}
-    <li class="gallery-item">
-      <a href="{{url}}" title="{{title}}" target="_blank">{{{thumbnail}}}</a>
-    </li>
-    {{/partner}}
-  </ul>
-</section>
-

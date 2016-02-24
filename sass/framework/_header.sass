@@ -1,33 +1,45 @@
 @import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables"
+@import "../../bower_components/colors/sass/variables"
 @import '../define'
 
 #top-bar
   border: none
-  border-top: 2px solid $brand-color
-  background-color: #f5f5f5
-  margin-bottom: 0
+  background-color: $white
+  background-color: rgba(255, 255, 255, 0.8)
+  color: $top-bar-color
+  position: absolute
+  z-index: 100
+  top: $top-bar-offset-lg
+  left: 50%
+  width: $container-lg
+  margin-left: -$container-lg / 2
 
-  .container,
+  .container-fluid,
   .navbar-header
     height: 100%
 
   .navbar-brand
     width: 200px
-    height: 100%
+    height: $top-bar_height - $gap-xs
+    margin-top: $gap-xs
     background: url(../img/logo.png) center center no-repeat
-    background-size: 160px 43px
+    background-size: 130px 34px
     text-indent: -9999px
 
   .nav > li > a
-    color: #606060
+    font-size: 16px
+    line-height: $top-bar_height
 
     &.active,
     &:hover
-      background-color: $footer-bg-color
+      background-color: $active-color
       color: $white
 
 @media (max-width: $screen-xs-min)
   #top-bar
+    position: static
+    margin-left: 0
+
     .navbar-header
       .navbar-toggle
         line-height: 1em
@@ -45,14 +57,19 @@
       background-size: 120px 28px
       background-position-x: $navbar-padding-horizontal
 
-@media (min-width: $screen-xs-max)
+@media (min-width: $screen-sm-min)
   #top-bar
+    width: $container-sm
+    margin-left: -$container-sm / 2
     height: $top-bar-height
 
     .navbar-header .login-button
       display: none
 
     .nav > li > a
-      font-size: 16px
-      line-height: $top-bar-height - 2px
       padding: 0 25px
+
+@media (min-width: $screen-md-min)
+  #top-bar
+    width: $container-md
+    margin-left: -$container-md /2

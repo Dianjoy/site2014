@@ -36,7 +36,7 @@ if ($not_index) {
 }
 
 // 提取描述和关键词
-$tags = '';
+$tags = $description = '';
 if (is_single()) {
   $description = apply_filters('the_excerpt', get_the_excerpt());
   $post_tags = get_the_terms(0, 'post_tag');
@@ -56,11 +56,11 @@ $result = array(
   'keywords' => $tags,
   'pingback' => get_bloginfo('pingback_url'),
   'home_url' => $home_url,
-  'channel' => $channel,
+  'theme_url' => str_replace($home_url, '', get_theme_root_uri()) . '/' . get_template(),
   'name' => get_bloginfo('name'),
   'name_title' => esc_attr(get_bloginfo('name', 'display')),
   'nav' => wp_nav_menu($nav),
-  'css' => has_filter('dianjoy_custom_css') ? apply_filters('dianjoy_custom_css', '') : 'css/style.css',
+  'css' => has_filter('dianjoy_custom_css') ? apply_filters('dianjoy_custom_css', '') : '',
   'body_class' => join( ' ', get_body_class( ) ),
 );
 
