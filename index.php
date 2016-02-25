@@ -17,7 +17,9 @@
 // 引用包含通用导航和前端框架的头部
 get_header();
 
-$result = array();
+$result = [
+  'theme_url' => str_replace($home_url, '', get_theme_root_uri()) . '/' . get_template(),
+];
 // 读取公司新闻
 if (have_posts()) {
   $blog = array();
@@ -38,6 +40,7 @@ if (have_posts()) {
       break;
     }
   }
+  $result['latest'] = array_shift($blog);
   $result['blog'] = $blog;
 } else {
   $noblog = array(
@@ -47,19 +50,7 @@ if (have_posts()) {
   $result['noblog'] = $noblog;
 }
 
-// 读取业内评价
-//$result['feedback'] = array();
-//$args = array('post_type' => 'feedback', 'orderby' => 'rand', 'posts_per_page' => '1');
-//$feedbacks = new WP_Query($args);
-//while ($feedbacks->have_posts()) {
-//  $feedbacks->the_post();
-//  $content = get_the_content();
-//  $content = apply_filters('the_content', $content);
-//  $result['feedback'][] = array(
-//    'content' => $content,
-//    'thumbnail' => get_the_post_thumbnail(),
-//  ); 
-//}
+
 // 读取合作伙伴
 $result['partner'] = array();
 $args = array('post_type' => 'partner', 'posts_per_page' => 20);
@@ -72,18 +63,6 @@ while ($partners->have_posts()) {
     'thumbnail' => get_the_post_thumbnail(null, 'homepage-partners'),
   ); 
 }
-// 读取热门广告
-//$result['hotads'] = array();
-//$args = array('post_type' => 'hotad', 'posts_per_page' => 8, 'orderby' => 'rand');
-//$hotads = new WP_Query($args);
-//while ($hotads->have_posts()) {
-//  $hotads->the_post();
-//  $result['hotads'][] = array(
-//    'title' => the_title('', '', FALSE),
-//    'price' => get_the_content(),
-//    'thumbnail' => get_the_post_thumbnail(null, 'homepage-hotads'),
-//  );
-//}
 
 require_once('inc/mustache.php');
 $tpl = new Mustache_Engine();

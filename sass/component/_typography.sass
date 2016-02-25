@@ -1,10 +1,45 @@
+@import "compass/css3/transform"
 @import "../define"
 
 .block-title
-  font-size: 33px
   text-align: center
 
   + .leading
-    font-size: 20px
     text-align: center
-    margin-bottom: $gap-l
+
+  @at-root h2#{&}
+    display: inline-block
+    font-size: 33px
+    margin: $gap-l auto $gap
+    position: relative
+
+    + .leading
+      font-size: 20px
+      margin-bottom: $gap + $gap-s
+
+    &:before,
+    &:after
+      content: ''
+      width: 10px
+      height: 10px
+      font: 10px/10px
+      position: absolute
+      top: 20px
+      @include rotate(45deg)
+
+    &:before
+      left: -$gap-l
+      background: #F7E4D6
+
+    &:after
+      right: -$gap-l
+      background: #B4CDD8
+
+  @at-root h3#{&}
+    font-size: 20px
+    color: $secondary-color
+    margin: $gap-s 0 $gap-xs
+
+    + .leading
+      color: #BBCADA
+      margin-bottom: $gap-s

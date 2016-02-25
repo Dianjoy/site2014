@@ -1,0 +1,25 @@
+<svg id="图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 1170 23">
+  <defs>
+    <style>.cls-1{filter:url(#filter-1);}.cls-2{fill:#fff;}rect{fill:#F8F9FA}</style>
+    <filter id="filter-1" x="-50" y="-50" width="200" height="200" name="filter-1">
+      <feOffset result="shadowOffsetOuter1" dy="-8" in="SourceAlpha"/>
+      <feGaussianBlur result="shadowBlurOuter1" stdDeviation="5.5" in="shadowOffsetOuter1"/>
+      <feColorMatrix result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
+                     in="shadowBlurOuter1"/>
+      <feMerge>
+        <feMergeNode in="shadowMatrixOuter1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+      <feGaussianBlur result="blur" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <title>arc2</title>
+  <rect x="0" y="0" width="1170" height="23"></rect>
+  <g id="Page-1">
+    <g class="cls-1">
+      <path id="Mask" class="cls-2"
+            d="M566.84,23.33C772.7,23.33,991.9,12.26,1170,0H0C166.7,11.66,369.27,23.33,566.84,23.33Z"/>
+    </g>
+  </g>
+</svg>

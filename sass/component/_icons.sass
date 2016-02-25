@@ -1,6 +1,70 @@
 .icon
   background-repeat: no-repeat
   background-position: center center
+  display: inline-block
 
 .icon-focus
   background-image: url(../img/icon/focus.svg)
+
+.icon-trend
+  background-image: url(../img/icon/trend.svg)
+
+.icon-dm
+  background-image: url(../img/icon/dm.svg)
+
+.icon-custom
+  background-image: url(../img/icon/custom.svg)
+
+.icon-sale
+  background-image: url(../img/icon/sale.svg)
+
+.icon-lock
+  background-image: url(../img/icon/lock.svg)
+
+.icon-banner
+  background-image: url(../img/icon/banner.svg)
+
+.icon-timeline
+  background-image: url(../img/icon/timeline.svg)
+
+.icon-appstore
+  background-image: url(../img/icon/appstore.svg)
+
+.icon-task
+  background-image: url(../img/icon/task.svg)
+
+.icon-offer
+  background-image: url(../img/icon/offer.svg)
+
+.icon-color
+  display: inline-block
+  background: url(../img/earnings.png) no-repeat center center
+
+.icon-obtain
+  background-position-y: -100px
+
+.icon-aso
+  background-position-y: -200px
+
+.icon-brand
+  background-position-y: -300px
+
+.icon-social
+  background-position-y: -400px
+
+.icon-clients
+  width: 50px
+  height: 50px
+  display: inline-block
+  background: url(../img/clients.png) no-repeat center center
+
+@for $i from 0 through 42
+  .icon-#{$i}
+    background-position-x: $i % 8 * -50px
+    background-position-y: floor($i / 8) * -50px
+
+.icon-21
+  width: 110px
+
+.icon-29
+  width: 66px

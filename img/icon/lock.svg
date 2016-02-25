@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 30"
+	 style="enable-background:new 0 0 30 30;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#BBCADA;}
+	.st1{fill:none;stroke:#BBCADA;}
+	.st2{fill:none;stroke:#BBCADA;stroke-linecap:square;}
+	.st3{fill:none;stroke:#BBCADA;stroke-width:1.5;stroke-linecap:square;}
+</style>
+<title>2</title>
+<desc>Created with Sketch.</desc>
+<g id="Page-1" sketch:type="MSPage">
+	<g id="_x31_170" transform="translate(-755.000000, -1316.000000)" sketch:type="MSArtboardGroup">
+		<g id="_x32__1_" transform="translate(45.000000, 1211.000000)" sketch:type="MSLayerGroup">
+			<g id="Group-10" transform="translate(607.000000, 25.000000)" sketch:type="MSShapeGroup">
+				<g id="_x32_" transform="translate(130.819672, 80.652174)">
+					<path id="Rectangle-384" class="st0" d="M-23.6,5.6h-1.1v15.6c0,1.1,0.9,2,2,2h20.4c1.1,0,2-0.9,2-2V5.6h-1.1v11.4h-22.2V5.6z"
+						/>
+					<ellipse id="Oval-214" class="st1" cx="-12.3" cy="13.7" rx="2" ry="2"/>
+					<ellipse id="Oval-213" class="st1" cx="-21.5" cy="13.5" rx="0.7" ry="0.8"/>
+					<ellipse id="Oval-213_1_" class="st1" cx="-3.7" cy="13.5" rx="0.7" ry="0.8"/>
+					<path id="Line" class="st2" d="M-4.5,13.5H-9"/>
+					<path id="Line_1_" class="st2" d="M-16,13.5h-4.5"/>
+					<path id="Line_2_" class="st3" d="M1.5,5.4H-27"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

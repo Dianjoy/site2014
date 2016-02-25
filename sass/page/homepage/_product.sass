@@ -1,0 +1,134 @@
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables"
+@import "../../../bower_components/colors/sass/variables"
+@import "compass/css3/box-shadow"
+@import "compass/css3/images"
+@import "compass/css3/transform"
+@import "../../define"
+
+#product
+  position: relative
+  text-align: center
+  padding-bottom: $gap-l
+
+  .title-bg
+    background: url(../img/product-bg.png)
+    height: 225px
+    z-index: -1
+    position: absolute
+    top: 0
+    left: -$grid-gutter-width / 2
+    right: -$grid-gutter-width / 2
+
+  .block
+    @include box-shadow(0 30px 30px rgba(140, 153, 191, .2))
+    background-color: $white
+    padding: $gap-s
+    margin-bottom: $gap-xl
+
+    .row
+      margin: 0
+
+    [class^=col-]
+      padding: 0
+
+  img
+    max-width: 100%
+
+  .ad-types,
+  .offer-ways,
+  .earnings
+    padding: 0
+
+    ul
+      padding: 0
+
+    li
+      text-align: center
+      list-style: none
+
+  .ad-types
+    text-align: center
+
+    li
+      color: $secondary-color
+      display: inline-block
+      list-style: none
+      width: 24%
+
+    i
+      width: 30px
+      height: 30px
+      line-height: 30px
+
+    p
+      word-break: keep-all
+
+  .offer-ways
+
+    li
+      border-radius: 36px
+      display: inline-block
+      padding: 6px
+      width: 72px
+      height: 72px
+      @include background(linear-gradient(to bottom right, rgba(180, 205, 216, .4), rgba(247, 228, 214, .4)))
+
+      h4
+        border-radius: 30px
+        color: $secondary-color
+        font-size: 15px
+        font-weight: normal
+        line-height: 60px
+        width: 60px
+        height: 60px
+        margin: 0
+        @include background(linear-gradient(to bottom right, #B4CDD8, #F7E4D6))
+
+      &:nth-of-type(2n),
+      &:nth-of-type(2n+3)
+        position: relative
+
+        &:before
+          content: ''
+          width: 20px
+          border-top: 1px dashed #999
+          position: absolute
+          top: -5px
+          left: -10px
+          @include rotate(45deg)
+
+      &:nth-of-type(2n)
+        top: 72px
+
+      &:nth-of-type(2n+1):before
+        top: auto
+        left: -15px
+        bottom: 5px
+        @include rotate(-45deg)
+
+  .earnings
+    .leading
+      margin-bottom: $gap-l
+
+    ul
+      text-align: center
+
+    li
+      border: 1px solid #B1B1B1
+      border-radius: 10px
+      display: inline-block
+      padding: $gap + $gap-xs 0
+      width: 160px
+
+      + li
+        margin-left: $gap-s + $gap-xs
+
+      .icon-color
+        width: 90px
+        height: 90px
+        line-height: 90px
+        margin: 0 auto
+
+      p
+        color: $muted-color
+        font-size: $font-size-small

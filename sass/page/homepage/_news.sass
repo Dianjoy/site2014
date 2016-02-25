@@ -1,25 +1,61 @@
 @import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables"
+@import "../../../bower_components/colors/sass/variables"
 @import "../../define"
 
+#latest-news
+  background-image: url(../img/latest-bg.jpg)
+  background-size: cover
+  color: $white
+  padding: $gap 0
+  font-size: 16px
+
+  a
+    color: $white
+
+  .container
+    position: relative
+
+  h2
+    font-size: 33px
+    margin-top: 0
+    line-height: 1.25em
+
+  .read-more
+    position: absolute
+    top: 50%
+    right: 0
+    margin-top: -25px
+
 #news
+  border-left: 1px solid #EEE
+  border-right: 1px solid #EEE
+  padding: 0 10%
+
+  h2
+    border-bottom: 1px solid #EEE
+    font-size: 20px
+    line-height: 2.5em
+
+    .more
+      color: $font-color
+      font-size: $font-size-base
+      vertical-align: bottom
 
   ul
-    background-color: #f0f0f0
-    border-top: 2px solid #e6e6e6
     padding: 0
 
     > li
       list-style: none
-      line-height: 60px
-      padding-left: 20px
+      line-height: 2.5em
 
       + li
-        border-top: 1px solid #e6e6e6
+        border-top: 1px dashed #e6e6e6
 
       a
-        color: #26416C
+        color: $font-color
 
       small
+        float: right
         padding-left: 10px
 
   @media (max-width: $screen-xs-max)
