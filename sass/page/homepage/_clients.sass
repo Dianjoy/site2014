@@ -1,3 +1,4 @@
+@import "compass/css3/images"
 @import "../../define"
 
 #clients
@@ -10,29 +11,44 @@
     padding: $gap-s 0
 
   .icon-list
-    padding: $gap + $gap-xs $gap 0 0
+    text-align: left
+    padding: $gap + $gap-xs 0 0
 
-    .left
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+
+    &.left
+      margin-right: -30px
       text-align: right
+
+      &:before
+        left: 0
+        right: 15%
+        @include background-image(linear-gradient(to right, rgba(248, 249, 250, 1), rgba(248, 249, 250, 0)))
+
+    &.right
+      padding-left: 80px
+
+      &:before
+        left: 15%
+        right: 0
+        @include background-image(linear-gradient(to left, rgba(248, 249, 250, 1), rgba(248, 249, 250, 0)))
 
     i + i
       margin-top: $gap-xs
       margin-left: $gap-xs
 
     .icon-5
-      margin-right: -10px
-
-    .icon-13
-      margin-right: -15px
+      margin-right: 20px
 
     .icon-20
-      margin-right: -50px
-
-    .icon-21
-      margin-left: -60px
+      margin-right: -20px
 
     .icon-29
-      margin-left: -10px
+      margin-left: 20px
 
     .icon-37
       margin-left: 40px
