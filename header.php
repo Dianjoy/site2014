@@ -29,7 +29,7 @@ if ($not_index) {
   } else {
     $login = '登录/注册';
   }
-  $login = '<li><a href="/dev/login">' . $login . '</a></li>';
+  $login = '<li><a href="/dev/login.php">' . $login . '</a></li>';
   add_filter('wp_nav_menu_items', function ( $items ) use ( $login ) {
     return $items . $login;
   });
