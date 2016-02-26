@@ -3,15 +3,9 @@
 @import '../define'
 
 #top-bar
-  border: none
-  background-color: $white
-  background-color: rgba(255, 255, 255, 0.8)
   color: $top-bar-color
   position: absolute
   z-index: 100
-  top: $top-bar-offset-lg
-  left: $top-bar-offset-lg
-  right: $top-bar-offset-lg
 
   .container-fluid,
   .navbar-header
@@ -19,8 +13,6 @@
 
   .navbar-brand
     width: 200px
-    height: $top-bar_height - $gap-xs
-    margin-top: $gap-xs
     background: url(../img/logo.png) center center no-repeat
     background-size: 130px 34px
     text-indent: -9999px
@@ -33,43 +25,65 @@
     &:hover
       background-color: $active-color
       color: $white
+    
+  .login-button
+    display: none
 
-@media (max-width: $screen-xs-min)
-  #top-bar
-    position: static
-    margin-left: 0
+  @media (max-width: $screen-xs-max)
+    &
+      position: static
+      margin-left: 0
+      margin-bottom: 0
 
-    .navbar-header
-      .navbar-toggle
-        line-height: 1em
-        margin-right: $gap-s
+      .navbar-header
+        .navbar-toggle
+          line-height: 1em
+          margin-right: $gap-s
 
-        + .navbar-toggle
-          margin-right: $gap-xs
+          + .navbar-toggle
+            margin-right: $gap-xs
 
-      .login-button
-        color: $font-color
-        display: inline-block
+        .login-button
+          color: $font-color
 
-    .navbar-brand
-      width: 120px + $navbar-padding-horizontal
-      background-size: 120px 28px
-      background-position-x: $navbar-padding-horizontal
+      .navbar-brand
+        width: 120px + $navbar-padding-horizontal
+        background-size: 120px 28px
+        background-position-x: $navbar-padding-horizontal
 
-@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max)
-  #top-bar
-    top: $top-bar-offset-sm
-    left: $top-bar-offset-sm
-    right: $top-bar-offset-sm
+      .navbar-nav
+        margin-top: 0
+        margin-bottom: 0
 
-    .navbar-header .login-button
-      display: none
+  @media (min-width: $screen-sm-min)
+    & .navbar-brand
+      background-color: $white
+      background-color: rgba(255, 255, 255, 0.8)
+      height: $top-bar_height - $gap-xs
+      margin-top: $gap-xs
+      border: none
 
-    .nav > li > a
-      padding: 0 25px
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max)
+    &
+      top: $top-bar-offset-sm
+      left: $top-bar-offset-sm
+      right: $top-bar-offset-sm
 
-@media (min-width: $screen-md-min) and (max-width: $screen-md-max)
-  #top-bar
-    top: $top-bar-offset-md
-    left: $top-bar-offset-md
-    right: $top-bar-offset-md
+      .navbar-header .login-button
+        display: none
+
+      .nav > li > a
+        padding: 0 25px
+
+  @media (min-width: $screen-md-min) and (max-width: $screen-md-max)
+    &
+      top: $top-bar-offset-md
+      left: $top-bar-offset-md
+      right: $top-bar-offset-md
+
+  @media (min-width: $screen-lg-min)
+    &
+      top: $top-bar-offset-lg
+      left: 50%
+      width: $container-lg
+      margin-left: -$container-lg / 2

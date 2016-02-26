@@ -66,7 +66,7 @@
   .offer-ways
 
     li
-      border-radius: 36px
+      border-radius: 50%
       display: inline-block
       padding: 6px
       width: 72px
@@ -74,7 +74,7 @@
       @include background(linear-gradient(to bottom right, rgba(180, 205, 216, .4), rgba(247, 228, 214, .4)))
 
       h4
-        border-radius: 30px
+        border-radius: 50%
         color: $secondary-color
         font-size: 15px
         font-weight: normal
@@ -120,9 +120,6 @@
       padding: $gap + $gap-xs 0
       width: 160px
 
-      + li
-        margin-left: $gap-s + $gap-xs
-
       .icon-color
         width: 90px
         height: 90px
@@ -132,3 +129,92 @@
       p
         color: $muted-color
         font-size: $font-size-small
+
+  @media (max-width: 320px) // iphone5
+    &
+      .ad-types li
+        width: 48%
+
+      .offer-ways
+        ul
+          min-height: 100px
+
+        li
+          width: 50px
+          height: 50px
+          padding: 3px
+
+          &:nth-of-type(2n)
+            top: 50px
+
+          h4
+            width: 44px
+            height: 44px
+            line-height: 44px
+
+      .earnings
+        li
+          width: 130px
+
+          &:nth-of-type(2n)
+            margin-left: $gap-s
+
+          &:nth-of-type(n+3)
+            margin-top: $gap-s
+
+  @media (min-width: 321px) and (max-width: 360px) // android 720p+1080p
+    &
+      .offer-ways
+        ul
+          min-height: 108px
+
+        li
+          width: 54px
+          height: 54px
+          padding: 4px
+
+          &:nth-of-type(2n)
+            top: 54px
+
+          h4
+            width: 46px
+            height: 46px
+            line-height: 44px
+
+      .earnings
+        li
+          width: 140px
+
+  @media (min-width: 361px) and (max-width: 375px) // iphone 6
+    &
+      .offer-ways
+        ul
+          min-height: 120px
+
+        li
+          width: 60px
+          height: 60px
+          padding: 5px
+
+          &:nth-of-type(2n)
+            top: 60px
+
+          h4
+            width: 50px
+            height: 50px
+            line-height: 50px
+
+  @media (max-width: $screen-xs-max)
+    &
+      .earnings
+        li:nth-of-type(2n)
+          margin-left: $gap-s + $gap-xs
+
+        li:nth-child(n+3)
+          margin-top: $gap-s + $gap-xs
+
+  @media (min-width: $screen-sm-min)
+    &
+      .earnings
+        li + li
+          margin-left: $gap-s + $gap-xs

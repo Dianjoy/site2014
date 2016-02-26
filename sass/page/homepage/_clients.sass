@@ -1,9 +1,14 @@
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables"
 @import "compass/css3/images"
 @import "../../define"
 
 #clients
-  background: #F8F9FA url(../img/lines.png) center 150px no-repeat
+  background-color: #F8F9FA
   padding: 0 0 $gap-l
+
+  header
+    img
+      width: 100%
 
   .col-sm-5,
   .col-sm-7
@@ -11,44 +16,56 @@
     padding: $gap-s 0
 
   .icon-list
-    text-align: left
-    padding: $gap + $gap-xs 0 0
+    padding: 0 $padding-small-horizontal
 
-    &:before
-      content: ''
-      position: absolute
-      top: 0
-      bottom: 0
+  @media (max-width: $screen-xs-max)
+    &
+      .icon-list br
+        display: none
 
-    &.left
-      margin-right: -30px
-      text-align: right
+  @media (min-width: $screen-sm-min)
+    &
+      background: url(../img/lines.png) center 150px no-repeat
 
-      &:before
-        left: 0
-        right: 15%
-        @include background-image(linear-gradient(to right, rgba(248, 249, 250, 1), rgba(248, 249, 250, 0)))
+      .icon-list
+        text-align: left
+        padding: $gap + $gap-xs 0 0
 
-    &.right
-      padding-left: 80px
+        &:before
+          content: ''
+          position: absolute
+          top: 0
+          bottom: 0
 
-      &:before
-        left: 15%
-        right: 0
-        @include background-image(linear-gradient(to left, rgba(248, 249, 250, 1), rgba(248, 249, 250, 0)))
+        &.left
+          margin-right: -30px
+          text-align: right
 
-    i + i
-      margin-top: $gap-xs
-      margin-left: $gap-xs
+          &:before
+            left: 0
+            right: 15%
+            @include background-image(linear-gradient(to right, rgba(248, 249, 250, 1), rgba(248, 249, 250, 0)))
 
-    .icon-5
-      margin-right: 20px
+        &.right
+          padding-left: 80px
 
-    .icon-20
-      margin-right: -20px
+          &:before
+            left: 15%
+            right: 0
+            @include background-image(linear-gradient(to left, rgba(248, 249, 250, 1), rgba(248, 249, 250, 0)))
 
-    .icon-29
-      margin-left: 20px
+        i + i
+          margin-top: $gap-xs
+          margin-left: $gap-xs
 
-    .icon-37
-      margin-left: 40px
+        .icon-5
+          margin-right: 20px
+
+        .icon-20
+          margin-right: -20px
+
+        .icon-29
+          margin-left: 20px
+
+        .icon-37
+          margin-left: 40px

@@ -1,3 +1,4 @@
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables"
 @import "../../define"
 
 #business
@@ -28,3 +29,15 @@
 
       + li
         margin-left: 1em
+
+  @media (max-width: $screen-xs-max)
+    &
+      h2, ul, ul li
+        display: block
+
+      h2
+        margin-bottom: $gap-s
+
+      ul li + li
+        margin-top: $gap-s
+        margin-left: 0

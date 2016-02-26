@@ -48,6 +48,19 @@
     img
       width: 100%
 
+  @media (max-width: $screen-xs-max)
+    &
+      .carousel, .carousel-inner
+        height: 100%
+
+      .item
+        h2
+          font-size: 3em
+          top: 100px
+
+        p
+          top: 250px
+
   @media (min-width: $screen-md-min) and (max-width: $screen-md-max)
     & .item
       height: 580px

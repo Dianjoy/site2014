@@ -1,3 +1,4 @@
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables"
 @import "compass/css3/transform"
 @import "../define"
 
@@ -34,6 +35,13 @@
     &:after
       right: -$gap-l
       background: #B4CDD8
+
+    @media (max-width: $screen-xs-max)
+      &:before
+        left: -$gap
+
+      &:after
+        right: -$gap
 
   @at-root h3#{&}
     font-size: 20px
