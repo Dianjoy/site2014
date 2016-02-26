@@ -1,5 +1,6 @@
 @import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables"
 @import "compass/css3/images"
+@import "compass/css3/transform"
 @import "../../define"
 
 #clients
@@ -8,7 +9,9 @@
 
   header
     img
+      display: block
       width: 100%
+      @include rotate(180deg)
 
   .col-sm-5,
   .col-sm-7
@@ -20,12 +23,18 @@
 
   @media (max-width: $screen-xs-max)
     &
+      header img
+        height: 12px
+
       .icon-list br
         display: none
 
   @media (min-width: $screen-sm-min)
     &
-      background: url(../img/lines.png) center 150px no-repeat
+      background: #F8F9FA url(../img/lines.png) center 150px no-repeat
+
+      header img
+        height: 24px
 
       .icon-list
         text-align: left
