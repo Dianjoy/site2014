@@ -10,9 +10,8 @@
   position: absolute
   z-index: 100
   top: $top-bar-offset-lg
-  left: 50%
-  width: $container-lg
-  margin-left: -$container-lg / 2
+  left: $top-bar-offset-lg
+  right: $top-bar-offset-lg
 
   .container-fluid,
   .navbar-header
@@ -28,7 +27,7 @@
 
   .nav > li > a
     font-size: 16px
-    line-height: $top-bar_height
+    line-height: $top-bar_height - $navbar-padding-vertical * 2
 
     &.active,
     &:hover
@@ -57,11 +56,11 @@
       background-size: 120px 28px
       background-position-x: $navbar-padding-horizontal
 
-@media (min-width: $screen-sm-min)
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max)
   #top-bar
-    width: $container-sm
-    margin-left: -$container-sm / 2
-    height: $top-bar-height
+    top: $top-bar-offset-sm
+    left: $top-bar-offset-sm
+    right: $top-bar-offset-sm
 
     .navbar-header .login-button
       display: none
@@ -69,7 +68,8 @@
     .nav > li > a
       padding: 0 25px
 
-@media (min-width: $screen-md-min)
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max)
   #top-bar
-    width: $container-md
-    margin-left: -$container-md /2
+    top: $top-bar-offset-md
+    left: $top-bar-offset-md
+    right: $top-bar-offset-md
