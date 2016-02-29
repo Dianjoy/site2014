@@ -21,19 +21,16 @@ $nav = array(
 );
 
 //非首页加入登录注册导航链接
-$not_index = $_SERVER['REQUEST_URI'] != '/';
-if ($not_index) {
-  $is_en = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) && stripos($_SERVER['HTTP_ACCEPT_LANGUAGE'], 'en') !== FALSE;
-  if (($is_en || isset($_REQUEST['lang']) && $_REQUEST['lang'] == 'en') && $_SERVER['REQUEST_URI'] == '/expedition') {
-    $login = 'Login';
-  } else {
-    $login = '登录/注册';
-  }
-  $login = '<li><a href="/dev/login.php">' . $login . '</a></li>';
-  add_filter('wp_nav_menu_items', function ( $items ) use ( $login ) {
-    return $items . $login;
-  });
+$is_en = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) && stripos($_SERVER['HTTP_ACCEPT_LANGUAGE'], 'en') !== FALSE;
+if (($is_en || isset($_REQUEST['lang']) && $_REQUEST['lang'] == 'en') && $_SERVER['REQUEST_URI'] == '/expedition') {
+  $login = 'Login';
+} else {
+  $login = '登录';
 }
+$login = '<li><a href="/dev/login.php">' . $login . '</a></li>';
+add_filter('wp_nav_menu_items', function ( $items ) use ( $login ) {
+  return $items . $login;
+});
 
 // 提取描述和关键词
 $tags = $description = '';

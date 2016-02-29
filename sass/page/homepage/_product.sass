@@ -3,6 +3,7 @@
 @import "compass/css3/box-shadow"
 @import "compass/css3/images"
 @import "compass/css3/transform"
+@import "../../core/mixin"
 @import "../../define"
 
 .home #product
@@ -23,14 +24,19 @@
     background-color: $white
     padding: $gap-s
     margin-bottom: $gap-xl
+    max-width: 1064px + $gap-s * 3
 
     .row
       margin: 0
+
+      + .row
+        margin-top: $gap-s
 
     [class^=col-]
       padding: 0
 
   img
+    display: block
     max-width: 100%
 
   .ad-types,
@@ -205,6 +211,13 @@
 
   @media (max-width: $screen-xs-max)
     &
+      .block
+        .img-left::after,
+        .img-right::after
+          @include triangle(top, $white, .5em)
+          left: 50%
+          bottom: 0
+
       .earnings
         li:nth-of-type(2n)
           margin-left: $gap-s + $gap-xs
@@ -214,6 +227,23 @@
 
   @media (min-width: $screen-sm-min)
     &
+      .block
+        .pl-5
+          padding-left: $gap-xs
+
+        .pr-5
+          padding-right: $gap-xs
+
+        .img-left::after
+          @include triangle(left, $white, .5em)
+          top: 50%
+          right: $gap-xs
+
+        .img-right::after
+          @include triangle(right, $white, .5em)
+          top: 50%
+          left: $gap-xs
+
       .earnings
         li + li
           margin-left: $gap-s + $gap-xs
