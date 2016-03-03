@@ -5,12 +5,13 @@
 @import "../../define"
 
 #key-slide
+  color: $white
   position: relative
 
   .item
     background-size: cover
+    background-position-y: bottom
     height: 600px
-    position: relative
 
     h2,
     p
@@ -20,25 +21,87 @@
       text-align: center
 
     h2
-      color: $white
       font-size: 5em
-      top: 210px
       margin: 0
 
     p
-      color: $white
       font-size: 16px
-      top: 336px
+
+    strong
+      color: $active-color
+      font-weight: normal
+
+      .lg
+        font-size: 2em
 
     .read-more
       position: absolute
       left: 50%
       margin-left: -$read-more-width / 2
-      top: 410px
 
     &:first-child
       background-image: url(../img/slide0.jpg)
-      background-position-y: bottom
+
+      h2
+        top: 200px
+
+      p
+        top: 330px
+
+      .read-more
+        top: 400px
+
+    &:nth-child(2)
+      background-image: url(../img/slide1.jpg)
+
+      h2
+        top: 160px
+
+      ul
+        position: absolute
+        top: 285px
+        left: 50%
+        width: 460px
+        margin-left:  -230px
+        padding: 0
+
+        li
+          background: rgba(0, 0, 0, .05)
+          line-height: 60px
+          list-style: none
+          padding: 0 45px
+
+          + li
+            border-top: #EEE 2px solid
+
+          img
+            margin-right: 1em
+
+      .read-more
+        top: 435px
+
+    &:nth-child(3)
+      background-image: url(../img/slide2.jpg)
+
+      h2
+        top: 140px
+
+      p
+        top: 330px
+
+      strong
+        position: absolute
+        top: 220px
+        left: 0
+        right: 0
+        text-align: center
+
+        &::first-letter
+          font-size: 5em
+          text-decoration: underline
+
+      .read-more
+        top: 410px
 
   footer
     position: absolute
@@ -53,7 +116,7 @@
     &
       height: 100%
 
-      .carousel, .carousel-inner
+      .carousel, .carousel-inner, .item
         height: 100%
 
       .item
@@ -70,19 +133,50 @@
         height: 12px
 
   @media (max-width: 320px) // iphone5-
-    & .item h2
-      font-size: 2.5em
+    & .item
+      &:first-child
+        h2
+          top: 130px
+
+        p
+          top: 270px
+
+
+      h2
+        font-size: 2.5em
 
   @media (min-width: 321px) and (max-width: $screen-xs-max)
     & .item
       h2
-        font-size: 3em
+        font-size: 2.75em
 
       p
         top: 270px
 
       .read-more
         top: 360px
+
+  @media (max-width: $screen-xs-max)
+    & .item
+      &:nth-child(2)
+        h2
+          top: 140px
+
+        ul
+          top: 275px
+          left: $gap-s
+          right: $gap-s
+          margin-left: 0
+          width: auto
+
+          li
+            padding: 0 $gap-s + $gap-xs
+
+            img
+              margin: 0
+
+      h2
+        line-height: 1.5em
 
   @media (min-width: $screen-sm-min)
     & footer img
