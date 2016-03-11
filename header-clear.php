@@ -23,7 +23,7 @@ $nav = array(
 //非首页加入登录注册导航链接
 $not_index = $_SERVER['REQUEST_URI'] != '/';
 if ($not_index) {
-  $login = '<li><a href="/dev/login">登录/注册</a></li>';
+  $login = '<li><a href="/dev/login.php">登录/注册</a></li>';
   add_filter('wp_nav_menu_items', function ( $items ) use ( $login ) {
     return $items . $login;
   });
@@ -41,12 +41,14 @@ if (is_single()) {
   $tags = substr($tags, 0, -1);
 }
 
-$result = array(
+$home_url = esc_url( home_url( '/' ) );
+$result   = array(
   'title' => wp_title('|', FALSE, 'right') . get_bloginfo('name') . $pagenum,
   'description' => $description ? $description : get_bloginfo('description'),
   'keywords' => $tags,
   'pingback' => get_bloginfo('pingback_url'),
-  'home_url' => esc_url(home_url('/')),
+  'home_url' => $home_url,
+  'theme_url' => str_replace($home_url, '', get_theme_root_uri()) . '/' . get_template(),
   'name' => get_bloginfo('name'),
   'name_title' => esc_attr(get_bloginfo('name', 'display')),
   'nav' => wp_nav_menu($nav),
