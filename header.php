@@ -25,7 +25,7 @@ $is_en = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) && stripos($_SERVER['HTTP_ACCEP
 if (($is_en || isset($_REQUEST['lang']) && $_REQUEST['lang'] == 'en') && $_SERVER['REQUEST_URI'] == '/expedition') {
   $login = 'Login';
 } else {
-  $login = '登录';
+  $login = '开发者登录';
 }
 $login = '<li><a href="/dev/login.php">' . $login . '</a></li>';
 add_filter('wp_nav_menu_items', function ( $items ) use ( $login ) {
