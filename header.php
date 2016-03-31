@@ -46,7 +46,7 @@ if (is_single()) {
   $tags = substr($tags, 0, -1);
 }
 
-$home_url = esc_url(home_url('/'));
+$home_url = esc_url(home_url('/', is_ssl() ? 'https' : 'http'));
 $result = array(
   'title' => wp_title('|', FALSE, 'right') . get_bloginfo('name') . $page_num,
   'description' => $description ? $description : get_bloginfo('description'),
