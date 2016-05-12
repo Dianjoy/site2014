@@ -1,18 +1,19 @@
-<div class="container">
+<div id="help" class="container">
   <h2 class="title">{{title}}</h2>
   <div class="row">
-    <div class="col-md-2">
-      <nav id="nav" class="hidden-xs hidden-sm affix-top" data-offset-top="60">
+    <a href="{{home_url}}/wp-content/themes/dian2013/template/help.pdf" download="点乐开发者帮助文档.pdf">下载此帮助文档</a>
+    <div class="col-md-2 hidden-xs hidden-sm">
+      <nav id="nav-list">
         <ul>
-          <li><i class="fa"></i><a href="#section_reg">注册点乐</a></li>
-          <li><i class="fa"></i><a href="#section_product">产品合作</a></li>
-          <li><i class="fa"></i><a href="#section_upload">上传应用</a></li>
-          <li><i class="fa"></i><a href="#section_income">收入相关</a></li>
-          <li><i class="fa"></i><a href="#section_service">使用后台</a></li>
+          <li><a href="#section_reg">注册点乐</a></li>
+          <li><a href="#section_product">产品合作</a></li>
+          <li><a href="#section_upload">上传应用</a></li>
+          <li><a href="#section_income">收入相关</a></li>
+          <li><a href="#section_service">使用后台</a></li>
         </ul>
       </nav>
     </div>
-    <div id="help" class="col-md-10 col-xs-12">
+    <div id="help-list" class="col-md-8 col-xs-12">
       {{{content}}}
     </div>
   </div>
