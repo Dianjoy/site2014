@@ -4,8 +4,15 @@
 @import "../../define"
 
 #clients
-  background-color: #F8F9FA
+  background-color: $deep-background-color
   padding: 0 0 $gap-l
+
+  .block-title
+    color: $font-color
+
+  .leading
+    font-size: 16px
+    color: $deep-font-color
 
   header
     img
@@ -13,68 +20,66 @@
       width: 100%
       @include rotate(180deg)
 
-  .col-sm-5,
-  .col-sm-7
+  .col-sm-6
     text-align: center
     padding: $gap-s 0
 
   .icon-list
-    padding: 0 $padding-small-horizontal
+    width: 330px
+    display: inline-block
+    padding: $gap + $gap-xs 0
+    background-color: $shallow-background-color
+    border-bottom: 2px solid $font-color
+    border-top: 2px solid $font-color
+
+    .border-part
+      background-image: url(../img/border-part.png)
+      display: block
+      position: relative
+      left: 120px
+      width: $top-bar-offset-md + $top-bar_height
+      height: $gap-xs
+
+    .border-top-part
+      bottom: $gap + $gap-xs
+
+    .border-bottom-part
+      top: $gap + $gap-xs
+      @include  rotate(180deg)
 
   @media (max-width: $screen-xs-max)
     &
       header img
         height: 12px
 
-      .icon-list br
-        display: none
-
   @media (min-width: $screen-sm-min)
     &
-      background: #F8F9FA url(../img/lines.png) center 150px no-repeat
-
       header img
         height: 24px
 
       .icon-list
-        text-align: left
-        padding: $gap + $gap-xs 0 0
-
-        &:before
-          content: ''
-          position: absolute
-          top: 0
-          bottom: 0
 
         &.left
-          margin-right: -30px
-          text-align: right
+          text-align: center
 
           &:before
             left: 0
             right: 15%
-            @include background-image(linear-gradient(to right, rgba(248, 249, 250, 1), rgba(248, 249, 250, 0)))
 
         &.right
-          padding-left: 80px
-
           &:before
             left: 15%
             right: 0
-            @include background-image(linear-gradient(to left, rgba(248, 249, 250, 1), rgba(248, 249, 250, 0)))
 
         i + i
           margin-top: $gap-xs
           margin-left: $gap-xs
 
-        .icon-5
-          margin-right: 20px
-
         .icon-20
-          margin-right: -20px
+          margin-right: -$gap
 
         .icon-29
-          margin-left: 20px
+          margin-left: $gap
 
         .icon-37
-          margin-left: 40px
+          margin-left: $gap-l

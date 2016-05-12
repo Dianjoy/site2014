@@ -1,41 +1,32 @@
 @import "../define"
 
-.page-template-contact
-  .table 
-    background-color: #f5fcff
+#contact
+  width: 100%
+  margin: 0
+  color: $deep-font-color
 
-    td,
-    th
-      border-color: #d4eaf2
+  .contacts-info
+    padding: 5% 0
+    background-color: $shallow-background-color
 
-    td:first-child
+    .contact-info
+      margin-bottom: 10%
+
+      .tel
+        text-align: left
+
+      .wechat
+
+        img
+          height: $gap-xl
+
+      div
+        padding: 0
+
+      h3
+        color: $font-color
+        margin-top: 0
+
+  @media (max-width: $screen-md-min)
+    & .contacts-info .contact-info .tel
       text-align: center
-
-  .address
-    padding: 15px
-    border-width: 1px
-
-    &.active
-      background-color: #f0f0f0
-      border: 1px solid #e8e8e8
-
-  .maps
-    margin: 0
-    position: relative
-
-    li
-      list-style: none
-      position: absolute
-      top: 0
-      right: 0
-      display: none
-
-      li:first-child
-        display: block
-
-  #beijing-map .modal-body,
-  #guangzhou-map .modal-body,
-  #shanghai-map .modal-body,
-  #xian-map .modal-body
-    overflow: hidden
-    max-height: inherit

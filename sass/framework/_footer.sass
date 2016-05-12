@@ -4,18 +4,20 @@
 #footer
   background-color: $footer-bg-color
   color: $footer-color
+  font-size: 12px
 
-  .address dl
-    border-right: 1px solid #888
-    border-bottom: 1px solid #888
-    margin-bottom: 0
-    padding: $gap
+  h2
+    font-size: 16px
 
-    dt
-      margin-bottom: 5px
+  .address
+    padding-left: 0
 
-    dd
-      color: #888888
+    li
+      list-style: none
+      display: inline-block
+
+  .footer-row
+    padding-bottom: $gap-s
 
   .others
     margin: $gap 0
@@ -26,20 +28,55 @@
       line-height: 25px
 
       a
-        color: #ddd
+        color: $active-color
         text-decoration: none
 
         &:hover
           text-decoration: underline
 
-  .copyright
-    text-align: center
-    color: #888
-    padding-bottom: 10px
+  .copyright, .social-media
+    display: inline-block
 
-  .service-icons
-    margin: 0
-    padding: 0 0 $gap
+  .social-media
+    margin-left: 10%
+
+    a
+      width: 36px
+      height: 36px
+      display: inline-block
+      margin: 0 $gap-s
+      position: relative
+      top: $gap-s
+
+    .wechat
+      margin-left: $top-bar-offset-sm
+      background-image: url(../img/wechat.png)
+
+      &:hover
+        background-image: url(../img/wechat-hover.png)
+
+        & img
+          display: inline-block
+
+      img
+        position: absolute
+        bottom: $top-bar-offset-lg
+        left: -$gap-xl
+        display: none
+
+    .weibo
+      background-image: url(../img/weibo.png)
+
+      &:hover
+        background-image: url(../img/weibo-hover.png)
+
+  .top-button
+    position: fixed
+    bottom: $gap
+    right: $gap
+    background-color: $active-color
+    color: $white
+    display: inline-block
     text-align: center
 
   @media (min-width: $screen-sm-min)
@@ -47,24 +84,6 @@
       .address
         margin-top: $gap
         margin-bottom: $gap-l
-
-        dl
-          dd
-            min-height: $gap * 2
-
-          &:nth-child(-n+3)
-            padding-top: 0
-
-          &:nth-child(3n + 1)
-            padding-left: 0
-
-          &:nth-child(3n)
-            padding-right: 0
-            border-right: none
-
-          &:nth-child(n+4)
-            border-bottom: none
-            padding-bottom: 0
 
       .others .weibo
         margin-top: 20px
@@ -74,24 +93,23 @@
           line-height: 32px
           height: 32px
 
+      .top-button
+        width: $top-bar-offset-lg
+        height: $top-bar-offset-lg
+        border-radius: $gap-xs
+
+        i
+          font-size: 4em
+
   @media (max-width: $screen-xs-max)
-    & .address
-      padding: $gap-s + $gap-xs
+    &
+      .address
+        padding: $gap-s + $gap-xs
 
-      dl
-        dd
-          min-height: $gap * 3
+      .top-button
+        width: $gap
+        height: $gap
+        border-radius: 2px
 
-        &:nth-child(2n)
-          border-right: none
-          padding-right: 0
-
-        &:nth-child(2n+1)
-          padding-left: 0
-
-        &:nth-child(-n+2)
-          padding-top: 0
-
-        &:nth-child(n+5)
-          border-bottom: none
-          padding-bottom: 0
+        i
+          font-size: 2em

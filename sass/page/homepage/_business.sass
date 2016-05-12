@@ -2,18 +2,21 @@
 @import "../../define"
 
 #business
-  background-color: #121A24
-  color: #95A9B1
+  background-color: $shallow-background-color
+  color: $deep-font-color
   font-size: 12px
   line-height: 3em
   padding: $gap-s + $gap-xs 0
   
-  a
-    color: #95A9B1
+  a, h3
+    color: $font-color
 
   h2
-    font-size: 12px
+    font-size: 16px
     margin: 0
+
+  h3
+    font-size: 12px
     display: inline-block
 
   ul
@@ -22,9 +25,8 @@
     padding: 0
 
     li
-      border: 1px solid #95A9B1
       list-style: none
-      display: inline-block
+      display: inline
       padding: 0 $gap-xs
 
   @media (max-width: $screen-xs-max)

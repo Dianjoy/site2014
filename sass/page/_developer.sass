@@ -1,34 +1,181 @@
 @import "../define"
 
-#steps
-  margin: 50px 0
-  padding: 0
-
-  > li
-    position: relative
-    text-align: center
-
-    .fa
-      border: 3px solid #ddd
-      border-radius: 15px
-      font-size: $gap * 2
-      line-height: 1.5em
-      text-align: center
-      width: 180px
-
-    .text
-      line-height: 40px
-      color: #27426b
-
 #developer
-  .action
-    text-align: center
+  width: 100%
+  margin: 0
 
-  .btn
-    padding: 10px 70px
-    border-radius: 0
-    background-color: #5CABF3
-    border: none
+  .ad-forms
+    padding-top: 5%
+    background-color: $shallow-background-color
 
-    &:hover
-      background-color: #4392DA
+    img
+      margin-left: 10%
+
+  .display
+    padding-top: 2%
+    background-color: $deep-background-color
+
+  .how-to
+    background-color: $shallow-background-color
+    padding: 5% 0
+
+    .icon
+      width: $top-bar-offset-lg * 2
+      height: $top-bar-offset-lg * 2
+      border-radius: $top-bar-offset-lg
+
+    .glyphicon-chevron-right
+      color: white
+      position: absolute
+      right: 0
+      top: 25%
+
+    .register
+      .icon
+        border: 1px solid $yellow
+        background-color: $yellow
+
+      p
+        color: $yellow
+
+
+    .create-app
+      .icon
+        border: 1px solid $purple
+        background-color: $purple
+
+      p
+        color: $purple
+
+
+    .embed-sdk
+      .icon
+        border: 1px solid $blue
+        background-color: $blue
+
+      p
+        color: $blue
+
+
+    .receive-ads
+      .icon
+        border: 1px solid $green
+        background-color: $green
+
+      p
+        color: $green
+
+
+    .income
+      .icon
+        border: 1px solid $orange
+        background-color: $orange
+
+      p
+        color: $orange
+
+
+  .sdk
+    background-color: $deep-background-color
+    padding-top: 2%
+
+    .sdk-intro
+      width: 100px
+      height: 100px
+      margin: 0 auto
+      padding-left: $gap-xs
+      color: $white
+
+      .quotation-mark
+        font-size: $gap-l
+        position: relative
+        top: $gap + $gap-s
+
+    .sdk-intro-1
+      background-color: $orange
+
+      & + .sdk-desc
+        color: $orange
+
+    .sdk-intro-2
+      background-color: $green
+
+      & + .sdk-desc
+        color: $green
+
+    .sdk-intro-3
+      background-color: $blue
+
+      & + .sdk-desc
+        color: $blue
+
+    .sdk-intro-4
+      background-color: $purple
+
+      & + .sdk-desc
+        color: $purple
+
+    .sdk-intro-5
+      background-color: $yellow
+
+      & + .sdk-desc
+        color: $yellow
+
+    .sdk-desc
+      margin-top: $gap-s
+
+  .feedback
+    background-color: $shallow-background-color
+    padding: 5%
+    color: $deep-font-color
+
+    .icon-list
+      div
+        display: inline-block
+
+      .lol
+        position: relative
+        top: $gap
+
+      .icon-clients
+        margin: $top-bar-offset-sm
+
+    .comment
+      margin-top: $gap
+
+      .icon
+        border-radius: $gap + $gap-xs
+        width: $top-bar-offset-lg
+        height: $top-bar-offset-lg
+        background-image: url(../img/clients-right.png)
+
+      .icon-0
+        background-position-x: -212px
+        background-position-y: -210px
+
+      .icon-1
+        background-position-x: -283px
+        background-position-y: -210px
+
+      .title
+        margin: 0
+
+      .item
+        margin-top: $gap + $gap-s
+
+        .read-more
+          display: inline-block
+
+      .app
+        padding: 0
+
+  .title
+    color: $font-color
+    margin-bottom: 5%
+
+  img
+    max-width: 100%
+
+  @media (max-width: $screen-lg-min)
+    & .glyphicon-chevron-right
+      display: none

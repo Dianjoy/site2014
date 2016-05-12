@@ -4,6 +4,10 @@
 
 #top-bar
   color: $top-bar-color
+  background-color: $top-bar-background-color
+  border-radius: 0
+  margin-bottom: $gap
+  border-color: $shallow-background-color
 
   .container-fluid,
   .navbar-header
@@ -11,23 +15,28 @@
 
   .navbar-brand
     width: 200px
-    background: url(../img/logo.png) center center no-repeat
+    background: url(../img/new-logo.png) center center no-repeat
     background-size: 130px 34px
     text-indent: -9999px
 
+  .navbar-brand:hover
+    background-image: url(../img/new-logo-hover.png)
+
   .nav > li > a
+    color: $white
     font-size: 16px
     line-height: $top-bar_height - $navbar-padding-vertical * 2
 
     &.active,
     &:hover
-      background-color: $active-color
-      color: $white
+      color: $active-color
+      border-bottom: $gap-xs solid $active-color
 
   .home &
     border: none
     position: absolute
     z-index: 100
+    opacity: 0.7
 
   @media (max-width: $screen-xs-max)
     &
@@ -44,12 +53,19 @@
         .navbar-toggle
           line-height: 1em
           margin-right: $gap-s
+          color: $active-color
+          border-color: $active-color
 
           + .navbar-toggle
             margin-right: $gap-xs
 
+          &:hover, &:focus
+            background-color: $active-color
+            color: $deep-background-color
+            border-color: $deep-background-color
+
         .login-button
-          color: $top-bar-color
+          color: $active-color
 
       .navbar-brand
         width: 120px + $navbar-padding-horizontal
@@ -70,22 +86,25 @@
         display: none
 
       .nav > li > a
-        padding: 0 25px
+        padding: $top-bar-offset-sm $gap-s
 
       .home &
-        top: $top-bar-offset-sm
-        left: $top-bar-offset-sm
-        right: $top-bar-offset-sm
+        left: 0
+        right: 0
+
+      .container-fluid
+        padding-left: 1%
+        padding-right: 1%
 
   @media (min-width: $screen-md-min) and (max-width: $screen-md-max)
     .home &
-      top: $top-bar-offset-md
-      left: $top-bar-offset-md
-      right: $top-bar-offset-md
+      left: 0
+      right: 0
 
   @media (min-width: $screen-lg-min)
     .home &
-      top: $top-bar-offset-lg
-      left: 50%
-      width: $container-lg
-      margin-left: -$container-lg / 2
+      width: 100%
+
+    & .container-fluid
+      padding-left: 15%
+      padding-right: 15%

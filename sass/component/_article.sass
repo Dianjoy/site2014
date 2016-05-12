@@ -3,10 +3,10 @@
 #article
   .article-list
     padding: 0
+    color: $deep-font-color
 
   > ul li
     list-style: none
-    border-bottom: 1px solid #EEE
     padding-bottom: 10px
     margin-bottom: 20px
 
@@ -18,14 +18,17 @@
       h2
         margin: 0
         font-size: 22px
+        color: $font-color
 
     .title
-      color: #1c86e9
       margin: $gap-xs 0 $gap-s
       font-size: 18px
 
-    .tag
-      color: #bbb
+      & a
+        color: $font-color
+
+    p
+      line-height: $gap + $gap-s
 
     .excerpt
       line-height: 25px

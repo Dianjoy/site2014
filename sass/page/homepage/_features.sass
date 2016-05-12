@@ -7,12 +7,17 @@ $radius: 100px
 #features
   text-align: center
   padding-bottom: $gap-l
+  background-color: $shallow-background-color
+  margin: 0
+  width: 100%
+  color: $font-color
 
   .leading
+    font-size: 16px
     margin-bottom: $gap-l
+    color: $deep-font-color
 
   .icon
-    background-color: #E0E6E9
     color: #A7A9AA
     display: block
     width: $radius
@@ -21,10 +26,13 @@ $radius: 100px
     border-radius: $radius / 2
     margin: 0 auto
 
-    &.hover
-      background-color: #98B8F6
+    &:hover
+      background-color: #554ae4
       color: $white
 
   h3
-    font-size: 20px
-    line-height: 60px
+    font-size: $gap
+    line-height: $gap * 3
+
+  .item p
+    color: $deep-font-color

@@ -4,16 +4,32 @@
   display: inline-block
 
 .icon-focus
-  background-image: url(../img/icon/focus.svg)
+  background-image: url(../img/icon/focus.png)
+  background-color: $orange
+
+  & + h3
+    color: $orange
 
 .icon-trend
-  background-image: url(../img/icon/trend.svg)
+  background-image: url(../img/icon/trend.png)
+  background-color: $green
+
+  & + h3
+    color: $green
 
 .icon-dm
-  background-image: url(../img/icon/dm.svg)
+  background-image: url(../img/icon/dm.png)
+  background-color: $blue
+
+  & + h3
+    color: $blue
 
 .icon-custom
-  background-image: url(../img/icon/custom.svg)
+  background-image: url(../img/icon/custom.png)
+  background-color: $purple
+
+  & + h3
+    color: $purple
 
 .icon-sale
   background-image: url(../img/icon/sale.svg)
@@ -40,6 +56,22 @@
   display: inline-block
   background: url(../img/earnings.png) no-repeat center center
 
+
+.icon-register
+  background: url(../img/advertiser/register.png) no-repeat center center
+
+.icon-create-app
+  background: url(../img/advertiser/create-app.png) no-repeat center center
+
+.icon-embed-sdk
+  background: url(../img/advertiser/embed-sdk.png) no-repeat center center
+
+.icon-receive-ads
+  background: url(../img/advertiser/receive-ads.png) no-repeat center center
+
+.icon-income
+  background: url(../img/advertiser/income.png) no-repeat center center
+
 .icon-obtain
   background-position-y: -100px
 
@@ -56,15 +88,36 @@
   width: 50px
   height: 50px
   display: inline-block
-  background: url(../img/clients.png) no-repeat center center
+  background-position: center center
+  background-repeat: no-repeat
 
-@for $i from 0 through 42
-  .icon-#{$i}
-    background-position-x: $i % 8 * -50px
-    background-position-y: floor($i / 8) * -50px
+  .left &
+    background-image: url(../img/clients-left.png)
 
-.icon-21
-  width: 110px
+  .right &
+    background-image: url(../img/clients-right.png)
 
-.icon-29
-  width: 66px
+.icon-list
+  .icon-21
+    width: 110px
+
+  .icon-29
+    width: 66px
+
+  @for $i from 0 through 39
+    .icon-#{$i}
+      background-position-x: $i % 5 * -70px
+      background-position-y: floor($i / 5) * -70px
+
+.icon-customers-list
+  .icon-customers
+    width: 50px
+    height: 50px
+    margin: 5px
+    display: inline-block
+    background-image: url(../img/advertiser/customers.png)
+
+  @for $i from 0 through 53
+    .icon-#{$i}
+      background-position-x: $i % 9 * -70px
+      background-position-y: floor($i / 9) * -70px

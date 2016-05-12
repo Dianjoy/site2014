@@ -3,9 +3,10 @@
 
 $read-more-width: 180px
 $read-more-height: 50px
+$read-more-border-color: #1ea2dd
 
 .read-more
-  border: 1px solid $white
+  border: 2px solid $read-more-border-color
   background-color: $white
   background-color: rgba(255, 255, 255, 0.15)
   color: $white
@@ -15,3 +16,7 @@ $read-more-height: 50px
   border-radius: $read-more-height / 2
   font-size: $font-size-large
   text-align: center
+
+.read-more:hover
+  color: $read-more-border-color
+  text-decoration: none

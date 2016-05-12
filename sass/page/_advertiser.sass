@@ -1,0 +1,339 @@
+#advertiser
+  width: 100%
+
+  .desc
+    color: $white
+    margin-bottom: $gap + $gap-s
+    display: none
+
+    .triangle
+      width: 0
+      height: 0
+      font-size: 0
+      border-width: $top-bar-offset-sm
+      border-style: solid
+      overflow: hidden
+      position: absolute
+      left: -($gap + $gap-s)
+      bottom: 48%
+
+    div
+      margin: $gap-xs + $gap-s 0 $gap-xs 0
+
+      p
+        margin: 0
+
+  .icon
+    width: 100px
+    height: 100px
+    line-height: 100px
+
+  .advantages
+    margin-top: $gap + $gap-s
+    background-color: $shallow-background-color
+
+    .focus
+      color: #FF851B
+
+      & + .desc
+        padding: $gap + $gap-s $top-bar-offset-sm
+        background-color: #FF851B
+
+        & .triangle
+          border-color: transparent #FF851B transparent transparent
+
+      &:hover
+
+        .icon
+          background-image: url(../img/advertiser/focus-negative.png)
+
+        & + .desc
+          display: inline-block
+
+      .icon
+        background-image: url(../img/advertiser/focus-positive.png)
+
+    .trend
+      color: #2ECC40
+
+      & + .desc
+        background-color: #2ECC40
+
+        & .triangle
+          border-color: transparent #2ECC40 transparent transparent
+
+      &:hover
+
+        .icon
+          background-image: url(../img/advertiser/trend-negative.png)
+
+        & + .desc
+          display: inline-block
+
+      .icon
+        background-image: url(../img/advertiser/trend-positive.png)
+
+    .dm
+      color: #0074D9
+
+      & + .desc
+        background-color: #0074D9
+
+        & .triangle
+          border-color: transparent #0074D9 transparent transparent
+
+      &:hover
+
+        .icon
+          background-image: url(../img/advertiser/dm-negative.png)
+
+        & + .desc
+          display: inline-block
+
+      .icon
+        background-image: url(../img/advertiser/dm-positive.png)
+
+    .custom
+      color: #B10DC9
+
+      & + .desc
+        background-color: #B10DC9
+
+        & .triangle
+          border-color: transparent #B10DC9 transparent transparent
+
+      &:hover
+
+        .icon
+          background-image: url(../img/advertiser/custom-negative.png)
+
+        & + .desc
+          display: inline-block
+
+      .icon
+        background-image: url(../img/advertiser/custom-positive.png)
+
+  .ad-forms
+    background-color: $deep-background-color
+    padding: 10%
+
+    .ad-form
+      display: inline-block
+      margin: 0 $top-bar-offset-sm
+
+      .icon
+        border-radius: 50px
+
+    .lockscreen
+      color: $red
+      top: $gap
+
+      .icon
+        background-color: $red
+        background-image: url(../img/advertiser/lockscreen.png)
+
+    .wall
+      color: $orange
+      bottom: $gap-xl
+
+      .icon
+        background-image: url(../img/advertiser/wall.png)
+        background-color: $orange
+
+    .ad-banner
+      color: $yellow
+
+      .icon
+        background-image: url(../img/advertiser/ad-banner.png)
+        background-color: $yellow
+
+    .deal
+      color: $green
+
+      .icon
+        background-image: url(../img/advertiser/deal.png)
+        background-color: $green
+
+    .task
+      color: $lime
+
+      .icon
+        background-image: url(../img/advertiser/task.png)
+        background-color: $lime
+
+    .market
+      color: $blue
+
+      .icon
+        background-image: url(../img/advertiser/market.png)
+        background-color: $blue
+
+    .moment
+      color: $purple
+
+      .icon
+        background-image: url(../img/advertiser/moment.png)
+        background-color: $purple
+
+    h2
+      margin-left: 15%
+
+  .bid-types
+    background-color: $shallow-background-color
+    padding: 5%
+
+    .bid-type p
+      width: 100px
+      height: 100px
+      line-height: 100px
+      margin: 0 auto
+      color: $white
+      font-size: 24px
+      font-style: italic
+
+    .cpa
+      background-color: $orange
+
+    .cpc
+      background-color: $green
+
+    .cpd
+      background-color: $blue
+
+    .cpt
+      background-color: $purple
+
+    .cpm
+      background-color: $yellow
+
+  .benefits
+    background-color: $deep-background-color
+    padding: 5%
+
+    .benefit
+      .icon
+        border-radius: 50px
+
+    .tansfer-obtaining
+
+      .icon
+        background-image: url(../img/advertiser/tansfer-obtaining.png)
+        border: 1px solid $yellow
+
+      p
+        color: $yellow
+
+    .promotion
+
+      .icon
+        background-image: url(../img/advertiser/promotion.png)
+        border: 1px solid $purple
+
+      p
+        color: $purple
+
+    .aso
+
+      .icon
+        background-image: url(../img/advertiser/aso.png)
+        border: 1px solid $blue
+
+      p
+        color: $blue
+
+    .exposure
+
+      .icon
+        background-image: url(../img/advertiser/exposure.png)
+        border: 1px solid $green
+
+      p
+        color: $green
+
+    .social-marketing
+
+      .icon
+        background-image: url(../img/advertiser/social-marketing.png)
+        border: 1px solid $orange
+
+      p
+        color: $orange
+
+  .customers
+    background-color: $shallow-background-color
+    padding: 5%
+
+    .customer-type
+      color: $deep-font-color
+      position: relative
+      bottom: $gap
+      display: inline-block
+
+    .operators
+      margin-right: 1em
+
+    .others
+      margin-right: 2em
+
+    .title
+      margin-top: 10%
+
+      h2
+        writing-mode: vertical-lr
+
+
+  .title
+    margin-bottom: 5%
+
+  img
+    max-width: 100%
+
+  h2
+    color: $font-color
+
+  @media (max-width: $screen-sm-min)
+    & .ad-forms
+
+      .ad-form
+        display: block
+
+      img
+        display: none
+
+  @media (min-width: $screen-sm-min)
+    & .ad-forms
+
+      .ad-form
+        display: none
+
+      img
+        display: inline-block
+
+
+  @media (min-width: $screen-md-min)
+    & .advantages:hover .advantage
+      width: 16.6%
+
+  @media (max-width: $screen-md-min)
+    &
+      .advantages
+
+        .desc .triangle
+          top: -($gap + $gap-xs)
+          left: 48%
+
+        .focus + .desc .triangle
+          border-color: transparent transparent #FF851B transparent
+
+        .trend + .desc .triangle
+          border-color: transparent transparent #2ECC40 transparent
+
+        .dm + .desc .triangle
+          border-color: transparent transparent #0074D9 transparent
+
+        .custom + .desc .triangle
+          border-color: transparent transparent #B10DC9 transparent
+
+      .customers .title h2
+        writing-mode: inherit
+        text-align: center

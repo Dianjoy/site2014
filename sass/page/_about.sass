@@ -1,13 +1,69 @@
+@import "compass/css3/columns"
+
 #about
+  width: 100%
+  margin: 0
+  color: $deep-font-color
+
+  .intro-row
+    background-color: $shallow-background-color
+    margin: 0
+    padding-bottom: $gap
+
+    #nav-list
+      margin: 200px auto 0
+
+  .intro
+    @include columns(25em 2)
+    margin-top: $gap-s
+
+  .founders
+    background-color: $deep-background-color
+    margin: 0
+
+    .photos
+      margin-top: 8%
+
+  .history
+    background-color: $shallow-background-color
+    padding-left: 10%
+
+    .history-container
+      margin: 0
+      padding: $gap 0 $gap 10%
+
+      .year
+        color: $font-color
+
+        &:after
+          content: url(../img/about/rectangle.png)
+          width: 10px
+          height: 10px
+
+    ul
+      padding: 0
+
+      li
+        list-style: none
+
+    img
+      max-width: 88%
+
+  .about-banner
+    width: 100%
+
   p
     line-height: 28px
 
   h2
-    border-bottom: 1px solid #EEE
     line-height: 2
+    padding-left: $top-bar-offset-lg / 2
+    color: $font-color
+
+    small
+      color: $deep-font-color
 
   h3
-    border-bottom: 1px solid #58aaf7
     line-height: 32px
     padding: 5px 0
 
@@ -17,3 +73,23 @@
 
   img
     max-width: 100%
+
+  @media (max-width: $screen-sm-min)
+    &
+      .history
+        padding-left: 0
+
+      .history-container
+        img
+          display: none
+
+        .events
+          display: block
+
+  @media (min-width: $screen-sm-min)
+    & .history .history-container
+      img
+        display: inline-block
+
+      .events
+        display: none
