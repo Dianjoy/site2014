@@ -1,3 +1,5 @@
+@import "compass/css3/transform"
+
 #advertiser
   width: 100%
 
@@ -115,11 +117,20 @@
 
   .ad-forms
     background-color: $deep-background-color
-    padding: 10%
+    padding: 5% 0 13%
+    position: relative
+
+    .round-rectangle
+      width: 4%
+      height: $gap-xs
+      position: relative
+      display: inline-block
+      border-radius: $gap-xs
+      background-color: $shallow-background-color
 
     .ad-form
       display: inline-block
-      margin: 0 $top-bar-offset-sm
+      position: relative
 
       .icon
         border-radius: 50px
@@ -132,6 +143,10 @@
         background-color: $red
         background-image: url(../img/advertiser/lockscreen.png)
 
+      & + .round-rectangle
+        bottom: $gap-xl
+        @include rotate(-40deg)
+
     .wall
       color: $orange
       bottom: $gap-xl
@@ -140,43 +155,75 @@
         background-image: url(../img/advertiser/wall.png)
         background-color: $orange
 
+      & + .round-rectangle
+        bottom: $gap-l * 3
+        @include rotate(20deg)
+
     .ad-banner
       color: $yellow
+      bottom: $gap
 
       .icon
         background-image: url(../img/advertiser/ad-banner.png)
         background-color: $yellow
 
+      & + .round-rectangle
+        bottom: $gap * 3
+        @include rotate(20deg)
+
     .deal
       color: $green
+      top: $gap-l
 
       .icon
         background-image: url(../img/advertiser/deal.png)
         background-color: $green
 
+      & + .round-rectangle
+        top: $gap
+        @include rotate(40deg)
+
     .task
       color: $lime
+      top: $top-bar-offset-lg * 3
 
       .icon
         background-image: url(../img/advertiser/task.png)
         background-color: $lime
 
+      & + .round-rectangle
+        top: $gap-xs + $gap * 3
+        @include rotate(-25deg)
+
     .market
       color: $blue
+      top: $top-bar-offset-lg * 2
 
       .icon
         background-image: url(../img/advertiser/market.png)
         background-color: $blue
 
+      & + .round-rectangle
+        right: $gap * 3
+        bottom: $top-bar-offset-lg
+        @include rotate(-70deg)
+
     .moment
       color: $purple
+      bottom: $gap-xl
+      right: $gap-xl + $gap-l
 
       .icon
         background-image: url(../img/advertiser/moment.png)
         background-color: $purple
 
+      & + .round-rectangle
+        top: $gap
+
     h2
-      margin-left: 15%
+      position: absolute
+      bottom: 10%
+      left: 25%
 
   .bid-types
     background-color: $shallow-background-color
@@ -291,23 +338,23 @@
   h2
     color: $font-color
 
-  @media (max-width: $screen-sm-min)
-    & .ad-forms
-
-      .ad-form
-        display: block
-
-      img
-        display: none
-
-  @media (min-width: $screen-sm-min)
-    & .ad-forms
-
-      .ad-form
-        display: none
-
-      img
-        display: inline-block
+  //@media (max-width: $screen-sm-min)
+  //  & .ad-forms
+  //
+  //    .ad-form
+  //      display: block
+  //
+  //    img
+  //      display: none
+  //
+  //@media (min-width: $screen-sm-min)
+  //  & .ad-forms
+  //
+  //    .ad-form
+  //      display: none
+  //
+  //    img
+  //      display: inline-block
 
 
   @media (min-width: $screen-md-min)
@@ -337,3 +384,16 @@
       .customers .title h2
         writing-mode: inherit
         text-align: center
+
+      .ad-forms
+        .ad-form
+          width: 100%
+          top: 0
+          right: 0
+          bottom: 0
+
+        .round-rectangle
+          display: none
+
+        h2
+          position: inherit

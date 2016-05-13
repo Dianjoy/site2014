@@ -30,13 +30,68 @@
 
     .history-container
       margin: 0
-      padding: $gap 0 $gap 10%
+      padding: 10% 0 20% 10%
+
+      .line
+        div
+          background-color: $deep-font-color
+          display: inline-block
+
+        .dot
+          width: $gap-xs
+          height: $gap-xs
+          border-radius: $gap-xs / 2
+          margin: 0 -3px -2px
+          position: relative
+
+          h3
+            position: absolute
+            bottom: 0
+
+          ul
+            position: absolute
+            font-size: 12px
+            margin-top: $gap-s
+
+        .solid-line
+          font-size: 12px
+          height: 1px
+
+        .dashed-line
+          border-top: 1px dashed $deep-font-color
+          background-color: transparent
+
+      .top-line
+
+        ul
+          width: 13em
+
+        .solid-line
+          width: 15%
+          min-width: 13em
+
+        .dashed-line
+          width: 10%
+
+
+      .bottom-line
+        margin: 10% 0 0 10%
+
+        ul
+          width: 20em
+
+        .solid-line
+          width: 30%
+          min-width: 20em
+
+        .dashed-line
+          width: 20%
 
       .year
         color: $font-color
 
         &:after
-          content: url(../img/about/rectangle.png)
+          content: url(../img/about/rectangle.svg)
           width: 10px
           height: 10px
 
@@ -80,7 +135,7 @@
         padding-left: 0
 
       .history-container
-        img
+        .line
           display: none
 
         .events
@@ -88,8 +143,8 @@
 
   @media (min-width: $screen-sm-min)
     & .history .history-container
-      img
-        display: inline-block
+      .line
+        display: block
 
       .events
         display: none
