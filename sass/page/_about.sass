@@ -17,7 +17,7 @@
     @include columns(25em 2)
     margin-top: $gap-s
 
-    & p:nth-child(2n+1)
+    p
       color: $font-color
 
   .founders
@@ -131,7 +131,7 @@
   img
     max-width: 100%
 
-  @media (max-width: $screen-sm-min)
+  @media (max-width: $screen-md-min)
     &
       .history
         padding-left: 0
@@ -143,18 +143,15 @@
         .events
           display: block
 
-  @media (min-width: $screen-sm-min)
-    & .history .history-container
-      .line
-        display: block
-
-      .events
-        display: none
-
   @media (min-width: $screen-md-min)
     &
+      .history .history-container
+        .line
+          display: block
+          margin-top: 170px
+
+        .events
+          display: none
+
       .founders, .history
         height: $module-height
-
-      .line
-        margin-top: 170px

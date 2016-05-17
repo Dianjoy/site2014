@@ -1,7 +1,6 @@
 @import "../define"
 
 #nav-list
-  line-height: $gap * 3
   margin: 200px auto 0
   position: fixed
   top: 15%
@@ -13,7 +12,6 @@
 
     > li
       list-style: none
-      padding: 0 $gap
       background-color: #105581
       text-align: center
 
@@ -29,6 +27,11 @@
 
       a
         color: $white
+        line-height: $gap * 3
+        display: inline-block
+        height: $gap * 3
+        padding: 0 $gap
+
 
       &.active a,
       a:hover
