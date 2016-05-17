@@ -17,8 +17,12 @@
     @include columns(25em 2)
     margin-top: $gap-s
 
+    & p:nth-child(2n+1)
+      color: $font-color
+
   .founders
     background-color: $deep-background-color
+    padding: $gap 0
     margin: 0
 
     .photos
@@ -30,7 +34,7 @@
 
     .history-container
       margin: 0
-      padding: 10% 0 20% 10%
+      padding-left: 10%
 
       .line
         div
@@ -75,8 +79,6 @@
 
 
       .bottom-line
-        margin: 10% 0 0 10%
-
         ul
           width: 20em
 
@@ -148,3 +150,11 @@
 
       .events
         display: none
+
+  @media (min-width: $screen-md-min)
+    &
+      .founders, .history
+        height: $module-height
+
+      .line
+        margin-top: 170px

@@ -31,13 +31,20 @@
     line-height: 100px
 
   .advantages
-    margin-top: $gap + $gap-s
+    margin-top: $gap * 3
     background-color: $shallow-background-color
+
+    .advantage p
+      font-size: 15px
+
+    .desc
+      font-size: 12px
 
     .focus
       color: #FF851B
 
       & + .desc
+        display: inline-block
         padding: $gap + $gap-s $top-bar-offset-sm
         background-color: #FF851B
 
@@ -48,9 +55,6 @@
 
         .icon
           background-image: url(../img/advertiser/focus-negative.png)
-
-        & + .desc
-          display: inline-block
 
       .icon
         background-image: url(../img/advertiser/focus-positive.png)
@@ -69,9 +73,6 @@
         .icon
           background-image: url(../img/advertiser/trend-negative.png)
 
-        & + .desc
-          display: inline-block
-
       .icon
         background-image: url(../img/advertiser/trend-positive.png)
 
@@ -88,9 +89,6 @@
 
         .icon
           background-image: url(../img/advertiser/dm-negative.png)
-
-        & + .desc
-          display: inline-block
 
       .icon
         background-image: url(../img/advertiser/dm-positive.png)
@@ -109,15 +107,12 @@
         .icon
           background-image: url(../img/advertiser/custom-negative.png)
 
-        & + .desc
-          display: inline-block
-
       .icon
         background-image: url(../img/advertiser/custom-positive.png)
 
   .ad-forms
     background-color: $deep-background-color
-    padding: 5% 0 13%
+    padding: 15% 0 0 10%
     position: relative
 
     .round-rectangle
@@ -136,11 +131,11 @@
         border-radius: 50px
 
     .lockscreen
-      color: $red
+      color: #fd3232
       top: $gap
 
       .icon
-        background-color: $red
+        background-color: #fd3232
         background-image: url(../img/advertiser/lockscreen.png)
 
       & + .round-rectangle
@@ -148,60 +143,60 @@
         @include rotate(-40deg)
 
     .wall
-      color: $orange
+      color: #fa8838
       bottom: $gap-xl
 
       .icon
         background-image: url(../img/advertiser/wall.png)
-        background-color: $orange
+        background-color: #fa8838
 
       & + .round-rectangle
         bottom: $gap-l * 3
         @include rotate(20deg)
 
     .ad-banner
-      color: $yellow
+      color: #e2e01c
       bottom: $gap
 
       .icon
         background-image: url(../img/advertiser/ad-banner.png)
-        background-color: $yellow
+        background-color: #e2e01c
 
       & + .round-rectangle
         bottom: $gap * 3
         @include rotate(20deg)
 
     .deal
-      color: $green
+      color: #58c328
       top: $gap-l
 
       .icon
         background-image: url(../img/advertiser/deal.png)
-        background-color: $green
+        background-color: #58c328
 
       & + .round-rectangle
         top: $gap
         @include rotate(40deg)
 
     .task
-      color: $lime
+      color: #16dea3
       top: $top-bar-offset-lg * 3
 
       .icon
         background-image: url(../img/advertiser/task.png)
-        background-color: $lime
+        background-color: #16dea3
 
       & + .round-rectangle
         top: $gap-xs + $gap * 3
         @include rotate(-25deg)
 
     .market
-      color: $blue
+      color: #13baff
       top: $top-bar-offset-lg * 2
 
       .icon
         background-image: url(../img/advertiser/market.png)
-        background-color: $blue
+        background-color: #13baff
 
       & + .round-rectangle
         right: $gap * 3
@@ -209,25 +204,25 @@
         @include rotate(-70deg)
 
     .moment
-      color: $purple
+      color: #e540cc
       bottom: $gap-xl
       right: $gap-xl + $gap-l
 
       .icon
         background-image: url(../img/advertiser/moment.png)
-        background-color: $purple
+        background-color: #e540cc
 
       & + .round-rectangle
         top: $gap
 
-    h2
+    .title
       position: absolute
       bottom: 10%
       left: 25%
 
   .bid-types
     background-color: $shallow-background-color
-    padding: 5%
+    padding: 10% 5% 5%
 
     .bid-type p
       width: 100px
@@ -255,7 +250,7 @@
 
   .benefits
     background-color: $deep-background-color
-    padding: 5%
+    padding: 10% 5% 5%
 
     .benefit
       .icon
@@ -338,28 +333,10 @@
   h2
     color: $font-color
 
-  //@media (max-width: $screen-sm-min)
-  //  & .ad-forms
-  //
-  //    .ad-form
-  //      display: block
-  //
-  //    img
-  //      display: none
-  //
-  //@media (min-width: $screen-sm-min)
-  //  & .ad-forms
-  //
-  //    .ad-form
-  //      display: none
-  //
-  //    img
-  //      display: inline-block
-
-
   @media (min-width: $screen-md-min)
-    & .advantages:hover .advantage
-      width: 16.6%
+    &
+      > .row
+        height: $module-height
 
   @media (max-width: $screen-md-min)
     &
@@ -386,6 +363,8 @@
         text-align: center
 
       .ad-forms
+        padding: 0
+
         .ad-form
           width: 100%
           top: 0
@@ -395,5 +374,7 @@
         .round-rectangle
           display: none
 
-        h2
+        .title
           position: inherit
+          bottom: 0
+          left: 0

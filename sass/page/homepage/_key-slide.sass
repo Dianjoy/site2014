@@ -40,7 +40,9 @@
       position: absolute
       left: 50%
       top: 400px
+      color: $active-color
       margin-left: -$read-more-width / 2
+      background-color: transparent
 
     &:first-child
       background-image: url(../img/slide3.png)
@@ -68,6 +70,14 @@
       margin: 1px
       background-color: $active-color
 
+  .glyphicon
+    height: 194px
+
+  .glyphicon-chevron-right
+    content: url(../img/chevron-right.svg)
+
+  .glyphicon-chevron-left
+    content: url(../img/chevron-left.svg)
 
   @media (max-width: $screen-xs-max)
     &

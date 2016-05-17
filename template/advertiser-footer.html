@@ -1,0 +1,8 @@
+<script>
+  $(function(){
+    $('.advantage').on('click, mouseenter', function(e) {
+      var target = $(e.currentTarget);
+      target.next('.desc').show().siblings('.desc').hide();
+    });
+  })
+</script>

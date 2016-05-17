@@ -27,7 +27,7 @@
   .icon-list
     width: 330px
     display: inline-block
-    padding: $gap + $gap-xs 0
+    padding: $gap + $gap-xs $gap
     background-color: $shallow-background-color
     border-bottom: 2px solid $font-color
     border-top: 2px solid $font-color
@@ -39,6 +39,7 @@
       left: 120px
       width: $top-bar-offset-md + $top-bar_height
       height: $gap-xs
+      margin: 0
 
     .border-top-part
       bottom: $gap + $gap-xs
@@ -58,6 +59,7 @@
         height: 24px
 
       .icon-list
+        width: 390px
 
         &.left
           text-align: center
@@ -71,9 +73,15 @@
             left: 15%
             right: 0
 
+        .border-part
+          left: 130px
+
         i + i
-          margin-top: $gap-xs
-          margin-left: $gap-xs
+          margin-top: $gap
+          margin-left: $gap
+
+        .icon-0
+          margin: 0
 
         .icon-20
           margin-right: -$gap

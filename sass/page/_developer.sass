@@ -5,19 +5,18 @@
   margin: 0
 
   .ad-forms
-    padding-top: 5%
     background-color: $shallow-background-color
 
     img
       margin-left: 10%
 
   .display
-    padding-top: 2%
+    padding: 2% 0
     background-color: $deep-background-color
 
   .how-to
     background-color: $shallow-background-color
-    padding: 5% 0
+    padding: 10% 0 5%
 
     .icon
       width: $top-bar-offset-lg * 2
@@ -74,17 +73,21 @@
       p
         color: $orange
 
+    p
+      margin-top: $gap + $gap-s
+
 
   .sdk
     background-color: $deep-background-color
-    padding-top: 2%
+    padding: 10% 0 5%
 
     .sdk-intro
-      width: 100px
-      height: 100px
+      width: 120px
+      height: 120px
       margin: 0 auto
       padding-left: $gap-xs
       color: $white
+      font-size: $gap
 
       .quotation-mark
         font-size: $gap-l
@@ -116,13 +119,15 @@
         color: $purple
 
     .sdk-intro-5
-      background-color: $yellow
+      background-color: #CEB518
 
       & + .sdk-desc
-        color: $yellow
+        color: #CEB518
 
     .sdk-desc
       margin-top: $gap-s
+      font-size: 15px
+      text-align: center
 
   .feedback
     background-color: $shallow-background-color
@@ -138,11 +143,9 @@
         top: $gap
 
       .icon-clients
-        margin: $top-bar-offset-sm
+        margin: 0 $gap
 
     .comment
-      margin-top: $gap
-
       .icon
         border-radius: $gap + $gap-xs
         width: $top-bar-offset-lg
@@ -157,14 +160,13 @@
         background-position-x: -$top-bar_height
         background-position-y: -$top-bar_height
 
-      .title
-        margin: 0
-
       .item
         margin-top: $gap + $gap-s
 
         .read-more
+          color: $active-color
           display: inline-block
+          background-color: transparent
 
       .app
         padding: 0
@@ -179,3 +181,22 @@
   @media (max-width: $screen-lg-min)
     & .glyphicon-chevron-right
       display: none
+
+  @media (min-width: $screen-md-min)
+    &
+      > .row
+        height: $module-height
+
+      .ad-forms
+        position: relative
+
+        div
+          position: absolute
+          bottom: 0
+
+      .sdk
+        .sdk-intro
+          margin: 0
+
+        .sdk-desc
+          text-align: left

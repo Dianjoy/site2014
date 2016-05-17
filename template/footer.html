@@ -44,9 +44,9 @@
       <div class="col-sm-9 col-xs-12">
         <h2>公司地址</h2>
         <ul class="address">
-          <li>【北京】北京市西城区裕民东路3号京版信息港5层</li>
+          <li class="beijing">【北京】北京市西城区裕民东路3号京版信息港5层</li>
           <li>【上海】上海市普陀区中江路388号SOHO国盛中心2号楼1203室</li>
-          <li>【广州】广州天河区华强路3号富力盈力大厦北塔1606</li>
+          <li class="guangzhou">【广州】广州天河区华强路3号富力盈力大厦北塔1606</li>
           <li>【深圳】深圳市南山区高新南四道泰邦科技大厦11层1105室</li>
           <li>【西安】陕西省西安市雁塔区高新路41号水晶城A座1701室</li>
         </ul>
@@ -59,10 +59,8 @@
       <div class="col-sm-2 col-sm-offset-1 col-xs-12">
         <ul class="others row">
           <li class="col-sm-12 col-xs-4"><a href="/about">关于点乐</a></li>
-          <li class="col-sm-12 col-xs-4"><a href="/partners">合作伙伴</a></li>
           <li class="col-sm-12 col-xs-4"><a href="/about/jobs">加入点乐</a></li>
           <li class="col-sm-12 col-xs-4"><a href="/contact">联系我们</a></li>
-          <li class="col-sm-12 col-xs-4"><a href="/sitemap">网站地图</a></li>
         </ul>
       </div>
     </div>
@@ -87,6 +85,14 @@
   function refresh_code() {
     this.src = '/dev/inc/showimg.php?timestamp=' + Date.now();
   }
+</script>
+<script>
+  $(function(){
+    $('#nav-list').on('click', 'li', function(e) {
+      var li = $(e.currentTarget);
+      li.addClass('active').siblings().removeClass('active');
+    })
+  })
 </script>
 {{{wp_footer}}}
 <script>

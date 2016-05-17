@@ -24,6 +24,9 @@ if (have_posts()) {
   $result['case'] = $content;
 }
 
+add_action('wp_footer', function () {
+  readfile(dirname(__FILE__) . '/template/advertiser-footer.html');
+}, 100);
 
 require_once('inc/mustache.php');
 $tpl = new Mustache_Engine();

@@ -7,8 +7,8 @@
 
   > ul li
     list-style: none
-    padding-bottom: 10px
-    margin-bottom: 20px
+    padding-bottom: $gap-s
+    margin-bottom: $gap
 
   li
     .date
@@ -20,14 +20,19 @@
         font-size: 22px
         color: $font-color
 
+      & + div
+        padding-left: $gap-l
+
     .title
-      margin: $gap-xs 0 $gap-s
+      margin: 0 0 $gap
       font-size: 18px
 
       & a
         color: $font-color
 
     p
+      margin: 0
+      word-break: break-all
       line-height: $gap + $gap-s
 
     .excerpt

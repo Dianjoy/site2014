@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="193.812" viewBox="0 0 30 193.812">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+        opacity: 0.3;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="60" y="268.188" width="30" height="193.812" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#13baff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="矩形_10_拷贝_2" data-name="矩形 10 拷贝 2" class="cls-1" d="M86.009,268.186l3.864,1.035L63.991,365.814l-3.864-1.035ZM86.1,462l3.9-1.039L63.9,364,60,365.038Z" transform="translate(-60 -268.188)"/>
+</svg>
