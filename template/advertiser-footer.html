@@ -2,6 +2,7 @@
   $(function(){
     $('.advantage').on('click, mouseenter', function(e) {
       var target = $(e.currentTarget);
+      target.addClass('negative').siblings('.advantage').removeClass('negative');
       target.next('.desc').show().siblings('.desc').hide();
     });
   })

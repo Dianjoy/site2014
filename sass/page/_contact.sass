@@ -9,7 +9,11 @@
     padding: 5% 0
     background-color: $shallow-background-color
 
+    > div
+      padding: 0
+
     .contact-info
+      padding: 0
       margin-bottom: 10%
 
       .tel
@@ -30,3 +34,7 @@
   @media (max-width: $screen-md-min)
     & .contacts-info .contact-info .tel
       text-align: center
+
+  @media (min-width: $screen-md-min)
+    & .contacts-info .contact-info .photo
+      text-align: left
