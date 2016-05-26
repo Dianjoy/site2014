@@ -81,17 +81,27 @@
 
   @media (max-width: $screen-xs-max)
     &
-      height: 100%
+      height: 50%
+
+      .glyphicon
+        top: 30%
 
       .carousel, .carousel-inner, .item
-        height: 100%
+        height: 280px
+
+        .read-more
+          top: 190px
+          height: $gap-l
+          line-height: $gap-l
+          border-radius: $gap
 
         h2
-          top: 150px
+          top: $gap-xl
           left: $gap
           right: $gap
 
         p
+          top: 140px
           left: $gap
           right: $gap
 
@@ -115,9 +125,6 @@
       h2
         font-size: 2.75em
 
-      p
-        top: 270px
-
       &:first-child
         p
           top: 380px
@@ -137,7 +144,7 @@
     & .item
       &:nth-child(2)
         h2
-          top: 140px
+          top: $gap-xl
 
         ul
           top: 275px

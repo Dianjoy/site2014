@@ -24,6 +24,7 @@
     padding: 0
 
     li
+      padding: 0
       list-style: none
       line-height: 25px
 
@@ -117,7 +118,7 @@
   @media (max-width: $screen-xs-max)
     &
       .address
-        padding: $gap-s + $gap-xs
+        padding: 0
 
       .top-button
         width: $gap
@@ -126,3 +127,25 @@
 
         i
           font-size: 2em
+
+      .copyright a
+        display: block
+
+        .beian
+          margin: $gap-xs
+
+  @media (max-width: $screen-md-min)
+    &
+      .social-media
+        margin-left: 0
+
+  @media (max-width: 321px)
+    &
+      .address li
+        display: flex
+
+        .cities
+          flex: 0.4
+
+          & + span
+            flex: 2

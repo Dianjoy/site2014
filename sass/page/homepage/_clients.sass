@@ -7,9 +7,6 @@
   background-color: $deep-background-color
   padding: 0 0 $gap-l
 
-  .block-title
-    color: $font-color
-
   .leading
     margin-bottom: $gap + $gap-s
     font-size: 16px
@@ -21,12 +18,11 @@
       width: 100%
       @include rotate(180deg)
 
-  .col-sm-6
-    text-align: center
+  .col-md-6
     padding: $gap-s 0
 
   .icon-list
-    width: 330px
+    width: 310px
     display: inline-block
     padding: $gap + $gap-xs $gap
     background-color: $shallow-background-color
@@ -37,7 +33,7 @@
       background-image: url(../img/border-part.svg)
       display: block
       position: relative
-      left: 120px
+      left: 36%
       width: $top-bar-offset-md + $top-bar_height
       height: $gap-xs
       margin: 0
@@ -49,15 +45,8 @@
       top: $gap + $gap-xs
       @include  rotate(180deg)
 
-  @media (max-width: $screen-xs-max)
-    &
-      header img
-        height: 12px
-
   @media (min-width: $screen-sm-min)
     &
-      header img
-        height: 24px
 
       .icon-list
         width: 390px
