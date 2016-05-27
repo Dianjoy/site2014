@@ -60,7 +60,7 @@
       margin-left: $top-bar-offset-sm
       background-image: url(../img/wechat.png)
 
-      &:hover, &:active
+      &:hover, &:active, &:focus
         background-image: url(../img/wechat-hover.png)
 
         & img
@@ -128,16 +128,19 @@
         i
           font-size: 2em
 
-      .copyright a
-        display: block
+      .copyright
+        margin-left: $gap-xs
 
-        .beian
-          margin: $gap-xs
+        a
+          display: block
+
+          .beian
+            margin-left: 0
 
   @media (max-width: $screen-md-min)
     &
       .social-media
-        margin-left: 0
+        margin-left: $gap-xs
 
   @media (max-width: 321px)
     &

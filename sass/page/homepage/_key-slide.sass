@@ -9,7 +9,7 @@
   position: relative
 
   .item
-    background-size: 100% 100%
+    background-size: cover
     background-position-y: bottom
     height: 600px
 
@@ -70,22 +70,18 @@
       margin: 1px
       background-color: $active-color
 
-  .glyphicon
-    height: 194px
+  @media (min-width: $screen-xs-max)
+    .glyphicon
+      height: 194px
 
-  .glyphicon-chevron-right
-    content: url(../img/chevron-right.svg)
+    .glyphicon-chevron-right
+      content: url(../img/chevron-right.svg)
 
-  .glyphicon-chevron-left
-    content: url(../img/chevron-left.svg)
+    .glyphicon-chevron-left
+      content: url(../img/chevron-left.svg)
 
   @media (max-width: $screen-xs-max)
     &
-      height: 50%
-
-      .glyphicon
-        top: 30%
-
       .carousel, .carousel-inner, .item
         height: 280px
 
@@ -99,6 +95,7 @@
           top: $gap-xl
           left: $gap
           right: $gap
+          font-size: 2.5em
 
         p
           top: 140px
@@ -108,75 +105,33 @@
       footer img
         height: 12px
 
-  @media (max-width: 320px) // iphone5-
-    & .item
-      &:first-child
-        h2
-          top: 130px
+  @media (max-width: 432px)
+    &
+      .item
+        &:first-child
+          background-position-x: 40%
 
-        p
-          top: 350px
+          .read-more
+            top: 200px
 
-      h2
-        font-size: 2.5em
+          p
+            top: 155px
 
-  @media (min-width: 321px) and (max-width: $screen-xs-max)
-    & .item
-      h2
-        font-size: 2.75em
+  @media (max-width: 375px)
+    &
+      .item
 
-      &:first-child
-        p
-          top: 380px
+        &:first-child
+          background-position-x: 50%
 
-        .read-more
-          top: 440px
+          p
+            top: 155px
 
-  @media (min-height: 700px) and (min-width: 321px) and (max-width: $screen-xs-max)
-    & .item:first-child
-      p
-        top: 430px
+          .read-more
+            top: 200px
 
-      .read-more
-        top: 490px
-
-  @media (max-width: $screen-xs-max)
-    & .item
-      &:nth-child(2)
         h2
           top: $gap-xl
 
-        ul
-          top: 275px
-          left: $gap-s
-          right: $gap-s
-          margin-left: 0
-          width: auto
-
-          li
-            padding: 0 $gap-s + $gap-xs
-
-            img
-              margin: 0
-
-      h2
-        line-height: 1.5em
-
-  @media (min-width: $screen-sm-min)
-    & footer img
-      height: 24px
-
-  @media (min-width: $screen-md-min) and (max-width: $screen-md-max)
-    & .item
-      height: 580px
-
-  @media (max-height: 480px) // iphone 4
-    & .item
-      h2
-        top: 120px
-
-      p
-        top: 240px
-
-      .read-more
-        top: 320px
+        p
+          top: 140px
