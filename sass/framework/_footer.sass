@@ -60,7 +60,7 @@
       margin-left: $top-bar-offset-sm
       background-image: url(../img/wechat.png)
 
-      &:hover, &:active, &:focus
+      &:focus, &:hover
         background-image: url(../img/wechat-hover.png)
 
         & img
@@ -97,7 +97,7 @@
           margin-right: 5em
 
         .guangzhou
-          margin-right: 3.3em
+          margin-right: 4.3em
 
       .others .weibo
         margin-top: 20px
@@ -137,6 +137,9 @@
           .beian
             margin-left: 0
 
+      .social-media .wechat
+        cursor: pointer
+
   @media (max-width: $screen-md-min)
     &
       .social-media
@@ -144,11 +147,14 @@
 
   @media (max-width: 321px)
     &
-      .address li
-        display: flex
+      .address
 
-        .cities
-          flex: 0.4
+        li
+          display: flex
 
-          & + span
-            flex: 2
+          .cities
+            flex: 0.7
+            text-align: center
+
+            & + span
+              flex: 2
