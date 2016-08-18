@@ -1,7 +1,7 @@
 <?php
 define('WP_USE_THEMES', false);
 require('../../../wp-load.php');
-query_posts('showposts=4&tag=gonggao');
+query_posts('showposts=4&tag=kaifazhegonggao');
 if (have_posts()) {
   $announcements = array();
   while (have_posts()) {
