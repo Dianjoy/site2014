@@ -40,7 +40,6 @@
       position: absolute
       left: 50%
       top: 400px
-      color: $active-color
       margin-left: -$read-more-width / 2
       background-color: transparent
 
@@ -65,14 +64,12 @@
 
   .carousel-indicators
     li
-      width: 10%
-      height: $gap-xs
-      border-radius: 0
-      border-color: $active-color
+      border-color: transparent
+      background-color: rgba(255, 255, 255, 0.5)
 
     .active
       margin: 1px
-      background-color: $active-color
+      background-color: $white
 
   @media (min-width: $screen-xs-max)
     .glyphicon
