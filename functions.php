@@ -133,10 +133,17 @@ add_action( 'pre_get_posts', 'dian2013_home_pagesize', 1 );
 function make_href_root_relative($input) {
     return preg_replace('!http(s)?://localhost:8080/!', '/', $input);
 }
-
 function root_relative_permalinks($input) {
     return make_href_root_relative($input);
 }
-
 add_filter( 'the_permalink', 'root_relative_permalinks' );
-?>
+
+function add_cors_on_feed($headers, $wp) {
+  if ('feed' == $wp->query_vars['feed']) {
+    $protocol = preg_match('/^https:/', $_SERVER['HTTP_REFERER']) ? 'https' : 'http';
+    $headers['Access-Control-Allow-Origin'] = $protocol . '://dev.dianjoy.com';
+    $headers['Access-Control-Allow-Methods'] = 'GET';
+  }
+  return $headers;
+}
+add_filter('wp_headers', 'add_cors_on_feed', 10, 3);
