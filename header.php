@@ -27,7 +27,7 @@ if (($is_en || isset($_REQUEST['lang']) && $_REQUEST['lang'] == 'en') && $_SERVE
 } else {
   $login = '开发者登录';
 }
-$login = '<li><a href="http://dev.dianjoy.com/login.php">' . $login . '</a></li>';
+$login = '<li><a href="/dev/login.php">' . $login . '</a></li>';
 add_filter('wp_nav_menu_items', function ( $items ) use ( $login ) {
   return $items . $login;
 });
