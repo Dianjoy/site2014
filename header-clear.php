@@ -23,7 +23,7 @@ $nav = array(
 //非首页加入登录注册导航链接
 $not_index = $_SERVER['REQUEST_URI'] != '/';
 if ($not_index) {
-  $login = '<li><a href="http://dev.dianjoy.com/login.php">开发者登录</a></li>';
+  $login = '<li><a href="https://dev.dianjoy.com/login.php">开发者登录</a></li>';
   add_filter('wp_nav_menu_items', function ( $items ) use ( $login ) {
     return $items . $login;
   });
@@ -41,7 +41,7 @@ if (is_single()) {
   $tags = substr($tags, 0, -1);
 }
 
-$home_url = esc_url( home_url( '/' ) );
+$home_url = esc_url(home_url('/', is_ssl() ? 'https' : 'http'));
 $result   = array(
   'title' => wp_title('|', FALSE, 'right') . get_bloginfo('name') . $pagenum,
   'description' => $description ? $description : get_bloginfo('description'),
